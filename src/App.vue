@@ -20,8 +20,12 @@ import Reincarnation from '@/components/Reincarnation.vue'
 
   <RouterView /> -->
     <div>
-        <Reincarnation />
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/pokoQ&A">寶可問答</RouterLink>
+        <RouterLink to="/reincarnation">轉生模擬器</RouterLink>
+        <!-- <Reincarnation /> -->
     </div>
+    <RouterView />
 </template>
 
 <style>
