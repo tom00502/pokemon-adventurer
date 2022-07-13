@@ -19,12 +19,14 @@ import Reincarnation from '@/components/Reincarnation.vue'
   </header>
 
   <RouterView /> -->
-    <div>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/pokoQ&A">寶可問答</RouterLink>
-        <RouterLink to="/reincarnation">轉生模擬器</RouterLink>
-        <!-- <Reincarnation /> -->
-    </div>
+    <header>
+        <nav>
+            <RouterLink to="/">Home</RouterLink>
+            <RouterLink to="/pokoQ&A">寶可問答</RouterLink>
+            <RouterLink to="/reincarnation">轉生模擬</RouterLink>
+            <RouterLink to="/star">星級計算</RouterLink>
+        </nav>
+    </header>
     <RouterView />
 </template>
 
@@ -44,7 +46,6 @@ body {
 
 header {
     line-height: 1.5;
-    max-height: 100vh;
 }
 
 .logo {
@@ -92,20 +93,20 @@ nav a:first-of-type {
 
 @media (min-width: 1024px) {
     body {
-        display: flex;
-        place-items: center;
+        /*display: flex;
+        place-items: center;*/
     }
 
     #app {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding: 0 2rem;
+        /*display: grid;
+        grid-template-columns: 1fr;
+        padding: 0 2rem;*/
     }
 
     header {
         display: flex;
         place-items: center;
-        padding-right: calc(var(--section-gap) / 2);
+        width: 100%;
     }
 
     header .wrapper {

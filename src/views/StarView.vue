@@ -1,0 +1,265 @@
+<script setup>
+import IconStar from '@/components/icons/IconStar.vue'
+import { ref, reactive, computed } from 'vue'
+const needExps = {
+    beyond: [0, 0, 0, 1500, 5000, 10000, 13000, 17500, 23500, 31000, 41000],
+    legend: [0, 0, 500, 2000, 5500, 10500, 13500, 18000, 24000, 31500, 41500],
+    epic: [0, 0, 400, 1400, 3800, 7000, 7400, 8400, 10900, 16900, 24900],
+    rare: [0, 100, 250, 550, 1300, 2800, 3000, 3300, 3900, 5400, 8400],
+}
+const poko = reactive({
+    quality: 'rare',
+    starLevel: 3,
+    experience: '0',
+})
+const expEveryPoko = {
+    beyond: 1500,
+    legend: 400,
+    epic: 75,
+    rare: 30,
+}
+const minStar = {
+    beyond: 2,
+    legend: 1,
+    epic: 1,
+    rare: 0,
+}
+const expEveryChip = {
+    beyond: 30,
+    legend: 20,
+    epic: 15,
+    rare: 10,
+}
+const expsThisLevel = computed(() => {
+    return (
+        needExps[poko.quality][poko.starLevel + 1] -
+        needExps[poko.quality][poko.starLevel]
+    )
+})
+const result = computed(() => {
+    return needExps[poko.quality]
+        .map((exp, index) => {
+            const exps =
+                exp - needExps[poko.quality][poko.starLevel] - poko.experience
+            return {
+                starLevel: index < 6 ? index + 1 : `轉${index - 4}`,
+                experience: exps,
+                chips: Math.ceil(exps / expEveryChip[poko.quality]),
+                pokos: Math.ceil(exps / expEveryPoko[poko.quality]),
+            }
+        })
+        .filter((e, i) => i > poko.starLevel)
+})
+const handleSelectQuality = (quality) => {
+    poko.quality = quality
+    poko.experience = 0
+    poko.starLevel = minStar[poko.quality]
+}
+const starClass = (i) => {
+    if (i > 5) {
+        return poko.starLevel < i ? 'star-unselect2' : 'star-select2'
+    }
+    return poko.starLevel < i ? 'star-unselect' : 'star-select'
+}
+const handleChangeLevel = (level) => {
+    if (level < minStar[poko.quality]) return
+    poko.starLevel = level
+    poko.experience = 0
+}
+</script>
+
+<template>
+    <main>
+        <div class="star-input-container">
+            <div>
+                <div>精靈階級</div>
+                <div class="quality-box">
+                    <div
+                        @click="handleSelectQuality('rare')"
+                        :class="
+                            poko.quality == 'rare' ? 'activeRare' : 'qualityBtn'
+                        "
+                    >
+                        稀有
+                    </div>
+                    <div
+                        @click="handleSelectQuality('epic')"
+                        :class="
+                            poko.quality == 'epic' ? 'activeEpic' : 'qualityBtn'
+                        "
+                    >
+                        史詩
+                    </div>
+                    <div
+                        @click="handleSelectQuality('legend')"
+                        :class="
+                            poko.quality == 'legend'
+                                ? 'activeLegend'
+                                : 'qualityBtn'
+                        "
+                    >
+                        傳說
+                    </div>
+                    <div
+                        @click="handleSelectQuality('beyond')"
+                        :class="
+                            poko.quality == 'beyond'
+                                ? 'activeBeyond'
+                                : 'qualityBtn'
+                        "
+                    >
+                        超越
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>目前星級</div>
+                <div class="star-box">
+                    <div>
+                        <IconStar
+                            class="star-select"
+                            @click="handleChangeLevel(0)"
+                        />
+                        <IconStar
+                            v-for="i in 5"
+                            :key="i"
+                            :class="starClass(i)"
+                            @click="handleChangeLevel(i)"
+                        />
+                    </div>
+                    <div>
+                        <IconStar
+                            :class="
+                                poko.starLevel < 5
+                                    ? 'star-unselect2'
+                                    : 'star-select2'
+                            "
+                            @click="handleChangeLevel(5)"
+                        />
+                        <IconStar
+                            v-for="i in 5"
+                            :key="i"
+                            :class="starClass(i + 5)"
+                            @click="handleChangeLevel(i + 5)"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>目前星級經驗</div>
+                <div>
+                    <input
+                        type="range"
+                        v-model="poko.experience"
+                        min="0"
+                        :max="expsThisLevel - 1"
+                    />
+                    {{ `${poko.experience} / ${expsThisLevel}` }}
+                </div>
+            </div>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td>目標星級</td>
+                    <td>還缺經驗</td>
+                    <td>還缺碎片</td>
+                    <td>還缺寵物(隻)</td>
+                </tr>
+                <tr v-for="data in result" :key="data.starLevel">
+                    <td>{{ data.starLevel }}</td>
+                    <td>{{ data.experience }}</td>
+                    <td>{{ data.chips }}</td>
+                    <td>{{ data.pokos }}</td>
+                </tr>
+            </table>
+            <div v-if="poko.starLevel === 10">已經是最大星級了</div>
+        </div>
+    </main>
+</template>
+<style scoped>
+.star-input-container > div {
+    display: flex;
+    border-width: 1px;
+    border-color: rgb(163 163 163);
+    border-style: solid;
+    width: 100%;
+    align-items: center;
+    padding: 0.25rem;
+}
+.star-unselect {
+    color: rgb(255, 251, 202);
+}
+.star-unselect2 {
+    color: rgb(255, 174, 248);
+}
+.star-select {
+    color: rgb(255, 238, 0);
+}
+.star-select2 {
+    color: rgb(255, 81, 241);
+}
+.quality-box {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0.5rem;
+}
+.star-box > div {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.star-box {
+    width: 100%;
+    padding: 0.5rem;
+}
+.star-input-container > div :nth-child(1) {
+    flex-shrink: 0;
+}
+table {
+    width: 100%;
+}
+.qualityBtn {
+    border-width: 3px;
+    border-color: rgb(163 163 163);
+    border-style: solid;
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+}
+.activeBeyond {
+    border-width: 3px;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(
+        135deg,
+        #3632ff 0%,
+        #3eff30 33%,
+        #ffff00 66%,
+        #ff5900 100%
+    );
+    border-style: solid;
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+}
+.activeLegend {
+    border-width: 3px;
+    border-color: rgb(255, 253, 114);
+    border-style: solid;
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+}
+.activeEpic {
+    border-width: 3px;
+    border-color: rgb(243, 116, 255);
+    border-style: solid;
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+}
+.activeRare {
+    border-width: 3px;
+    border-color: rgb(136, 123, 255);
+    border-style: solid;
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+}
+</style>

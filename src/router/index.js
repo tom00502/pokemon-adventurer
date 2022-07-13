@@ -27,6 +27,11 @@ const router = createRouter({
             name: 'reincarnation',
             component: () => import('@/components/Reincarnation.vue'),
         },
+        {
+            path: '/star',
+            name: 'star',
+            component: () => import('@/views/StarView.vue'),
+        },
     ],
 })
 
