@@ -4,16 +4,16 @@ const table = {
     口袋怪獸: [
         { question: '以下絕招中威力不同於其他三只的是?', answer: '瓦割' },
         { question: '以下絕招中初始PP不同於其他三只的是?', answer: '起风' },
-        { question: '以下不屬於舊版四大物盾的是', answer: '大綱蛇' },
         { question: '以下HP不同於其他三只的是', answer: '叉字蝠' },
         { question: '以下物功不同於其他三只的是', answer: '暴鯉龍' },
         { question: '以下物防不同於其他三只的是', answer: '沙河馬' },
         { question: '以下特功不同於其他三只的是', answer: '獵斑鰻' },
-        { question: '以下特防不同於其他三只的是', answer: '搖籃百合' },
+        { question: '以下特防不同於其他三只的是?', answer: '摇篮百合' },
         { question: '以下速度不同於其他三只的是', answer: '愛心魚' },
         { question: '以下絕招命中不同於其他三只的是', answer: '岩石封殺' },
         { question: '下面沒有隨身攜帶物品的神奇寶貝是', answer: '可達鴨' },
         { question: '口袋怪獸中，總共有多少種屬性', answer: '18' },
+        { question: '以下不屬於舊版四大物盾的是', answer: '大綱蛇' },
         { question: '以下四只口袋怪獸裡,誰最重', answer: '古拉頓' },
         {
             question: '圖圖犬,咩利羊,呆呆獸,電龍的尾巴末端分別是什麼顏色',
@@ -54,6 +54,12 @@ const table = {
         { question: '瀕死的精靈可以去哪裡治療?', answer: '精靈中心' },
         { question: '真新鎮在長青市那個方位?', answer: '南方' },
         { question: '下麵不屬於精靈獲得技能方式是?', answer: '華麗大賽' },
+        { question: '下麵哪種不屬於精靈的培養方式?', answer: '覺醒' },
+        { question: '那個培養方式是本作特有的?', answer: '轉生' },
+        {
+            question: '洗鍊個體值的神奇膠囊可以從那裏獲得?',
+            answer: '伊布的宝藏',
+        },
         { question: '列車正在維修的是哪個市', answer: '吉花市' },
         { question: '在滿金市開發佈會的歌星叫什麼', answer: '梨香' },
         { question: 'MEGA石碎片主要是在哪個副本產出', answer: '聯盟大會' },
@@ -64,10 +70,8 @@ const table = {
         { question: '下面那種不是遊戲中的扭蛋機', answer: '糖果扭蛋機' },
         { question: '下面那種方式不是遊戲體力恢復的方式', answer: '旅館休息' },
         { question: '下面那種途徑不能獲得攜帶物的', answer: '遠征之路' },
-        { question: '下面那種不屬於精靈的培養方式', answer: '覺醒' },
         { question: '狩獵場在下面那個城市', answer: '滿金市' },
         { question: '列車正在維修的是那個城市', answer: '吉花市' },
-        { question: '哪個培養方式是本作特有的', answer: '轉生' },
         { question: '在野外草叢捕捉寵物，需要消耗', answer: '疲勞' },
         { question: '我們的疲勞可以用來幹什麼', answer: '捕捉寵物' },
         { question: '精靈有那些途徑獲得經驗', answer: '選項全對' },
@@ -76,29 +80,68 @@ const table = {
             answer: '捕捉寵物',
         },
         { question: '八大蝶可以在下面那個地點捕捉', answer: '桐樹林' },
-        {
-            question: '洗鍊個體質的神奇膠囊可以從哪裡獲得',
-            answer: '伊布的寶藏',
-        },
     ],
     屬性克制: [
         { question: '草系被多少種屬性克制?', answer: '5' },
         { question: '鋼系克制下麵那3種屬性?', answer: '岩石系、冰系、妖精' },
+        { question: '電系克制下麵那2種屬性?', answer: '水系、飞行系' },
         {
             question: '地面系克制屬性的數量和下面哪種屬性一樣多?',
             answer: '格斗系',
         },
+        { question: '飛行系克制下麵那3種屬性', answer: '格鬥系、蟲系、草系' },
+        { question: '草系克制下麵那3種屬性', answer: '地面系、岩石系、水系' },
+        { question: '水系克制下麵那3種屬性', answer: '地面系、岩石系、火系' },
+        { question: '蟲系克制下麵那3種屬性', answer: '超能系、草系、惡系' },
+        { question: '超能力系克制下麵那2種屬性', answer: '格鬥系、毒系' },
+        { question: '毒系克制下麵那2種屬性', answer: '草系、妖精系' },
         { question: '岩石系克制下面哪種屬性', answer: '飛行系' },
+        { question: '格鬥系克制下面哪種屬性', answer: '冰系' },
+        { question: '妖精系克制下面哪種屬性', answer: '格鬥系、龍系、惡系' },
+        { question: '龍系克制下面哪種屬性', answer: '龍系' },
+        { question: '普通系克制多少種屬性', answer: '0' },
+        { question: '火系克制多少種屬性', answer: '4' },
         { question: '岩石系被克制的數量和下面哪種屬性一樣多', answer: '草系' },
+        {
+            question: '超能力系被下麵那3種屬性克制',
+            answer: '蟲系、幽靈系、惡系',
+        },
+        { question: '惡系被那3種屬性克制', answer: '格鬥系、蟲系、妖精系' },
+        { question: '鋼系被那3種屬性克制', answer: '格鬥系、地面系、火系' },
+        { question: '龍系被那3種屬性克制', answer: '冰系、龍系、妖精系' },
+        { question: '幽靈系被下面哪2種屬性克制', answer: '幽靈系,惡系' },
+        { question: '妖精系被下面哪種屬性', answer: '毒系、鋼系' },
+        { question: '普通系被下面哪種屬性', answer: '格鬥系' },
         {
             question: '以下哪三種屬性克制格鬥系',
             answer: '飛行系,超能力系,妖精系',
         },
+        {
+            question: '以下哪三種屬性克制飛行系',
+            answer: '岩石系,電系,冰系',
+        },
         { question: '以下哪三種屬性克制蟲系', answer: '飛行系,岩石系,火系' },
+        { question: '以下哪三種屬性克制地面系', answer: '水系,草系,冰系' },
+        { question: '以下哪2種屬性克制毒系', answer: '地面系、超能力系' },
         { question: '克制鬼蟬的屬性有幾個', answer: '5' },
-        { question: '幽靈系被下面哪2種屬性克制', answer: '幽靈系,惡系' },
         { question: '下面哪種屬性不克制冰系', answer: '超能力系' },
+        { question: '下面哪種屬性不克制草系', answer: '普通系' },
         { question: '下面哪種屬性克制電系', answer: '地面系' },
+        { question: '下列屬性中被克制最多的屬性是', answer: '岩石系' },
+        { question: '冰系不克制下面哪種屬性', answer: '水' },
+        {
+            question: '對超能抗性兩倍，並火屬性對其有兩倍效果，該PM的屬性為',
+            answer: '鋼',
+        },
+        {
+            question:
+                '已知某兩個屬性任意混合，且幽靈對其效果兩倍，飛行對其效果兩倍，蟲對其效果減半，則超能對其',
+            answer: '正常效果',
+        },
+        {
+            question: '屬性為草+冰，特性厚脂肪，當受到火系傷害係數為',
+            answer: '2',
+        },
     ],
     其他: [
         {
@@ -114,7 +157,7 @@ const table = {
 
 <template>
     <main>
-        寶可夢問答
+        寶可問答
         <div v-for="(category, key) in table" :key="key">
             <div class="text-red">{{ key }}</div>
             <table>
