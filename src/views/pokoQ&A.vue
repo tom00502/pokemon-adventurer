@@ -4,6 +4,7 @@ const table = {
     口袋怪獸: [
         { question: '以下絕招中威力不同於其他三只的是?', answer: '瓦割' },
         { question: '以下絕招中初始PP不同於其他三只的是?', answer: '起风' },
+        { question: '下麵沒有隨身攜帶物品的神奇寶貝是?', answer: '可達鴨' },
         { question: '以下HP不同於其他三只的是', answer: '叉字蝠' },
         { question: '以下物功不同於其他三只的是', answer: '暴鯉龍' },
         { question: '以下物防不同於其他三只的是', answer: '沙河馬' },
@@ -11,7 +12,10 @@ const table = {
         { question: '以下特防不同於其他三只的是?', answer: '摇篮百合' },
         { question: '以下速度不同於其他三只的是', answer: '愛心魚' },
         { question: '以下絕招命中不同於其他三只的是', answer: '岩石封殺' },
-        { question: '下面沒有隨身攜帶物品的神奇寶貝是', answer: '可達鴨' },
+        {
+            question: '已知小磁怪的體蟲為6千克，那三合一磁怪的體重是多少?',
+            answer: '60',
+        },
         { question: '口袋怪獸中，總共有多少種屬性', answer: '18' },
         { question: '以下不屬於舊版四大物盾的是', answer: '大綱蛇' },
         { question: '以下四只口袋怪獸裡,誰最重', answer: '古拉頓' },
@@ -35,10 +39,6 @@ const table = {
         },
         { question: '小火龍是第幾世代的寶可夢', answer: '第一世代' },
         { question: '木守宮是第幾世代的寶可夢', answer: '第三世代' },
-        {
-            question: '已知小磁怪的體重為6千克，那三合一磁怪的體重是多少',
-            answer: '60',
-        },
         { question: '卡拉卡拉頭上戴著的是誰的頭骨', answer: '母親' },
         { question: '圖鑒編號為001的是下麵那只精靈', answer: '妙蛙種子' },
         {
@@ -57,9 +57,10 @@ const table = {
         { question: '下麵哪種不屬於精靈的培養方式?', answer: '覺醒' },
         { question: '那個培養方式是本作特有的?', answer: '轉生' },
         {
-            question: '洗鍊個體值的神奇膠囊可以從那裏獲得?',
+            question: '洗練個體值的神奇膠囊可以從那裏獲得?',
             answer: '伊布的宝藏',
         },
+        { question: '我們的疲勞可以用來幹什麼?', answer: '捕捉寵物' },
         { question: '列車正在維修的是哪個市', answer: '吉花市' },
         { question: '在滿金市開發佈會的歌星叫什麼', answer: '梨香' },
         { question: 'MEGA石碎片主要是在哪個副本產出', answer: '聯盟大會' },
@@ -73,7 +74,6 @@ const table = {
         { question: '狩獵場在下面那個城市', answer: '滿金市' },
         { question: '列車正在維修的是那個城市', answer: '吉花市' },
         { question: '在野外草叢捕捉寵物，需要消耗', answer: '疲勞' },
-        { question: '我們的疲勞可以用來幹什麼', answer: '捕捉寵物' },
         { question: '精靈有那些途徑獲得經驗', answer: '選項全對' },
         {
             question: '首沖送的巨鉗螳螂，技能"點到為止"，最適合用來',
@@ -82,9 +82,14 @@ const table = {
         { question: '八大蝶可以在下面那個地點捕捉', answer: '桐樹林' },
     ],
     屬性克制: [
+        { question: '普通系克制多少種屬性?', answer: '0' },
         { question: '草系被多少種屬性克制?', answer: '5' },
         { question: '鋼系克制下麵那3種屬性?', answer: '岩石系、冰系、妖精' },
         { question: '電系克制下麵那2種屬性?', answer: '水系、飞行系' },
+        {
+            question: '對超能抗性兩倍，並火屬性對其有兩倍效果，該PM屬性為?',
+            answer: '钢',
+        },
         {
             question: '地面系克制屬性的數量和下面哪種屬性一樣多?',
             answer: '格斗系',
@@ -99,7 +104,6 @@ const table = {
         { question: '格鬥系克制下面哪種屬性', answer: '冰系' },
         { question: '妖精系克制下面哪種屬性', answer: '格鬥系、龍系、惡系' },
         { question: '龍系克制下面哪種屬性', answer: '龍系' },
-        { question: '普通系克制多少種屬性', answer: '0' },
         { question: '火系克制多少種屬性', answer: '4' },
         { question: '岩石系被克制的數量和下面哪種屬性一樣多', answer: '草系' },
         {
@@ -129,10 +133,6 @@ const table = {
         { question: '下面哪種屬性克制電系', answer: '地面系' },
         { question: '下列屬性中被克制最多的屬性是', answer: '岩石系' },
         { question: '冰系不克制下面哪種屬性', answer: '水' },
-        {
-            question: '對超能抗性兩倍，並火屬性對其有兩倍效果，該PM的屬性為',
-            answer: '鋼',
-        },
         {
             question:
                 '已知某兩個屬性任意混合，且幽靈對其效果兩倍，飛行對其效果兩倍，蟲對其效果減半，則超能對其',

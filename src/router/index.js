@@ -23,6 +23,11 @@ const router = createRouter({
             component: () => import('@/views/pokoQ&A.vue'),
         },
         {
+            path: '/fieldwork',
+            name: 'fieldwork',
+            component: () => import('@/views/fieldwork.vue'),
+        },
+        {
             path: '/reincarnation',
             name: 'reincarnation',
             component: () => import('@/components/Reincarnation.vue'),

@@ -23,6 +23,7 @@ import Reincarnation from '@/components/Reincarnation.vue'
         <nav>
             <RouterLink to="/">Home</RouterLink>
             <RouterLink to="/pokoQ&A">寶可問答</RouterLink>
+            <RouterLink to="/fieldwork">田野調查</RouterLink>
             <RouterLink to="/reincarnation">轉生模擬</RouterLink>
             <RouterLink to="/star">星級計算</RouterLink>
         </nav>
