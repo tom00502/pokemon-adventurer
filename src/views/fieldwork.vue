@@ -446,6 +446,108 @@ const table = [
         level: 'great',
         checkAward: false,
     },
+
+    {
+        work: '將火系的精靈,提升10級',
+        award: '',
+        level: 'normal',
+        checkAward: false,
+    },
+    {
+        work: '將電系的精靈,提升10級',
+        award: '',
+        level: 'normal',
+        checkAward: false,
+    },
+    {
+        work: '將水系的精靈,提升10級',
+        award: '',
+        level: 'normal',
+        checkAward: false,
+    },
+    {
+        work: '將冰系的精靈,提升10級',
+        award: '',
+        level: 'normal',
+        checkAward: false,
+    },
+    {
+        work: '將蟲系的精靈,提升10級',
+        award: '',
+        level: 'normal',
+        checkAward: false,
+    },
+    {
+        work: '將草系的精靈,提升10級',
+        award: '',
+        level: 'normal',
+        checkAward: false,
+    },
+    {
+        work: '將地面系的精靈,提升10級',
+        award: '',
+        level: 'normal',
+        checkAward: false,
+    },
+    {
+        work: '將格鬥系的精靈,提升10級',
+        award: '',
+        level: 'normal',
+        checkAward: false,
+    },
+    {
+        work: '將超能力系的精靈,提升10級',
+        award: '',
+        level: 'normal',
+        checkAward: false,
+    },
+    {
+        work: '將一般系的精靈,提升10級',
+        award: '',
+        level: 'normal',
+        checkAward: false,
+    },
+    { work: '進化2次精靈', award: '', level: 'normal', checkAward: false },
+    { work: '捕捉20只精靈', award: '', level: 'normal', checkAward: false },
+    {
+        work: '使用1次可達鴨噴壺',
+        award: '',
+        level: 'normal',
+        checkAward: false,
+    },
+    { work: '使用3次體力飲料', award: '', level: 'normal', checkAward: false },
+    { work: '使用10次誘捕噴霧', award: '', level: 'normal', checkAward: false },
+    {
+        work: '使用30次神奇糖果(中)',
+        award: '',
+        level: 'normal',
+        checkAward: false,
+    },
+    {
+        work: '使用50次神奇糖果(小)',
+        award: '',
+        level: 'normal',
+        checkAward: false,
+    },
+    { work: '擊敗2次道館館主', award: '', level: 'normal', checkAward: false },
+    {
+        work: '擊敗5次水系的精靈',
+        award: '',
+        level: 'normal',
+        checkAward: false,
+    },
+    {
+        work: '擊敗5次電系的精靈',
+        award: '',
+        level: 'normal',
+        checkAward: false,
+    },
+    {
+        work: '擊敗5次格鬥系的精靈',
+        award: '',
+        level: 'normal',
+        checkAward: false,
+    },
 ]
 </script>
 
