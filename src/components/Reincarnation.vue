@@ -59,7 +59,13 @@ const board = reactive({
 })
 const steps = ref([])
 const nowSelect = reactive({ type: 'hitPoint', quality: 'perfect' })
-const step = reactive({ count: 0, type: '', quality: '', overflow: 0 })
+const step = reactive({
+    count: 0,
+    type: '',
+    quality: '',
+    overflow: 0,
+    overflowMinus: 0,
+})
 const effect = {
     hitPoint: 'defence',
     defence: 'block',
@@ -94,23 +100,25 @@ const useGem = (type = nowSelect.type, quality = nowSelect.quality) => {
         board[type] += 2
     }
     if (board[type] > 20) {
+        step.overflow += board[type] - 20
         board[type] = 20
     }
     if (board[effect[type]] < 0) {
         board[effect[type]] = 0
-        step.overflow++
+        step.overflowMinus++
     }
     if (step.type === type && step.quality === quality) {
         step.count++
     } else {
         if (step.count !== 0) {
-            const { count, type, quality } = step
-            steps.value.push({ count, type, quality })
+            const { count, type, quality, overflow, overflowMinus } = step
+            steps.value.push({ count, type, quality, overflow, overflowMinus })
         }
         step.type = type
         step.count = 1
         step.quality = quality
         step.overflow = 0
+        step.overflowMinus = 0
     }
 }
 
@@ -169,39 +177,51 @@ const undo = () => {
     step.count--
     const { quality, type } = step
     if (quality === 'low') {
-        board[type] -= 1
         if (step.overflow == 0) {
-            board[effect[type]] += 1
+            board[type] -= 1
         } else {
             step.overflow--
+        }
+        if (step.overflowMinus == 0) {
+            board[effect[type]] += 1
+        } else {
+            step.overflowMinus--
         }
     }
     if (quality === 'normal') {
-        board[type] -= 2
         if (step.overflow == 0) {
+            board[type] -= 2
+        } else {
+            step.overflow -= 2
+        }
+        if (step.overflowMinus == 0) {
             board[effect[type]] += 1
         } else {
-            step.overflow--
+            step.overflowMinus--
         }
     }
     if (quality === 'perfect') {
-        board[type] -= 2
+        if (step.overflow == 0) {
+            board[type] -= 2
+        } else {
+            step.overflow -= 2
+        }
     }
     if (step.count == 0) {
         if (steps.value.length == 0) {
             return
         }
-        const { count, quality, type, overflow } = steps.value.pop()
+        const { count, quality, type, overflow, overflowMinus } =
+            steps.value.pop()
         step.count = count
         step.quality = quality
         step.type = type
         step.overflow = overflow
+        step.overflowMinus = overflowMinus
     }
 }
 const setQuality = (quality) => {
-    console.log(quality)
     nowSelect.quality = quality
-    console.log(nowSelect.quality)
 }
 const setType = (type) => {
     nowSelect.type = type
@@ -366,6 +386,9 @@ button {
 .select-quality > :nth-child(2) {
     margin-top: auto;
     text-align: center;
+    background: rgb(14, 50, 192);
+    color: white;
+    padding: 8px;
 }
 .select-quality > :nth-child(3) {
     box-shadow: 0px 1px 0px 0px #fff6af;
@@ -393,13 +416,15 @@ button {
 }
 .select-type > div.active {
     border-left: 0px;
-    background: rgb(160, 160, 255);
+    background: rgb(160, 212, 255);
 }
 .use-gen-borad {
     display: flex;
     justify-content: space-between;
-    background: rgb(160, 160, 255);
+    background: rgb(160, 212, 255);
     max-width: 500px;
     width: 100%;
+    border: 1px solid gray;
+    border-radius: 8px;
 }
 </style>
