@@ -310,10 +310,15 @@ button {
     margin: 8px;
     padding: 4px;
 }
-.statistics-board {
-    display: flex;
-    gap: 8px;
-    justify-content: space-between;
+.statistics-board > :nth-child(2) {
+    margin-top: 16px;
+}
+@media (min-width: 1024px) {
+    .statistics-board {
+        display: flex;
+        gap: 8px;
+        justify-content: space-between;
+    }
 }
 .board-value {
     display: flex;
