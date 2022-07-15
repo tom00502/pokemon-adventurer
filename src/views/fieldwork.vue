@@ -106,7 +106,6 @@ const table = [
         award: '阿勃梭魯之笛',
         level: 'epic',
         checkAward: false,
-        checkWord: false,
     },
     {
         work: '捕捉4只一般和飛行系的精靈',
@@ -117,6 +116,12 @@ const table = [
     {
         work: '捕捉4只岩石和地面系的精靈',
         award: '阿勃梭魯之笛',
+        level: 'epic',
+        checkAward: false,
+    },
+    {
+        work: '捕捉4只電和鋼系的精靈',
+        award: '',
         level: 'epic',
         checkAward: false,
     },
@@ -216,9 +221,14 @@ const table = [
     },
     {
         work: '擊敗8次道館館主',
-        award: 'GEN3稀有之笛',
+        award: 'GEN3史詩之笛',
         level: 'rare',
         checkAward: false,
+    },
+    {
+        work: '進化5次精靈',
+        award: '金幣1500',
+        level: 'rare',
     },
     {
         work: '進化8次精靈',
@@ -263,6 +273,12 @@ const table = [
         checkAward: false,
     },
     {
+        work: '使用5次灼傷藥',
+        award: 'GEN1稀有之笛',
+        level: 'rare',
+        checkAward: false,
+    },
+    {
         work: '使用5次解毒藥',
         award: '禦三家之笛',
         level: 'rare',
@@ -278,6 +294,19 @@ const table = [
     { work: '捕捉5只水系的精靈', award: '', level: 'great', checkAward: false },
     { work: '捕捉5只火系的精靈', award: '', level: 'great', checkAward: false },
     { work: '捕捉5只龍系的精靈', award: '', level: 'great', checkAward: false },
+    { work: '捕捉5只鋼系的精靈', award: '', level: 'great', checkAward: false },
+    {
+        work: '捕捉5只岩石系的精靈',
+        award: '',
+        level: 'great',
+        checkAward: false,
+    },
+    {
+        work: '捕捉5只地面系的精靈',
+        award: '',
+        level: 'great',
+        checkAward: false,
+    },
     {
         work: '捕捉5只幽靈系的精靈',
         award: '',
@@ -300,6 +329,8 @@ const table = [
         checkAward: false,
     },
     { work: '進化3次蟲系的精靈', award: '', level: 'great', checkAward: false },
+    { work: '進化3次毒系的精靈', award: '', level: 'great', checkAward: false },
+    { work: '進化3次鋼系的精靈', award: '', level: 'great', checkAward: false },
     {
         work: '進化3次妖精系的精靈',
         award: '',
@@ -308,6 +339,30 @@ const table = [
     },
     { work: '進化3次電系的精靈', award: '', level: 'great', checkAward: false },
     {
+        work: '進化3次飛行系的精靈',
+        award: '',
+        level: 'great',
+        checkAward: false,
+    },
+    {
+        work: '進化3次幽靈系的精靈',
+        award: '',
+        level: 'great',
+        checkAward: false,
+    },
+    {
+        work: '進化3次岩石系的精靈',
+        award: '',
+        level: 'great',
+        checkAward: false,
+    },
+    {
+        work: '進化3次地面系的精靈',
+        award: '',
+        level: 'great',
+        checkAward: false,
+    },
+    {
         work: '擊敗4次一般和飛行系的精靈',
         award: '',
         level: 'great',
@@ -315,6 +370,12 @@ const table = [
     },
     {
         work: '擊敗4次岩石和水系的精靈',
+        award: '',
+        level: 'great',
+        checkAward: false,
+    },
+    {
+        work: '擊敗4次蟲和飛行系的精靈',
         award: '',
         level: 'great',
         checkAward: false,
@@ -405,6 +466,24 @@ const table = [
         checkAward: false,
     },
     {
+        work: '將一般和飛行系的精靈,提升10級',
+        award: '',
+        level: 'great',
+        checkAward: false,
+    },
+    {
+        work: '將蟲和飛行系的精靈,提升10級',
+        award: '',
+        level: 'great',
+        checkAward: false,
+    },
+    {
+        work: '將岩石和水系的精靈,提升10級',
+        award: '',
+        level: 'great',
+        checkAward: false,
+    },
+    {
         work: '將岩石和地面系的精靈,提升10級',
         award: '',
         level: 'great',
@@ -446,7 +525,11 @@ const table = [
         level: 'great',
         checkAward: false,
     },
-
+    {
+        work: '擊敗6次道館館主',
+        award: '金幣1500',
+        level: 'great',
+    },
     {
         work: '將火系的精靈,提升10級',
         award: '',
@@ -507,7 +590,26 @@ const table = [
         level: 'normal',
         checkAward: false,
     },
+    {
+        work: '將龍系的精靈,提升10級',
+        award: '',
+        level: 'normal',
+        checkAward: false,
+    },
+    {
+        work: '將鋼系的精靈,提升10級',
+        award: '',
+        level: 'normal',
+        checkAward: false,
+    },
+    {
+        work: '將飛行系的精靈,提升10級',
+        award: '',
+        level: 'normal',
+        checkAward: false,
+    },
     { work: '進化2次精靈', award: '', level: 'normal', checkAward: false },
+    { work: '捕捉10只精靈', award: '', level: 'normal', checkAward: false },
     { work: '捕捉20只精靈', award: '', level: 'normal', checkAward: false },
     {
         work: '使用1次可達鴨噴壺',
@@ -544,6 +646,12 @@ const table = [
     },
     {
         work: '擊敗5次格鬥系的精靈',
+        award: '',
+        level: 'normal',
+        checkAward: false,
+    },
+    {
+        work: '使用100次精靈球捕捉精靈',
         award: '',
         level: 'normal',
         checkAward: false,
