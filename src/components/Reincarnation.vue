@@ -13,7 +13,14 @@ class gemCount {
 }
 const chartData = computed(() => {
     return {
-        labels: ['血量', '特攻', '特防', '速度', '防禦', '攻擊'],
+        labels: [
+            `血量(${board.hitPoint})`,
+            `特攻(${board.contact})`,
+            `特防(${board.defence})`,
+            `速度(${board.speed})`,
+            `防禦(${board.block})`,
+            `攻擊(${board.attack})`,
+        ],
         datasets: [
             {
                 label: '轉生石板成長檔',
@@ -36,13 +43,19 @@ const chartData = computed(() => {
         ],
     }
 })
+const labelColors = computed(() => {
+    return Object.values(board).map((data) => {
+        if (data == 20) return 'red'
+        return 'black'
+    })
+})
 const board = reactive({
     hitPoint: 0,
-    attack: 0,
-    block: 0,
     contact: 0,
     defence: 0,
     speed: 0,
+    block: 0,
+    attack: 0,
 })
 const steps = ref([])
 const nowSelect = reactive({ type: 'hitPoint', quality: 'perfect' })
@@ -232,14 +245,9 @@ const discript = computed(() => {
 <template>
     <div>轉生模擬器</div>
     <div>
-        <RadarChartVue :chartData="chartData" />
+        <RadarChartVue :chartData="chartData" :labelColors="labelColors" />
     </div>
-    <div class="board-value">
-        <div v-for="(value, type) in board" :key="type">
-            {{ `${names[type]}(${value})` }}
-        </div>
-    </div>
-    <div>
+    <div class="action-board">
         <div class="use-gen-borad">
             <div class="select-quality">
                 <div class="quality-select">
@@ -276,8 +284,10 @@ const discript = computed(() => {
                 </div>
             </div>
         </div>
-        <button @click="undo">上一步</button>
-        <button @click="clear">全部重置</button>
+        <div>
+            <button @click="undo">上一步</button>
+            <button @click="clear">全部重置</button>
+        </div>
     </div>
     <div class="statistics-board">
         <div>
@@ -319,6 +329,11 @@ button {
         gap: 8px;
         justify-content: space-between;
     }
+}
+.action-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .board-value {
     display: flex;
@@ -385,5 +400,6 @@ button {
     justify-content: space-between;
     background: rgb(160, 160, 255);
     max-width: 500px;
+    width: 100%;
 }
 </style>
