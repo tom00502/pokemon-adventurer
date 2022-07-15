@@ -1,6 +1,7 @@
 <script setup>
 import { ref, reactive, computed } from 'vue'
 import RadarChartVue from '@/components/RadarChart.vue'
+import plans from '@/assets/steps.json'
 class gemCount {
     constructor() {
         this.low = 0
@@ -45,8 +46,11 @@ const chartData = computed(() => {
 })
 const labelColors = computed(() => {
     return Object.values(board).map((data) => {
-        if (data == 20) return 'red'
-        return 'black'
+        if (data == 0) return 'black'
+        if (data < 11) return 'green'
+        if (data < 16) return 'blue'
+        if (data < 20) return 'purple'
+        return 'red'
     })
 })
 const board = reactive({
@@ -57,6 +61,7 @@ const board = reactive({
     block: 0,
     attack: 0,
 })
+const selectPlan = ref('')
 const steps = ref([])
 const nowSelect = reactive({ type: 'hitPoint', quality: 'perfect' })
 const step = reactive({
@@ -148,7 +153,7 @@ const statistics = computed(() => {
     }
 })
 const gemLabel = (gem, type) => {
-    let label = `${names[type]}寶石:(${gem.total}) `
+    let label = `${names[type]}寶石(${gem.total}): `
     if (gem.perfect) {
         label += `極好(${gem.perfect}) `
     }
@@ -169,6 +174,7 @@ const clear = () => {
     board.speed = 0
     steps.value = []
     step.count = 0
+    selectPlan.value = ''
 }
 const undo = () => {
     if (step.count == 0) {
@@ -261,9 +267,34 @@ const genDiscript = {
 const discript = computed(() => {
     return genDiscript[nowSelect.type][nowSelect.quality]
 })
+const usePlan = (plan = selectPlan.value) => {
+    if (plan == '') return
+    steps.value = plans[plan].steps
+    const { count, quality, type, overflow, overflowMinus } = plans[plan].step
+    step.count = count
+    step.quality = quality
+    step.type = type
+    step.overflow = overflow
+    step.overflowMinus = overflowMinus
+    const { hitPoint, contact, defence, speed, block, attack } =
+        plans[plan].board
+    board.hitPoint = hitPoint
+    board.contact = contact
+    board.defence = defence
+    board.speed = speed
+    board.block = block
+    board.attack = attack
+}
 </script>
 <template>
     <div>轉生模擬器</div>
+    <select @change="usePlan()" v-model="selectPlan">
+        <option value="">請選擇方案</option>
+        <option v-for="(value, key) in plans" :key="key">{{ key }}</option>
+    </select>
+    <div class="plan-discript" v-if="selectPlan">
+        {{ plans[selectPlan].discript }}
+    </div>
     <div>
         <RadarChartVue :chartData="chartData" :labelColors="labelColors" />
     </div>
@@ -426,5 +457,9 @@ button {
     width: 100%;
     border: 1px solid gray;
     border-radius: 8px;
+}
+.plan-discript {
+    background: pink;
+    padding: 8px;
 }
 </style>
