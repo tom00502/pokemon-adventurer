@@ -3,60 +3,55 @@ import { RouterLink, RouterView } from 'vue-router'
 const table = [
     {
         work: '提升1次毒和飛行系精靈的品階',
-        award: '胡地之笛、28800',
+        award: '胡地之笛、金幣28800',
         level: 'legend',
     },
     {
         work: '提升1次蟲和飛行系精靈的品階',
-        award: '胡地之笛、28800',
+        award: '胡地之笛、金幣28800',
         level: 'legend',
     },
     {
         work: '提升1次草和超能力系精靈的品階',
-        award: '胡地之笛、28800',
+        award: '胡地之笛、金幣28800',
         level: 'legend',
         checkWord: false,
     },
     {
         work: '提升1次一般和飛行系精靈的品階',
-        award: '胡地之笛、28800',
+        award: '胡地之笛、金幣28800',
         level: 'legend',
-        checkWord: false,
     },
     {
         work: '提升1次草和毒系精靈的品階',
-        award: '胡地之笛、28800',
+        award: '胡地之笛、金幣28800',
         level: 'legend',
     },
     {
         work: '提升1次地面和岩石系精靈的品階',
-        award: '胡地之笛、28800',
+        award: '胡地之笛、金幣28800',
         level: 'legend',
         checkWord: false,
     },
     {
         work: '提升1次岩石和水系精靈的品階',
-        award: '胡地之笛、28800',
+        award: '胡地之笛、金幣28800',
         level: 'legend',
-        checkWord: false,
     },
     {
         work: '提升1次蟲和毒系精靈的品階',
-        award: '大岩蛇之笛、28800',
+        award: '大岩蛇之笛、金幣28800',
         level: 'legend',
-        checkAward: false,
     },
     {
         work: '提升1次一般和妖精系精靈的品階',
-        award: '大岩蛇之笛、28800',
+        award: '大岩蛇之笛、金幣28800',
         level: 'legend',
-        checkAward: false,
     },
     {
         work: '提升1次電和鋼系精靈的品階',
-        award: '大岩蛇之笛、28800',
+        award: '大岩蛇之笛、金幣28800',
         level: 'legend',
-        checkWord: false,
     },
     {
         work: '使用1次大師球捕捉精靈',
@@ -139,6 +134,12 @@ const table = [
     },
     {
         work: '進化1次草和超能力系的精靈',
+        award: 'GEN1史詩之笛',
+        level: 'epic',
+        checkAward: false,
+    },
+    {
+        work: '進化1次蟲和毒系的精靈',
         award: 'GEN1史詩之笛',
         level: 'epic',
         checkAward: false,
@@ -244,6 +245,12 @@ const table = [
     },
     {
         work: '使用2次活力碎片',
+        award: '胡地之笛',
+        level: 'rare',
+        checkAward: false,
+    },
+    {
+        work: '使用2次活力塊',
         award: '差不多娃娃之笛',
         level: 'rare',
         checkAward: false,
@@ -296,6 +303,18 @@ const table = [
     { work: '捕捉5只龍系的精靈', award: '', level: 'great', checkAward: false },
     { work: '捕捉5只鋼系的精靈', award: '', level: 'great', checkAward: false },
     {
+        work: '捕捉5只格鬥系的精靈',
+        award: '',
+        level: 'great',
+        checkAward: false,
+    },
+    {
+        work: '捕捉5只妖精系的精靈',
+        award: '',
+        level: 'great',
+        checkAward: false,
+    },
+    {
         work: '捕捉5只岩石系的精靈',
         award: '',
         level: 'great',
@@ -321,6 +340,12 @@ const table = [
     },
     { work: '捕捉30只精靈', award: '', level: 'great', checkAward: false },
     { work: '進化3次冰系的精靈', award: '', level: 'great', checkAward: false },
+    {
+        work: '進化3次一般系的精靈',
+        award: '',
+        level: 'great',
+        checkAward: false,
+    },
     { work: '進化3次龍系的精靈', award: '', level: 'great', checkAward: false },
     {
         work: '進化3次格鬥系的精靈',
@@ -370,6 +395,12 @@ const table = [
     },
     {
         work: '擊敗4次岩石和水系的精靈',
+        award: '',
+        level: 'great',
+        checkAward: false,
+    },
+    {
+        work: '擊敗4次毒和飛行系的精靈',
         award: '',
         level: 'great',
         checkAward: false,
@@ -634,6 +665,12 @@ const table = [
     { work: '擊敗2次道館館主', award: '', level: 'normal', checkAward: false },
     {
         work: '擊敗5次水系的精靈',
+        award: '',
+        level: 'normal',
+        checkAward: false,
+    },
+    {
+        work: '擊敗5次幽靈系的精靈',
         award: '',
         level: 'normal',
         checkAward: false,
