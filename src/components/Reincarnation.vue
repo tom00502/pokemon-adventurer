@@ -1,7 +1,8 @@
 <script setup>
 import { ref, reactive, computed } from 'vue'
 import RadarChartVue from '@/components/RadarChart.vue'
-import plans from '@/assets/steps.json'
+import attPlans from '@/assets/attPlans.json'
+import defPlans from '@/assets/defPlans.json'
 class gemCount {
     constructor() {
         this.low = 0
@@ -61,7 +62,8 @@ const board = reactive({
     block: 0,
     attack: 0,
 })
-const selectPlan = ref('')
+const attPlan = ref('')
+const defPlan = ref('')
 const steps = ref([])
 const nowSelect = reactive({ type: 'hitPoint', quality: 'perfect' })
 const step = reactive({
@@ -174,7 +176,8 @@ const clear = () => {
     board.speed = 0
     steps.value = []
     step.count = 0
-    selectPlan.value = ''
+    attPlan.value = ''
+    defPlan.value = ''
 }
 const undo = () => {
     if (step.count == 0) {
@@ -267,17 +270,39 @@ const genDiscript = {
 const discript = computed(() => {
     return genDiscript[nowSelect.type][nowSelect.quality]
 })
-const usePlan = (plan = selectPlan.value) => {
-    if (plan == '') return
-    steps.value = plans[plan].steps
-    const { count, quality, type, overflow, overflowMinus } = plans[plan].step
+const usePlan = () => {
+    if (attPlan.value == '' && defPlan.value == '') {
+        board.hitPoint = 0
+        board.contact = 0
+        board.defence = 0
+        board.speed = 0
+        board.block = 0
+        board.attack = 0
+        return
+    }
+    steps.value = []
+    if (attPlan.value) {
+        steps.value = [...attPlans[attPlan.value].steps]
+    }
+    if (defPlan.value) {
+        steps.value = [...steps.value, ...defPlans[defPlan.value].steps]
+    }
+    const { count, quality, type, overflow, overflowMinus } = steps.value.pop()
     step.count = count
     step.quality = quality
     step.type = type
     step.overflow = overflow
     step.overflowMinus = overflowMinus
-    const { hitPoint, contact, defence, speed, block, attack } =
-        plans[plan].board
+    const {
+        contact = 0,
+        speed = 0,
+        attack = 0,
+    } = attPlans[attPlan.value]?.board || {}
+    const {
+        hitPoint = 0,
+        defence = 0,
+        block = 0,
+    } = defPlans[defPlan.value]?.board || {}
     board.hitPoint = hitPoint
     board.contact = contact
     board.defence = defence
@@ -288,13 +313,33 @@ const usePlan = (plan = selectPlan.value) => {
 </script>
 <template>
     <div>轉生模擬器</div>
-    <select @change="usePlan()" v-model="selectPlan">
-        <option value="">請選擇方案</option>
-        <option v-for="(value, key) in plans" :key="key">{{ key }}</option>
-    </select>
-    <div class="plan-discript" v-if="selectPlan">
-        {{ plans[selectPlan].discript }}
+    <div class="plan-select-board">
+        <div>
+            攻擊套餐選擇:
+            <select @change="usePlan()" v-model="attPlan">
+                <option value="">請選擇攻擊套餐</option>
+                <option v-for="(value, key) in attPlans" :key="key">
+                    {{ key }}
+                </option>
+            </select>
+            <div class="plan-discript" v-if="attPlan">
+                {{ attPlans[attPlan].discript }}
+            </div>
+        </div>
+        <div>
+            防禦套餐選擇:
+            <select @change="usePlan()" v-model="defPlan">
+                <option value="">請選擇防禦套餐</option>
+                <option v-for="(value, key) in defPlans" :key="key">
+                    {{ key }}
+                </option>
+            </select>
+            <div class="plan-discript" v-if="defPlan">
+                {{ defPlans[defPlan].discript }}
+            </div>
+        </div>
     </div>
+
     <div>
         <RadarChartVue :chartData="chartData" :labelColors="labelColors" />
     </div>
@@ -379,6 +424,12 @@ button {
         display: flex;
         gap: 8px;
         justify-content: space-between;
+    }
+    .plan-select-board {
+        display: flex;
+    }
+    .plan-select-board > div {
+        width: 100%;
     }
 }
 .action-board {
