@@ -739,6 +739,10 @@ const table = [
 
 <template>
     <main>
+        <div class="day7">
+            <div>連續7天完成任務隨機獎勵:</div>
+            由克希之笛、雷公之笛、水君之笛、雷吉洛克之笛、火焰鳥之笛、博士皮卡丘之笛*2、偶像皮卡丘之笛*2旋轉洛托姆之笛*2...(待補)
+        </div>
         <table>
             <tbody>
                 <tr>
@@ -776,5 +780,11 @@ table tr {
 }
 .great {
     background: rgb(150, 255, 164);
+}
+.day7 {
+    padding: 4px;
+    border: 1px solid gray;
+    background: pink;
+    border-radius: 8px;
 }
 </style>
