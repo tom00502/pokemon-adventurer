@@ -61,34 +61,34 @@ const table = [
     },
     {
         work: '捕捉4只岩石和水系的精靈',
-        award: '波克基古之笛',
+        award: '波克基古之笛、金幣12000',
         level: 'epic',
-        checkAward: false,
     },
     {
         work: '捕捉4只毒和飛行系的精靈',
-        award: '波克基古之笛',
+        award: '波克基古之笛、金幣12000',
         level: 'epic',
-        checkAward: false,
     },
     {
         work: '捕捉4只草和毒系的精靈',
-        award: '波克基古之笛',
+        award: '波克基古之笛、金幣12000',
         level: 'epic',
-        checkAward: false,
     },
     {
         work: '捕捉4只蟲和毒系的精靈',
-        award: '波克基古之笛',
+        award: '波克基古之笛、金幣12000',
         level: 'epic',
-        checkAward: false,
     },
     {
         work: '捕捉4只一般和妖精系的精靈',
-        award: '波克基古之笛',
+        award: '波克基古之笛、金幣12000',
         level: 'epic',
-        checkAward: false,
         checkWord: false,
+    },
+    {
+        work: '捕捉4只電和鋼系的精靈',
+        award: '波克基古之笛、金幣12000',
+        level: 'epic',
     },
     {
         work: '捕捉4只草和超能力系的精靈',
@@ -111,12 +111,6 @@ const table = [
     {
         work: '捕捉4只岩石和地面系的精靈',
         award: '阿勃梭魯之笛',
-        level: 'epic',
-        checkAward: false,
-    },
-    {
-        work: '捕捉4只電和鋼系的精靈',
-        award: '',
         level: 'epic',
         checkAward: false,
     },
