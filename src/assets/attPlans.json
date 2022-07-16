@@ -39,11 +39,8 @@
             }
         ],
         "board": {
-            "hitPoint": 0,
             "contact": 20,
-            "defence": 0,
             "speed": 20,
-            "block": 0,
             "attack": 3
         }
     },
@@ -51,18 +48,18 @@
         "discript": "適合物攻型寵物的攻擊方案!",
         "steps": [
             {
-                "count": 10,
-                "type": "speed",
-                "quality": "perfect",
+                "count": 20,
+                "type": "attack",
+                "quality": "low",
                 "overflow": 0,
-                "overflowMinus": 0
+                "overflowMinus": 20
             },
             {
-                "count": 10,
-                "type": "attack",
-                "quality": "perfect",
+                "count": 20,
+                "type": "speed",
+                "quality": "low",
                 "overflow": 0,
-                "overflowMinus": 0
+                "overflowMinus": 19
             },
             {
                 "count": 2,
@@ -87,11 +84,81 @@
             }
         ],
         "board": {
-            "hitPoint": 0,
             "contact": 3,
-            "defence": 0,
             "speed": 20,
-            "block": 0,
+            "attack": 20
+        }
+    },
+    "雙攻套餐": {
+        "discript": "適合二刀流寵物的攻擊方案!",
+        "steps": [
+            {
+                "count": 20,
+                "type": "contact",
+                "quality": "low",
+                "overflow": 0,
+                "overflowMinus": 20
+            },
+            {
+                "count": 20,
+                "type": "attack",
+                "quality": "low",
+                "overflow": 0,
+                "overflowMinus": 19
+            },
+            {
+                "count": 9,
+                "type": "speed",
+                "quality": "normal",
+                "overflow": 0,
+                "overflowMinus": 0
+            },
+            {
+                "count": 4,
+                "type": "contact",
+                "quality": "normal",
+                "overflow": 0,
+                "overflowMinus": 0
+            },
+            {
+                "count": 1,
+                "type": "attack",
+                "quality": "normal",
+                "overflow": 0,
+                "overflowMinus": 0
+            },
+            {
+                "count": 1,
+                "type": "speed",
+                "quality": "low",
+                "overflow": 0,
+                "overflowMinus": 0
+            },
+            {
+                "count": 1,
+                "type": "contact",
+                "quality": "perfect",
+                "overflow": 0,
+                "overflowMinus": 0
+            },
+            {
+                "count": 1,
+                "type": "attack",
+                "quality": "perfect",
+                "overflow": 0,
+                "overflowMinus": 0
+            },
+            {
+                "count": 1,
+                "type": "speed",
+                "quality": "perfect",
+                "overflow": 0,
+                "overflowMinus": 0
+            }
+        ],
+        "board": {
+            "contact": 20,
+            "speed": 20,
             "attack": 20
         }
     },

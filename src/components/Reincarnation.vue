@@ -490,15 +490,21 @@ button {
     position: relative;
     top: 1px;
 }
+.select-type {
+    background: rgb(184, 184, 184);
+}
 .select-type > div {
-    border: 1px solid gray;
+    border-left: 1px solid gray;
     background: rgb(184, 184, 184);
     padding: 4px;
     cursor: pointer;
 }
 .select-type > div.active {
+    border: 1px solid gray;
     border-left: 0px;
     background: rgb(160, 212, 255);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 .use-gen-borad {
     display: flex;
