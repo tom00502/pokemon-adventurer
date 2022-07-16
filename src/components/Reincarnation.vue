@@ -313,6 +313,18 @@ const usePlan = () => {
 </script>
 <template>
     <div>轉生模擬器</div>
+    <div class="plan-discript">
+        使用說明:
+        <ul>
+            <li>可進行寶石鑲嵌練習，下面會顯示操作步驟與使用寶石統計</li>
+            <li>
+                做出滿意的數值後，依照紀錄的步驟於遊戲中鑲嵌即可，須注意寶石數量是否足夠
+            </li>
+            <li>
+                不知道怎麼鑲嵌，也可以直接選套餐，選好後會顯示步驟與寶石數，可依據自身寶石數量搭配
+            </li>
+        </ul>
+    </div>
     <div class="plan-select-board">
         <div>
             攻擊套餐選擇:
