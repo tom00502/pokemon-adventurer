@@ -1,4 +1,5 @@
 <script setup>
+import { computed, ref } from '@vue/runtime-core'
 import { RouterLink, RouterView } from 'vue-router'
 const table = {
     口袋怪獸: [
@@ -24,8 +25,8 @@ const table = {
             answer: '綠橘白紅',
         },
         {
-            question: '哪隻精靈的體溫比太陽表面的溫度還要高',
-            answer: '熔岩蝸牛',
+            question: '那只精靈的體溫比太陽表面的溫度還要高?',
+            answer: '熔岩蜗牛',
         },
         { question: '以下種族值為600的是', answer: '夢幻' },
         { question: '光合作用，在大晴天時回復HP最大值的?', answer: '2/3' },
@@ -151,15 +152,31 @@ const table = {
             question: '請問火箭隊出場臺詞中"可愛又迷人的反派腳色"上一句是什麼?',
             answer: '貫徹愛與真實的邪惡',
         },
-        { question: '火箭隊中的女隊員叫什麼', answer: '武藏' },
+        { question: '火箭隊中女隊員叫什麼?', answer: '武藏' },
     ],
 }
+const searchText = ref('')
+const filterTable = computed(() => {
+    if (searchText.value == '') return table
+    else
+        return Object.fromEntries(
+            Object.entries(table).map(([key, value]) => {
+                return [
+                    key,
+                    value.filter((question) =>
+                        question.question.includes(searchText.value)
+                    ),
+                ]
+            })
+        )
+})
 </script>
 
 <template>
     <main>
         <div class="page-title">寶可問答</div>
-        <div v-for="(category, key) in table" :key="key">
+        搜尋: <input type="text" v-model="searchText" />
+        <div v-for="(category, key) in filterTable" :key="key">
             <div class="text-red">{{ key }}</div>
             <table>
                 <tbody>
