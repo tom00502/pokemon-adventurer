@@ -739,6 +739,7 @@ const table = [
 
 <template>
     <main>
+        <div class="page-title">田野調查</div>
         <div class="day7">
             <div>連續7天完成任務隨機獎勵:</div>
             由克希之笛、雷公之笛、水君之笛、雷吉洛克之笛、火焰鳥之笛、博士皮卡丘之笛*2、偶像皮卡丘之笛*2旋轉洛托姆之笛*2...(待補)
@@ -762,29 +763,69 @@ const table = [
 </template>
 <style scoped>
 table {
-    font-size: 12px;
-    border-collapse: collapse;
+    margin-top: 8px;
+    font-size: 14px;
+    /* border-collapse: collapse; */
+    border-collapse: separate;
+    border-spacing: 0;
     width: 100%;
+    border: 1px solid black;
+    border-radius: 8px;
 }
 table tr {
-    border-bottom: 1px rgb(177, 177, 177) solid;
+    /* border-bottom: 1px solid rgb(177, 177, 177); */
+}
+td {
+    padding: 4px;
+    border-bottom: 1px solid rgb(177, 177, 177);
+}
+/*第一欄第一列：左上*/
+tr:first-child td:first-child {
+    border-top-left-radius: 8px;
+}
+/*第一欄最後列：左下*/
+tr:last-child td:first-child {
+    border-bottom-left-radius: 8px;
+}
+/*最後欄第一列：右上*/
+tr:first-child td:last-child {
+    border-top-right-radius: 10px;
+}
+/*最後欄第一列：右下*/
+tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
 }
 .legend {
     background: rgb(255, 255, 150);
+    /* background: linear-gradient(to right, #feffdb 5%, #f8ff36e1 100%);
+    border-left: 7px solid yellow;
+    border-right: 7px solid yellow; */
 }
 .epic {
     background: rgb(255, 150, 255);
+    /* background: linear-gradient(to right, #ffdbff 5%, #ff36f8e1 100%);
+    border-left: 7px solid rgb(192, 0, 192);
+    border-right: 7px solid rgb(192, 0, 192); */
 }
 .rare {
     background: rgb(157, 150, 255);
+    /* border-left: 7px solid rgb(46, 57, 255); */
 }
 .great {
     background: rgb(150, 255, 164);
+    /* border-left: 7px solid rgb(150, 255, 164); */
 }
 .day7 {
     padding: 4px;
     border: 1px solid gray;
     background: pink;
     border-radius: 8px;
+}
+.page-title {
+    border-left: 8px solid rgb(255, 60, 93);
+    padding-left: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 8px 0px;
 }
 </style>

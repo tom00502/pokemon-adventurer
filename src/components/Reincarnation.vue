@@ -312,7 +312,7 @@ const usePlan = () => {
 }
 </script>
 <template>
-    <div>轉生模擬器</div>
+    <div class="page-title">轉生模擬器</div>
     <div class="plan-discript">
         使用說明:
         <ul>
@@ -530,5 +530,12 @@ button {
 .plan-discript {
     background: pink;
     padding: 8px;
+}
+.page-title {
+    border-left: 8px solid rgb(60, 255, 105);
+    padding-left: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 8px 0px;
 }
 </style>

@@ -17,7 +17,7 @@ const table = {
             answer: '60',
         },
         { question: '口袋怪獸中，總共有多少種屬性', answer: '18' },
-        { question: '以下不屬於舊版四大物盾的是', answer: '大綱蛇' },
+        { question: '以下不屬於舊版四大物盾的是?', answer: '大钢蛇' },
         { question: '以下四只口袋怪獸裡,誰最重', answer: '古拉頓' },
         {
             question: '圖圖犬,咩利羊,呆呆獸,電龍的尾巴末端分別是什麼顏色',
@@ -28,8 +28,13 @@ const table = {
             answer: '熔岩蝸牛',
         },
         { question: '以下種族值為600的是', answer: '夢幻' },
-        { question: '光合作用，在大晴天時回復HP最大值的', answer: '2/3' },
+        { question: '光合作用，在大晴天時回復HP最大值的?', answer: '2/3' },
         { question: '光合作用，在無天氣時回復HP最大值的', answer: '1/2' },
+        {
+            question:
+                '光合作用，在沙暴、冰雹、下雨、大雨或霧天氣下，回復自己最大HP的',
+            answer: '1/4',
+        },
         { question: '下列口袋妖怪中最適合速攻的是', answer: '化石翼龍' },
         { question: '雷吉洛克有幾只眼睛', answer: '7只' },
         { question: '皮卡丘屬於什麼系的寶可夢', answer: '電系' },
@@ -41,11 +46,6 @@ const table = {
         { question: '木守宮是第幾世代的寶可夢', answer: '第三世代' },
         { question: '卡拉卡拉頭上戴著的是誰的頭骨', answer: '母親' },
         { question: '圖鑒編號為001的是下麵那只精靈', answer: '妙蛙種子' },
-        {
-            question:
-                '光合作用，在沙暴、冰雹、下雨、大雨或霧天氣下，回復自己最大HP的',
-            answer: '1/4',
-        },
     ],
     屬性克制: [
         { question: '普通系克制多少種屬性?', answer: '0' },
@@ -128,15 +128,15 @@ const table = {
         { question: 'MEGA石是由什麼碎片合成的?', answer: 'MEGA石碎片' },
         { question: '下麵哪種方式不是遊戲體力恢復的方式?', answer: '旅館休息' },
         { question: '狩獵場在下面那個城市?', answer: '滿金市' },
+        { question: 'MEGA石碎片主要是在那個副本產出?', answer: '聯盟大會' },
+        { question: '在野外草叢捕捉寵物，需要消耗?', answer: '疲勞' },
         { question: '列車正在維修的是哪個市', answer: '吉花市' },
         { question: '在滿金市開發佈會的歌星叫什麼', answer: '梨香' },
-        { question: 'MEGA石碎片主要是在哪個副本產出', answer: '聯盟大會' },
         { question: '目前精靈扭蛋機有幾世代', answer: '6' },
         { question: '挑戰精靈訓練家,可以獲得下面哪種物品', answer: '精靈經驗' },
         { question: '下面那種不是遊戲中的扭蛋機', answer: '糖果扭蛋機' },
         { question: '下面那種途徑不能獲得攜帶物的', answer: '遠征之路' },
         { question: '列車正在維修的是那個城市', answer: '吉花市' },
-        { question: '在野外草叢捕捉寵物，需要消耗', answer: '疲勞' },
         { question: '精靈有那些途徑獲得經驗', answer: '選項全對' },
         {
             question: '首沖送的巨鉗螳螂，技能"點到為止"，最適合用來',
@@ -158,7 +158,7 @@ const table = {
 
 <template>
     <main>
-        寶可問答
+        <div class="page-title">寶可問答</div>
         <div v-for="(category, key) in table" :key="key">
             <div class="text-red">{{ key }}</div>
             <table>
@@ -174,14 +174,26 @@ const table = {
 </template>
 <style scoped>
 table {
-    font-size: 12px;
+    font-size: 14px;
     border-collapse: collapse;
     width: 100%;
 }
 table tr {
     border-bottom: 1px rgb(177, 177, 177) solid;
 }
+td {
+    padding: 4px;
+}
 .text-red {
+    margin: 8px 0px;
+    font-size: 16px;
     color: red;
+}
+.page-title {
+    border-left: 8px solid rgb(83, 60, 255);
+    padding-left: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 8px 0px;
 }
 </style>

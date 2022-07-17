@@ -70,6 +70,7 @@ const handleChangeLevel = (level) => {
 
 <template>
     <main>
+        <div class="page-title">星級計算</div>
         <div class="star-input-container">
             <div>
                 <div>精靈階級</div>
@@ -261,5 +262,12 @@ table {
     border-style: solid;
     padding: 0.25rem;
     border-radius: 0.5rem;
+}
+.page-title {
+    border-left: 8px solid rgb(248, 255, 60);
+    padding-left: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 8px 0px;
 }
 </style>
