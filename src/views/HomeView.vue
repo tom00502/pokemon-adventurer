@@ -7,6 +7,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <div class="link-container">
             <RouterLink to="/pokoQ&A" class="link-box">寶可問答</RouterLink>
             <RouterLink to="/fieldwork" class="link-box">田野調查</RouterLink>
+            <RouterLink to="/guild" class="link-box">公會備戰</RouterLink>
             <RouterLink to="/reincarnation" class="link-box"
                 >轉生模擬</RouterLink
             >

@@ -28,6 +28,11 @@ const router = createRouter({
             component: () => import('@/views/fieldwork.vue'),
         },
         {
+            path: '/guild',
+            name: 'guild',
+            component: () => import('@/views/guildBattleView.vue'),
+        },
+        {
             path: '/reincarnation',
             name: 'reincarnation',
             component: () => import('@/components/Reincarnation.vue'),

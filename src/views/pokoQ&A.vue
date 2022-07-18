@@ -160,14 +160,16 @@ const filterTable = computed(() => {
     if (searchText.value == '') return table
     else
         return Object.fromEntries(
-            Object.entries(table).map(([key, value]) => {
-                return [
-                    key,
-                    value.filter((question) =>
-                        question.question.includes(searchText.value)
-                    ),
-                ]
-            })
+            Object.entries(table)
+                .map(([key, value]) => {
+                    return [
+                        key,
+                        value.filter((question) =>
+                            question.question.includes(searchText.value)
+                        ),
+                    ]
+                })
+                .filter(([key, value]) => value.length)
         )
 })
 </script>

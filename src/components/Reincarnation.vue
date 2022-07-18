@@ -530,6 +530,8 @@ button {
 .plan-discript {
     background: pink;
     padding: 8px;
+    border: 1px solid gray;
+    border-radius: 8px;
 }
 .page-title {
     border-left: 8px solid rgb(60, 255, 105);
