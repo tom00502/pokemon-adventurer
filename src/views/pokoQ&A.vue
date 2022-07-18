@@ -3,21 +3,21 @@ import { computed, ref } from '@vue/runtime-core'
 import { RouterLink, RouterView } from 'vue-router'
 const table = {
     口袋怪獸: [
-        { question: '以下絕招中威力不同於其他三只的是?', answer: '瓦割' },
-        { question: '以下絕招中初始PP不同於其他三只的是?', answer: '起风' },
-        { question: '下麵沒有隨身攜帶物品的神奇寶貝是?', answer: '可達鴨' },
         { question: '以下HP不同於其他三只的是', answer: '叉字蝠' },
         { question: '以下物攻不同於其他三只的是?', answer: '暴鲤龙' },
         { question: '以下物防不同於其他三只的是?', answer: '沙河马' },
         { question: '以下特攻不同於其他三只的是', answer: '獵斑鰻' },
         { question: '以下特防不同於其他三只的是?', answer: '摇篮百合' },
         { question: '以下速度不同於其他三只的是', answer: '愛心魚' },
+        { question: '以下絕招中威力不同於其他三只的是?', answer: '瓦割' },
+        { question: '以下絕招中初始PP不同於其他三只的是?', answer: '起风' },
         { question: '以下絕招命中不同於其他三只的是', answer: '岩石封殺' },
+        { question: '口袋怪獸中，總共有多少種屬性', answer: '18' },
+        { question: '下麵沒有隨身攜帶物品的神奇寶貝是?', answer: '可達鴨' },
         {
             question: '已知小磁怪的體蟲為6千克，那三合一磁怪的體重是多少?',
             answer: '60',
         },
-        { question: '口袋怪獸中，總共有多少種屬性', answer: '18' },
         { question: '以下不屬於舊版四大物盾的是?', answer: '大钢蛇' },
         { question: '以下四只口袋怪獸裡,誰最重', answer: '古拉頓' },
         {
@@ -30,7 +30,7 @@ const table = {
         },
         { question: '以下種族值為600的是', answer: '夢幻' },
         { question: '光合作用，在大晴天時回復HP最大值的?', answer: '2/3' },
-        { question: '光合作用，在無天氣時回復HP最大值的', answer: '1/2' },
+        { question: '光合作用，在無天氣時回復HP最大值的?', answer: '1/2' },
         {
             question:
                 '光合作用，在沙暴、冰雹、下雨、大雨或霧天氣下，回復自己最大HP的',
@@ -112,13 +112,14 @@ const table = {
         },
     ],
     遊戲背景: [
+        { question: '下麵不屬於精靈獲得技能方式是?', answer: '華麗大賽' },
+        { question: '下麵哪種不屬於精靈的培養方式?', answer: '覺醒' },
+        { question: '下麵哪種方式不是遊戲體力恢復的方式?', answer: '旅館休息' },
         { question: '今日美食每天領取幾次?', answer: '3' },
         { question: '精靈之星主要產出什麼?', answer: '精靈碎片' },
         { question: '四大天王在那個城市召開?', answer: '石英聯盟' },
         { question: '瀕死的精靈可以去哪裡治療?', answer: '精靈中心' },
         { question: '真新鎮在長青市那個方位?', answer: '南方' },
-        { question: '下麵不屬於精靈獲得技能方式是?', answer: '華麗大賽' },
-        { question: '下麵哪種不屬於精靈的培養方式?', answer: '覺醒' },
         { question: '那個培養方式是本作特有的?', answer: '轉生' },
         {
             question: '洗練個體值的神奇膠囊可以從那裏獲得?',
@@ -127,13 +128,13 @@ const table = {
         { question: '我們的疲勞可以用來幹什麼?', answer: '捕捉寵物' },
         { question: '挑戰訓練家,每一關,最高為幾星?', answer: '3' },
         { question: 'MEGA石是由什麼碎片合成的?', answer: 'MEGA石碎片' },
-        { question: '下麵哪種方式不是遊戲體力恢復的方式?', answer: '旅館休息' },
         { question: '狩獵場在下面那個城市?', answer: '滿金市' },
         { question: 'MEGA石碎片主要是在那個副本產出?', answer: '聯盟大會' },
         { question: '在野外草叢捕捉寵物，需要消耗?', answer: '疲勞' },
+        { question: '扭蛋機中的精靈扭蛋機現有幾個世代?', answer: '6' },
+        { question: '八大蝶可以在下面那個地點捕捉?', answer: '桐樹林' },
         { question: '列車正在維修的是哪個市', answer: '吉花市' },
         { question: '在滿金市開發佈會的歌星叫什麼', answer: '梨香' },
-        { question: '目前精靈扭蛋機有幾世代', answer: '6' },
         { question: '挑戰精靈訓練家,可以獲得下面哪種物品', answer: '精靈經驗' },
         { question: '下面那種不是遊戲中的扭蛋機', answer: '糖果扭蛋機' },
         { question: '下面那種途徑不能獲得攜帶物的', answer: '遠征之路' },
@@ -143,7 +144,6 @@ const table = {
             question: '首沖送的巨鉗螳螂，技能"點到為止"，最適合用來',
             answer: '捕捉寵物',
         },
-        { question: '八大蝶可以在下面那個地點捕捉', answer: '桐樹林' },
     ],
     其他: [
         { question: '皮卡丘是屬於哪位訓練家的精靈?', answer: '小智' },
