@@ -33,6 +33,11 @@ const router = createRouter({
             component: () => import('@/views/guildBattleView.vue'),
         },
         {
+            path: '/flute',
+            name: 'flute',
+            component: () => import('@/views/fluteView.vue'),
+        },
+        {
             path: '/reincarnation',
             name: 'reincarnation',
             component: () => import('@/components/Reincarnation.vue'),
