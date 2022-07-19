@@ -12,6 +12,7 @@ import { RouterLink, RouterView } from 'vue-router'
                 >轉生模擬</RouterLink
             >
             <RouterLink to="/star" class="link-box">星級計算</RouterLink>
+            <RouterLink to="/about" class="link-box">聯絡站長</RouterLink>
         </div>
     </main>
 </template>

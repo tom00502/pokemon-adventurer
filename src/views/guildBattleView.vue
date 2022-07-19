@@ -34,7 +34,7 @@ const pokeDistribution = {
         { name: '怪力', level: 'epic' },
         { name: '胡地', level: 'epic' },
         { name: '阿羅拉雷丘', level: 'epic' },
-        { name: '八大蝶', level: 'rare' },
+        { name: '巴大蝶', level: 'rare' },
     ],
     左下草叢: [
         { name: '超夢', level: 'beyond' },
