@@ -19,11 +19,11 @@ const table = {
             answer: '60',
         },
         { question: '以下不屬於舊版四大物盾的是?', answer: '大钢蛇' },
-        { question: '以下四只口袋怪獸裡,誰最重', answer: '古拉頓' },
         {
-            question: '圖圖犬,咩利羊,呆呆獸,電龍的尾巴末端分別是什麼顏色',
-            answer: '綠橘白紅',
+            question: '圖圖犬、咩利羊、呆呆獸、電龍的尾巴末端分別是什麼顏色?',
+            answer: '绿、橘、白、红',
         },
+        { question: '以下四只口袋怪獸裡,誰最重', answer: '古拉頓' },
         {
             question: '那只精靈的體溫比太陽表面的溫度還要高?',
             answer: '熔岩蜗牛',
@@ -114,6 +114,7 @@ const table = {
     遊戲背景: [
         { question: '下麵不屬於精靈獲得技能方式是?', answer: '華麗大賽' },
         { question: '下麵哪種不屬於精靈的培養方式?', answer: '覺醒' },
+        { question: '下麵哪種不是遊戲中的扭蛋機?', answer: '糖果扭蛋機' },
         { question: '下麵哪種方式不是遊戲體力恢復的方式?', answer: '旅館休息' },
         { question: '今日美食每天領取幾次?', answer: '3' },
         { question: '精靈之星主要產出什麼?', answer: '精靈碎片' },
@@ -136,7 +137,6 @@ const table = {
         { question: '列車正在維修的是哪個市', answer: '吉花市' },
         { question: '在滿金市開發佈會的歌星叫什麼', answer: '梨香' },
         { question: '挑戰精靈訓練家,可以獲得下面哪種物品', answer: '精靈經驗' },
-        { question: '下面那種不是遊戲中的扭蛋機', answer: '糖果扭蛋機' },
         { question: '下面那種途徑不能獲得攜帶物的', answer: '遠征之路' },
         { question: '列車正在維修的是那個城市', answer: '吉花市' },
         { question: '精靈有那些途徑獲得經驗', answer: '選項全對' },
