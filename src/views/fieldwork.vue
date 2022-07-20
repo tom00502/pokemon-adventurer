@@ -342,7 +342,7 @@ const table = [
     },
     {
         work: '捕捉50只精靈',
-        award: 'GEN1稀有之笛',
+        award: 'GEN1稀有之笛、金幣4200',
         level: 'rare',
         checkAward: false,
     },
