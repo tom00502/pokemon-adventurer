@@ -12,7 +12,7 @@ const table = {
         { question: '以下絕招中威力不同於其他三只的是?', answer: '瓦割' },
         { question: '以下絕招中初始PP不同於其他三只的是?', answer: '起风' },
         { question: '以下絕招命中不同於其他三只的是', answer: '岩石封殺' },
-        { question: '口袋怪獸中，總共有多少種屬性', answer: '18' },
+        { question: '口袋妖怪中，總共有多少種屬性', answer: '18' },
         { question: '下麵沒有隨身攜帶物品的神奇寶貝是?', answer: '可達鴨' },
         {
             question: '已知小磁怪的體蟲為6千克，那三合一磁怪的體重是多少?',
