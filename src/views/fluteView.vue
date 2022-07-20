@@ -267,33 +267,33 @@ const filterDistribution = computed(() => {
 </template>
 <style scoped>
 .beyond {
-    border: 3px solid;
-    border-image: linear-gradient(
+    border: 3px solid transparent;
+    border-radius: 8px;
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    background-image: linear-gradient(to right, white, white),
+        linear-gradient(
             135deg,
             #3632ff 0%,
             #3eff30 33%,
             #ffff00 66%,
             #ff5900 100%
-        )
-        1;
-    padding: 0.25rem;
-    clip-path: inset(0 round 4px);
+        );
 }
 .legend {
     border: 3px solid #ffff00;
-    border-radius: 4px;
-    /* background: rgb(255, 255, 150); */
-    /* background: linear-gradient(to right, #feffdb 5%, #f8ff36e1 100%);
-    border-left: 7px solid yellow;
-    border-right: 7px solid yellow; */
+    border-radius: 8px;
+    background: white;
 }
 .epic {
     border: 3px solid rgb(192, 0, 192);
-    border-radius: 4px;
+    border-radius: 8px;
+    background: white;
 }
 .rare {
     border: 3px solid rgb(46, 57, 255);
-    border-radius: 4px;
+    border-radius: 8px;
+    background: white;
 }
 .note {
     padding: 8px;
@@ -318,7 +318,6 @@ const filterDistribution = computed(() => {
 .poke-list > div {
     padding: 4px;
     margin: 4px;
-    background: white;
     flex-grow: 1;
     text-align: center;
     max-width: 100px;

@@ -1,19 +1,18 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import routers from '@/router/config'
 </script>
 
 <template>
     <main>
         <div class="link-container">
-            <RouterLink to="/pokoQ&A" class="link-box">寶可問答</RouterLink>
-            <RouterLink to="/fieldwork" class="link-box">田野調查</RouterLink>
-            <RouterLink to="/guild" class="link-box">公會備戰</RouterLink>
-            <RouterLink to="/flute" class="link-box">召喚笛子</RouterLink>
-            <RouterLink to="/reincarnation" class="link-box"
-                >轉生模擬</RouterLink
+            <RouterLink
+                v-for="route in routers.filter((r) => r.title != 'home')"
+                :key="route.name"
+                :to="route.path"
+                class="link-box"
+                >{{ route.title }}</RouterLink
             >
-            <RouterLink to="/star" class="link-box">星級計算</RouterLink>
-            <RouterLink to="/about" class="link-box">聯絡站長</RouterLink>
         </div>
     </main>
 </template>

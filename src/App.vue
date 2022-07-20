@@ -2,6 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from '@/components/HelloWorld.vue'
 import Reincarnation from '@/components/Reincarnation.vue'
+import routers from '@/router/config'
 </script>
 
 <template>
@@ -21,13 +22,12 @@ import Reincarnation from '@/components/Reincarnation.vue'
   <RouterView /> -->
     <header>
         <nav>
-            <RouterLink to="/">Home</RouterLink>
-            <RouterLink to="/pokoQ&A">寶可問答</RouterLink>
-            <RouterLink to="/fieldwork">田野調查</RouterLink>
-            <RouterLink to="/guild">公會備戰</RouterLink>
-            <RouterLink to="/flute">召喚笛子</RouterLink>
-            <RouterLink to="/reincarnation">轉生模擬</RouterLink>
-            <RouterLink to="/star">星級計算</RouterLink>
+            <RouterLink
+                v-for="route in routers"
+                :key="route.name"
+                :to="route.path"
+                >{{ route.title }}</RouterLink
+            >
         </nav>
     </header>
     <RouterView />
