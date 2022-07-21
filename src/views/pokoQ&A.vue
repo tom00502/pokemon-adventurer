@@ -84,6 +84,7 @@ const table = {
         { question: '幽靈系被下麵那2種屬性克制?', answer: '幽灵系、恶系' },
         { question: '妖精系被下面哪種屬性', answer: '毒系、鋼系' },
         { question: '普通系被下面哪種屬性', answer: '格鬥系' },
+        { question: '以下屬性中被克制最多的屬性是?', answer: '岩石' },
         {
             question: '以下哪三種屬性克制格鬥系',
             answer: '飛行系,超能力系,妖精系',
@@ -99,7 +100,6 @@ const table = {
         { question: '下面哪種屬性不克制冰系', answer: '超能力系' },
         { question: '下面哪種屬性不克制草系', answer: '普通系' },
         { question: '下面哪種屬性克制電系', answer: '地面系' },
-        { question: '下列屬性中被克制最多的屬性是', answer: '岩石系' },
         { question: '冰系不克制下面哪種屬性', answer: '水' },
         {
             question:
@@ -133,7 +133,7 @@ const table = {
         { question: 'MEGA石碎片主要是在那個副本產出?', answer: '聯盟大會' },
         { question: '在野外草叢捕捉寵物，需要消耗?', answer: '疲勞' },
         { question: '扭蛋機中的精靈扭蛋機現有幾個世代?', answer: '6' },
-        { question: '八大蝶可以在下面那個地點捕捉?', answer: '桐樹林' },
+        { question: '巴大蝶可以在下面那個地點捕捉?', answer: '桐樹林' },
         { question: '列車正在維修的是哪個市', answer: '吉花市' },
         { question: '在滿金市開發佈會的歌星叫什麼', answer: '梨香' },
         { question: '挑戰精靈訓練家,可以獲得下面哪種物品', answer: '精靈經驗' },

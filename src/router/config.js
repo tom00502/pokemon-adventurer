@@ -15,6 +15,11 @@ const router = [
         title: '田野調查',
     },
     {
+        path: '/hunting',
+        name: 'hunting',
+        title: '狩獵場',
+    },
+    {
         path: '/guild',
         name: 'guild',
         title: '公會備戰',

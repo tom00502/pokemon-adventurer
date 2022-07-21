@@ -24,6 +24,11 @@ const router = createRouter({
             component: () => import('@/views/fieldwork.vue'),
         },
         {
+            path: '/hunting',
+            name: 'hunting',
+            component: () => import('@/views/huntingView.vue'),
+        },
+        {
             path: '/guild',
             name: 'guild',
             component: () => import('@/views/guildBattleView.vue'),
