@@ -9,6 +9,7 @@ const pokeDistribution = {
         { name: '洛奇亞', level: 'beyond' },
         { name: '固拉多', level: 'beyond' },
         { name: '基拉祈', level: 'beyond' },
+        { name: '呆呆王', level: 'beyond' },
         { name: '帕路奇亞', level: 'beyond' },
         { name: '萊希拉姆', level: 'beyond' },
         { name: '波爾凱尼恩', level: 'beyond' },
@@ -21,7 +22,6 @@ const pokeDistribution = {
         { name: '沙奈朵', level: 'legend' },
         { name: '火爆獸', level: 'legend' },
         { name: '雷伊布', level: 'legend' },
-        { name: '呆呆王', level: 'legend' },
         { name: '沙漠蜻蜓', level: 'legend' },
         { name: '遠古巨蜓', level: 'legend' },
         { name: '達摩狒狒', level: 'legend' },
@@ -166,7 +166,7 @@ const filterDistribution = computed(() => {
                 <li>於備戰聖地抓到的精靈才能在公會戰出戰</li>
                 <li>一人抓到全公會都可以用</li>
                 <li>
-                    若本身有該精靈，回連動自己精靈的數據，若沒有，則由系統自動配置
+                    若本身有該精靈，會連動自己精靈的數據，若沒有，則由系統自動配置
                 </li>
             </ul>
         </div>
