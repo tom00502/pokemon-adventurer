@@ -135,33 +135,28 @@ const table = [
     },
     {
         work: '進化1次電和鋼系的精靈',
-        award: '神奇膠囊',
+        award: '神奇膠囊*2、金幣19200',
         level: 'epic',
-        checkAward: false,
     },
     {
         work: '進化1次毒和飛行系的精靈',
-        award: '神奇膠囊',
+        award: '神奇膠囊*2、金幣19200',
         level: 'epic',
-        checkAward: false,
     },
     {
         work: '進化1次蟲和飛行系的精靈',
-        award: '神奇膠囊',
+        award: '神奇膠囊*2、金幣19200',
         level: 'epic',
-        checkAward: false,
     },
     {
         work: '進化1次岩石和水系的精靈',
-        award: '神奇膠囊',
+        award: '神奇膠囊*2、金幣19200',
         level: 'epic',
-        checkAward: false,
     },
     {
         work: '進化1次一般和飛行系的精靈',
-        award: '神奇膠囊',
+        award: '神奇膠囊*2、金幣19200',
         level: 'epic',
-        checkAward: false,
     },
     {
         work: '進化12次精靈',
@@ -296,9 +291,8 @@ const table = [
     },
     {
         work: '使用2次活力碎片',
-        award: '胡地之笛',
+        award: '胡地之笛、金幣19200',
         level: 'rare',
-        checkAward: false,
     },
     {
         work: '使用2次活力塊',
@@ -354,6 +348,12 @@ const table = [
     },
     {
         work: '使用3次努力增強劑',
+        award: 'GEN2傳說之笛',
+        level: 'great',
+        checkAward: false,
+    },
+    {
+        work: '使用5次厲害傷藥',
         award: 'GEN2傳說之笛',
         level: 'great',
         checkAward: false,
@@ -552,6 +552,7 @@ const table = [
     { work: '進化3次電系的精靈', award: '', level: 'great', checkAward: false },
     { work: '進化3次冰系的精靈', award: '', level: 'great', checkAward: false },
     { work: '進化3次龍系的精靈', award: '', level: 'great', checkAward: false },
+    { work: '進化3次惡系的精靈', award: '', level: 'great', checkAward: false },
     {
         work: '進化3次一般系的精靈',
         award: '',
@@ -678,6 +679,12 @@ const table = [
         checkAward: false,
     },
     {
+        work: '擊敗5次火系的精靈',
+        award: '',
+        level: 'normal',
+        checkAward: false,
+    },
+    {
         work: '擊敗5次草系的精靈',
         award: '',
         level: 'normal',
@@ -715,6 +722,12 @@ const table = [
     },
     {
         work: '擊敗5次一般系的精靈',
+        award: '',
+        level: 'normal',
+        checkAward: false,
+    },
+    {
+        work: '擊敗5次飛行系的精靈',
         award: '',
         level: 'normal',
         checkAward: false,
@@ -793,6 +806,12 @@ const table = [
     },
     {
         work: '將格鬥系的精靈,提升10級',
+        award: '',
+        level: 'normal',
+        checkAward: false,
+    },
+    {
+        work: '將幽靈系的精靈,提升10級',
         award: '',
         level: 'normal',
         checkAward: false,
@@ -940,13 +959,13 @@ tr:last-child td:last-child {
     border-right: 7px solid yellow; */
 }
 .epic {
-    background: rgb(255, 150, 255);
+    background: rgb(201, 150, 255);
     /* background: linear-gradient(to right, #ffdbff 5%, #ff36f8e1 100%);
     border-left: 7px solid rgb(192, 0, 192);
     border-right: 7px solid rgb(192, 0, 192); */
 }
 .rare {
-    background: rgb(157, 150, 255);
+    background: rgb(111, 255, 255);
     /* border-left: 7px solid rgb(46, 57, 255); */
 }
 .great {
