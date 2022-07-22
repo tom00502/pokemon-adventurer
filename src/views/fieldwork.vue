@@ -169,12 +169,6 @@ const table = [
         level: 'epic',
     },
     {
-        work: '提升1次惡系精靈的品階',
-        award: '大岩蛇之笛',
-        level: 'rare',
-        checkAward: false,
-    },
-    {
         work: '提升1次毒系精靈的品階',
         award: 'GEN2傳說之笛、金幣14400',
         level: 'rare',
@@ -253,6 +247,12 @@ const table = [
         work: '提升1次妖精系精靈的品階',
         award: '禦三家之笛、金幣14400',
         level: 'rare',
+    },
+    {
+        work: '提升1次惡系精靈的品階',
+        award: 'GEN1稀有之笛',
+        level: 'rare',
+        checkAward: false,
     },
     {
         work: '提升1次格鬥系精靈的品階',
