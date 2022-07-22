@@ -77,7 +77,7 @@ a,
 @media (hover: hover) {
     a:hover {
         background-color: hsla(160, 100%, 37%, 0.2);
-        border-radius: 8px;
+        border-radius: 1rem;
     }
 }
 
@@ -89,12 +89,14 @@ nav {
     display: flex;
     overflow: auto;
     flex-wrap: nowrap;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
 }
 
 nav a.router-link-exact-active {
     color: white;
     background-color: hsla(160, 100%, 37%, 1);
-    border-radius: 8px;
+    border-radius: 1rem;
 }
 
 nav a.router-link-exact-active:hover {
@@ -104,15 +106,16 @@ nav a.router-link-exact-active:hover {
 
 nav a {
     display: inline-block;
-    padding: 0 0.5rem;
+    padding: 0.25rem 1rem;
     margin: 0 0.5rem;
 }
 nav div {
+    margin: 0.5rem 0;
     border-left: 1px solid var(--color-border);
     flex-shrink: 0;
 }
 
-nav a:first-of-type {
+nav div:first-of-type {
     border: 0;
 }
 .bulletin {
@@ -151,10 +154,10 @@ nav a:first-of-type {
 
     nav {
         text-align: left;
-        margin-left: -1rem;
+        /*margin-left: -1rem;*/
         font-size: 1rem;
 
-        padding: 1rem 0;
+        /*padding: 1rem 0;*/
         margin-top: 1rem;
     }
 }
