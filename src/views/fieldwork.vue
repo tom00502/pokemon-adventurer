@@ -378,21 +378,18 @@ const table = [
     },
     {
         work: '使用10次特攻強化',
-        award: 'GEN3史詩之笛',
+        award: 'GEN3史詩之笛、金幣9600',
         level: 'great',
-        checkAward: false,
     },
     {
         work: '使用10次特防強化',
-        award: 'GEN3史詩之笛',
+        award: 'GEN3史詩之笛、金幣9600',
         level: 'great',
-        checkAward: false,
     },
     {
         work: '使用10次速度強化',
-        award: 'GEN3史詩之笛',
+        award: 'GEN3史詩之笛、金幣9600',
         level: 'great',
-        checkAward: false,
     },
     {
         work: '使用10次要害攻擊',
@@ -420,16 +417,14 @@ const table = [
         checkAward: false,
     },
     {
-        work: '將草和超能力系的精靈,提升10級',
-        award: '阿羅拉九尾碎片',
+        work: '將草和毒系的精靈,提升10級',
+        award: '阿羅拉六尾碎片*2、金幣3600',
         level: 'great',
-        checkAward: false,
     },
     {
-        work: '將草和毒系的精靈,提升10級',
-        award: '阿羅拉九尾碎片',
+        work: '將草和超能力系的精靈,提升10級',
+        award: '阿羅拉六尾碎片*2、金幣3600',
         level: 'great',
-        checkAward: false,
     },
     {
         work: '將一般和妖精系的精靈,提升10級',
@@ -721,6 +716,12 @@ const table = [
         checkAward: false,
     },
     {
+        work: '擊敗5次蟲系的精靈',
+        award: '',
+        level: 'normal',
+        checkAward: false,
+    },
+    {
         work: '擊敗5次一般系的精靈',
         award: '',
         level: 'normal',
@@ -849,6 +850,7 @@ const table = [
     { work: '進化2次精靈', award: '', level: 'normal', checkAward: false },
     { work: '捕捉5只精靈', award: '', level: 'normal', checkAward: false },
     { work: '捕捉10只精靈', award: '', level: 'normal', checkAward: false },
+    { work: '捕捉15只精靈', award: '', level: 'normal', checkAward: false },
     { work: '捕捉20只精靈', award: '', level: 'normal', checkAward: false },
     { work: '捕捉25只精靈', award: '', level: 'normal', checkAward: false },
     { work: '擊敗2次道館館主', award: '', level: 'normal', checkAward: false },

@@ -135,7 +135,7 @@ const table = {
         { question: '扭蛋機中的精靈扭蛋機現有幾個世代?', answer: '6' },
         { question: '巴大蝶可以在下面那個地點捕捉?', answer: '桐樹林' },
         { question: '列車正在維修的是哪個市', answer: '吉花市' },
-        { question: '在滿金市開發佈會的歌星叫什麼', answer: '梨香' },
+        { question: '在滿金市開發布會的歌星叫什麼?', answer: '梨香' },
         {
             question: '挑戰精靈訓練家,可以獲得下麵哪種物品?',
             answer: '精靈經驗',
