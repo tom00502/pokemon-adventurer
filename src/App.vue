@@ -20,6 +20,20 @@ import routers from '@/router/config'
   </header>
 
   <RouterView /> -->
+    <div class="bulletin">
+        <details>
+            <summary>★官方周末活動★</summary>
+            <ul>
+                <li>劍蘭掉落 7/23~7/24</li>
+                <li>精靈占星 7/22~7/24</li>
+                <li>翻翻樂 7/22~7/24</li>
+                <li>扭蛋排行-霜奶仙 7/22~7/24</li>
+                <li>大暑節氣福利 7/23</li>
+                <li>大暑超級返利 7/23</li>
+                <li>夏日特賣 7/23~7/24</li>
+            </ul>
+        </details>
+    </div>
     <header>
         <nav>
             <RouterLink
@@ -93,7 +107,12 @@ nav a {
 nav a:first-of-type {
     border: 0;
 }
-
+.bulletin {
+    padding: 8px;
+    background: #3ab0ff;
+    border: thick double #323cce;
+    border-radius: 8px;
+}
 @media (min-width: 1024px) {
     body {
         /*display: flex;
