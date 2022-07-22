@@ -71,6 +71,14 @@ const handleChangeLevel = (level) => {
 <template>
     <main>
         <div class="page-title">星級計算</div>
+        <div class="note">
+            <ul>
+                <li>先選擇精靈品質、目前星級與目前經驗就能輕鬆算出剩餘經驗~</li>
+                <li>
+                    目前的數據都是本體碎片，想要算小隻的碎片嗎...?開發中請稍後^^|
+                </li>
+            </ul>
+        </div>
         <div class="star-input-container">
             <div>
                 <div>精靈階級</div>
@@ -179,6 +187,9 @@ const handleChangeLevel = (level) => {
     </main>
 </template>
 <style scoped>
+.star-input-container {
+    margin: 1rem 0;
+}
 .star-input-container > div {
     display: flex;
     border-width: 1px;
@@ -205,6 +216,9 @@ const handleChangeLevel = (level) => {
     justify-content: space-evenly;
     width: 100%;
     padding: 0.5rem;
+}
+.quality-box > div {
+    cursor: pointer;
 }
 .star-box > div {
     display: flex;
@@ -269,5 +283,11 @@ table {
     font-weight: 700;
     font-size: 16px;
     margin: 8px 0px;
+}
+.note {
+    padding: 8px;
+    border: 1px solid gray;
+    background: pink;
+    border-radius: 8px;
 }
 </style>

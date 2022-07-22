@@ -220,7 +220,7 @@ const filterDistribution = computed(() => {
     border-radius: 8px;
 }
 .page-title {
-    border-left: 8px solid rgb(255, 122, 60);
+    border-left: 8px solid rgb(255, 60, 255);
     padding-left: 8px;
     font-weight: 700;
     font-size: 16px;

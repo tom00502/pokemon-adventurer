@@ -42,7 +42,7 @@ const router = [
     {
         path: '/about',
         name: 'about',
-        title: '聯絡站長',
+        title: '關於本站',
     },
 ]
 export default router
