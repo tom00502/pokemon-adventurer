@@ -36,12 +36,9 @@ import routers from '@/router/config'
     </div>
     <header>
         <nav>
-            <RouterLink
-                v-for="route in routers"
-                :key="route.name"
-                :to="route.path"
-                >{{ route.title }}</RouterLink
-            >
+            <div v-for="route in routers" :key="route.name">
+                <RouterLink :to="route.path">{{ route.title }}</RouterLink>
+            </div>
         </nav>
     </header>
     <RouterView />
@@ -80,6 +77,7 @@ a,
 @media (hover: hover) {
     a:hover {
         background-color: hsla(160, 100%, 37%, 0.2);
+        border-radius: 8px;
     }
 }
 
@@ -87,21 +85,31 @@ nav {
     width: 100%;
     font-size: 12px;
     text-align: center;
-    margin-top: 2rem;
+    margin: 1rem 0;
+    display: flex;
+    overflow: auto;
+    flex-wrap: nowrap;
 }
 
 nav a.router-link-exact-active {
-    color: var(--color-text);
+    color: white;
+    background-color: hsla(160, 100%, 37%, 1);
+    border-radius: 8px;
 }
 
 nav a.router-link-exact-active:hover {
-    background-color: transparent;
+    /*background-color: transparent;*/
+    /*color: var(--color-border);*/
 }
 
 nav a {
     display: inline-block;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
+    margin: 0 0.5rem;
+}
+nav div {
     border-left: 1px solid var(--color-border);
+    flex-shrink: 0;
 }
 
 nav a:first-of-type {
