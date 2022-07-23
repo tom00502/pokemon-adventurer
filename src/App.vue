@@ -24,7 +24,7 @@ import routers from '@/router/config'
         <details>
             <summary>★官方周末活動★</summary>
             <ul>
-                <li>劍蘭掉落 7/23~7/24</li>
+                <li>劍蘭掉落 7/23~7/24 官方擺爛中...= =, 目前不會掉落</li>
                 <li>精靈占星 7/22~7/24</li>
                 <li>翻翻樂 7/22~7/24</li>
                 <li>扭蛋排行-霜奶仙 7/22~7/24</li>

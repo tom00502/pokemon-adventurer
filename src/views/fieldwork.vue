@@ -54,7 +54,7 @@ const table = [
     },
     {
         work: '使用1次大師球捕捉精靈',
-        award: ['50水晶'],
+        award: ['水晶50', '金幣48000'],
         level: 'legend',
         checkAward: false,
     },
@@ -251,15 +251,13 @@ const table = [
     },
     {
         work: '提升1次惡系精靈的品階',
-        award: ['GEN1稀有之笛'],
+        award: ['GEN1稀有之笛', '金幣14400'],
         level: 'rare',
-        checkAward: false,
     },
     {
         work: '提升1次格鬥系精靈的品階',
-        award: ['GEN1稀有之笛'],
+        award: ['GEN1稀有之笛', '金幣14400'],
         level: 'rare',
-        checkAward: false,
     },
     {
         work: '擊敗8次道館館主',
@@ -863,6 +861,7 @@ const table = [
         checkAward: false,
     },
     { work: '使用3次體力飲料', award: [], level: 'normal', checkAward: false },
+    { work: '使用5次相遇碰碰', award: [], level: 'normal', checkAward: false },
     { work: '使用10次誘捕噴霧', award: [], level: 'normal', checkAward: false },
     {
         work: '使用10次神奇糖果(大)',
@@ -917,7 +916,7 @@ const filterItems = computed(() => {
         <div class="page-title">田野調查</div>
         <div class="day7">
             <div>連續7天完成任務隨機獎勵:</div>
-            由克希之笛、雷公之笛、水君之笛、雷吉洛克之笛、火焰鳥之笛、博士皮卡丘之笛*2、偶像皮卡丘之笛*2、旋轉洛托姆之笛*2...(待補)
+            由克希之笛、雷公之笛、水君之笛、雷吉洛克之笛、火焰鳥之笛、博士皮卡丘之笛*2、偶像皮卡丘之笛*2、旋轉洛托姆之笛*2、加熱洛托姆之笛*2...(待補)
         </div>
         任務篩選:
         <select v-model="selectAward">
