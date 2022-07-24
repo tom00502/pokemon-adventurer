@@ -261,7 +261,7 @@ const table = [
     },
     {
         work: '擊敗8次道館館主',
-        award: ['GEN3史詩之笛'],
+        award: ['GEN3史詩之笛', '金幣3600'],
         level: 'rare',
         checkAward: false,
     },
@@ -301,33 +301,28 @@ const table = [
     },
     {
         work: '使用2次全複藥',
-        award: ['GEN1稀有之笛'],
+        award: ['GEN1稀有之笛', '金幣9600'],
         level: 'rare',
-        checkAward: false,
     },
     {
         work: '使用5次解凍藥',
-        award: ['GEN1稀有之笛'],
+        award: ['GEN1稀有之笛', '金幣9600'],
         level: 'rare',
-        checkAward: false,
     },
     {
         work: '使用5次解麻藥',
-        award: ['GEN1稀有之笛'],
+        award: ['GEN1稀有之笛', '金幣9600'],
         level: 'rare',
-        checkAward: false,
     },
     {
         work: '使用5次解眠藥',
-        award: ['GEN1稀有之笛'],
+        award: ['GEN1稀有之笛', '金幣9600'],
         level: 'rare',
-        checkAward: false,
     },
     {
         work: '使用5次灼傷藥',
-        award: ['GEN1稀有之笛'],
+        award: ['GEN1稀有之笛', '金幣9600'],
         level: 'rare',
-        checkAward: false,
     },
     {
         work: '使用5次努力之羽',
@@ -727,6 +722,12 @@ const table = [
         checkAward: false,
     },
     {
+        work: '擊敗5次地面系的精靈',
+        award: [],
+        level: 'normal',
+        checkAward: false,
+    },
+    {
         work: '擊敗5次飛行系的精靈',
         award: [],
         level: 'normal',
@@ -806,6 +807,12 @@ const table = [
     },
     {
         work: '將格鬥系的精靈,提升10級',
+        award: [],
+        level: 'normal',
+        checkAward: false,
+    },
+    {
+        work: '將妖精系的精靈,提升10級',
         award: [],
         level: 'normal',
         checkAward: false,
