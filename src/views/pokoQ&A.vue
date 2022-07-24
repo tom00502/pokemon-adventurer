@@ -28,7 +28,7 @@ const table = {
             question: '那只精靈的體溫比太陽表面的溫度還要高?',
             answer: '熔岩蜗牛',
         },
-        { question: '以下種族值為600的是', answer: '夢幻' },
+        { question: '以下種族值為600是?', answer: '梦幻' },
         { question: '光合作用，在大晴天時回復HP最大值的?', answer: '2/3' },
         { question: '光合作用，在無天氣時回復HP最大值的?', answer: '1/2' },
         {
@@ -100,7 +100,7 @@ const table = {
         { question: '下面哪種屬性不克制冰系', answer: '超能力系' },
         { question: '下面哪種屬性不克制草系', answer: '普通系' },
         { question: '下面哪種屬性克制電系', answer: '地面系' },
-        { question: '冰系不克制下面哪種屬性', answer: '水' },
+        { question: '冰系不克制下麵那種屬性?', answer: '水系' },
         {
             question:
                 '已知某兩個屬性任意混合，且幽靈對其效果兩倍，飛行對其效果兩倍，蟲對其效果減半，則超能對其',
