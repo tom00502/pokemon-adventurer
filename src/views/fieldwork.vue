@@ -360,15 +360,13 @@ const table = [
     },
     {
         work: '使用10次力量強化',
-        award: ['GEN1稀有之笛'],
+        award: ['GEN1稀有之笛', '金幣9600'],
         level: 'great',
-        checkAward: false,
     },
     {
         work: '使用10次防禦強化',
-        award: ['GEN1稀有之笛'],
+        award: ['GEN1稀有之笛', '金幣9600'],
         level: 'great',
-        checkAward: false,
     },
     {
         work: '使用10次特攻強化',
@@ -422,9 +420,8 @@ const table = [
     },
     {
         work: '將一般和妖精系的精靈,提升10級',
-        award: [],
+        award: ['阿羅拉六尾碎片*2', '金幣3600'],
         level: 'great',
-        checkAward: false,
     },
     {
         work: '將一般和飛行系的精靈,提升10級',
@@ -536,6 +533,7 @@ const table = [
     { work: '進化3次毒系的精靈', award: [], level: 'great', checkAward: false },
     { work: '進化3次蟲系的精靈', award: [], level: 'great', checkAward: false },
     { work: '進化3次鋼系的精靈', award: [], level: 'great', checkAward: false },
+    { work: '進化3次水系的精靈', award: [], level: 'great', checkAward: false },
     { work: '進化3次火系的精靈', award: [], level: 'great', checkAward: false },
     { work: '進化3次草系的精靈', award: [], level: 'great', checkAward: false },
     { work: '進化3次電系的精靈', award: [], level: 'great', checkAward: false },
@@ -580,6 +578,12 @@ const table = [
     },
     {
         work: '進化3次地面系的精靈',
+        award: [],
+        level: 'great',
+        checkAward: false,
+    },
+    {
+        work: '進化3次超能力系的精靈',
         award: [],
         level: 'great',
         checkAward: false,
