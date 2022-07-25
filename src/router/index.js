@@ -39,6 +39,11 @@ const router = createRouter({
             component: () => import('@/views/fluteView.vue'),
         },
         {
+            path: '/distribution',
+            name: 'distribution',
+            component: () => import('@/views/distribution.vue'),
+        },
+        {
             path: '/reincarnation',
             name: 'reincarnation',
             component: () => import('@/components/Reincarnation.vue'),

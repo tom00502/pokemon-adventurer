@@ -30,6 +30,11 @@ const router = [
         title: '召喚笛子',
     },
     {
+        path: '/distribution',
+        name: 'distribution',
+        title: '精靈分佈',
+    },
+    {
         path: '/reincarnation',
         name: 'reincarnation',
         title: '轉生模擬',

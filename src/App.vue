@@ -3,6 +3,15 @@ import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from '@/components/HelloWorld.vue'
 import Reincarnation from '@/components/Reincarnation.vue'
 import routers from '@/router/config'
+import { ref, onMounted } from 'vue'
+import { usePokedexStore } from '@/stores/pokedex'
+
+const pokedexStore = usePokedexStore()
+onMounted(() => {
+    console.log('mount test')
+    pokedexStore.getPokedex()
+    // api.getDistributed()
+})
 </script>
 
 <template>
