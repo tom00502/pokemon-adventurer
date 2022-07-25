@@ -20,7 +20,7 @@ import routers from '@/router/config'
   </header>
 
   <RouterView /> -->
-    <div class="bulletin">
+    <!-- <div class="bulletin">
         <details>
             <summary>★官方周末活動★</summary>
             <ul>
@@ -36,7 +36,7 @@ import routers from '@/router/config'
                 <li>夏日特賣 7/23~7/24</li>
             </ul>
         </details>
-    </div>
+    </div> -->
     <header>
         <nav>
             <div v-for="route in routers" :key="route.name">
