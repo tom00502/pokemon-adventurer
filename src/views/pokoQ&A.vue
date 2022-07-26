@@ -6,7 +6,7 @@ const table = {
         { question: '以下HP不同於其他三只的是?', answer: '叉字蝠' },
         { question: '以下物攻不同於其他三只的是?', answer: '暴鲤龙' },
         { question: '以下物防不同於其他三只的是?', answer: '沙河马' },
-        { question: '以下特攻不同於其他三只的是', answer: '獵斑鰻' },
+        { question: '以下特攻不同於其他三只的是?', answer: '獵斑鰻' },
         { question: '以下特防不同於其他三只的是?', answer: '摇篮百合' },
         { question: '以下速度不同於其他三只的是', answer: '愛心魚' },
         { question: '以下絕招中威力不同於其他三只的是?', answer: '瓦割' },
