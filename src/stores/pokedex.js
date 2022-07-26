@@ -24,7 +24,7 @@ export const usePokedexStore = defineStore({
                             poke.i,
                             {
                                 name: poke.n,
-                                attribute: poke.a,
+                                attribute: poke.a.filter((attr) => attr),
                                 quality: quality[poke.q],
                             },
                         ]

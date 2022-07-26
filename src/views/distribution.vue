@@ -34,6 +34,9 @@ const filterDistribution = computed(() => {
             })
             .filter((distribution) => distribution.pokes.length)
 })
+const isDark = (name) => {
+    return name.includes('晚上')
+}
 </script>
 
 <template>
@@ -49,13 +52,22 @@ const filterDistribution = computed(() => {
             <div class="area">
                 <span>{{ area.name }}</span>
             </div>
-            <div class="poke-list">
+            <div class="poke-list" :class="{ dark: isDark(area.name) }">
                 <div
                     v-for="poke in area.pokes"
                     :key="poke.name"
                     :class="poke.quality"
                 >
                     {{ poke.name }}
+                    <div class="attribute-line">
+                        <div
+                            v-for="attribute in poke.attribute"
+                            :key="attribute"
+                            :class="attribute"
+                        >
+                            {{ attribute }}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -112,9 +124,12 @@ const filterDistribution = computed(() => {
 .poke-list {
     display: flex;
     flex-wrap: wrap;
-    background: #dbffdba4;
+    background: #8eff8e86;
     padding: 8px;
     border-radius: 8px;
+}
+.dark {
+    background: #27792786;
 }
 .poke-list > div {
     padding: 4px;
@@ -130,5 +145,52 @@ const filterDistribution = computed(() => {
     border-left: 4px solid green;
     border-right: 4px solid green;
     padding: 0px 8px;
+}
+.attribute-line {
+    display: flex;
+    justify-content: space-around;
+    /* gap: 8px; */
+}
+.attribute-line > div {
+    font-size: 12px;
+    border-radius: 4px;
+    /* padding: 0px 8px; */
+    width: 48px;
+}
+.一般 {
+    background: gray;
+    color: white;
+}
+.草 {
+    background: green;
+    color: white;
+}
+.電 {
+    background: rgb(219, 208, 83);
+    color: white;
+}
+.水 {
+    background: rgb(60, 142, 215);
+    color: white;
+}
+.蟲 {
+    background: rgb(126, 175, 100);
+    color: white;
+}
+.火 {
+    background: rgb(176, 0, 0);
+    color: white;
+}
+.毒 {
+    background: rgb(166, 68, 166);
+    color: white;
+}
+.超能力 {
+    background: rgb(220, 20, 170);
+    color: white;
+}
+.飛行 {
+    background: rgb(42, 105, 221);
+    color: white;
 }
 </style>
