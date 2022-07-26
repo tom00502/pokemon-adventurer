@@ -385,16 +385,14 @@ const table = [
     },
     {
         work: '使用10次要害攻擊',
-        award: ['GEN2傳說之笛'],
+        award: ['GEN2傳說之笛', '金幣9600'],
         level: 'great',
-        checkAward: false,
     },
     { work: '使用10次好傷藥', award: [], level: 'great', checkAward: false },
     {
         work: '使用10次能力防守',
-        award: ['GEN2傳說之笛'],
+        award: ['GEN2傳說之笛', '金幣9600'],
         level: 'great',
-        checkAward: false,
     },
     {
         work: '使用10次性格轉換蜜',
@@ -425,9 +423,8 @@ const table = [
     },
     {
         work: '將一般和飛行系的精靈,提升10級',
-        award: [],
+        award: ['阿羅拉六尾碎片*2', '金幣3600'],
         level: 'great',
-        checkAward: false,
     },
     {
         work: '將蟲和飛行系的精靈,提升10級',
