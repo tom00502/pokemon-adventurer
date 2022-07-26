@@ -53,6 +53,9 @@ onMounted(() => {
             </div>
         </nav>
     </header>
+    <div class="key">
+        寵物冒險家,寵物冒險助理,寵物冒險家攻略,攻略,轉生模擬器,升星計算機,解答,笛子,召喚笛,狩獵場,公會戰,宠物冒险家,宠物冒险助理,宠物冒险家攻略,攻略,转生模拟器,升星计算机,解答,笛子,召唤笛,狩猎场,公会战,冲锋吧精灵
+    </div>
     <RouterView />
 </template>
 
@@ -85,7 +88,9 @@ a,
     color: hsla(160, 100%, 37%, 1);
     transition: 0.4s;
 }
-
+.key {
+    display: none;
+}
 @media (hover: hover) {
     a:hover {
         background-color: hsla(160, 100%, 37%, 0.2);
