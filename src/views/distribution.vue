@@ -82,18 +82,25 @@ const isDark = (name) => {
                 <li>資料建立中</li>
             </ul>
         </div>
-        搜尋: <input type="text" v-model="searchText" />
-        屬性篩選:
-        <select v-model="selectAttribute">
-            <option :value="''">-請選擇屬性-</option>
-            <option
-                v-for="attribute in attributes"
-                :value="attribute"
-                :key="attribute"
-            >
-                {{ attribute }}
-            </option>
-        </select>
+        <div class="search-bar">
+            <div>搜尋: <input type="text" v-model="searchText" /></div>
+            <div>
+                屬性篩選:
+                <select v-model="selectAttribute">
+                    <option :value="''">-請選擇屬性-</option>
+                    <option
+                        v-for="attribute in attributes"
+                        :value="attribute"
+                        :key="attribute"
+                    >
+                        {{ attribute }}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div v-if="distributionStore.distributions.length == 0" class="loading">
+            <div class="lds-dual-ring">loading...</div>
+        </div>
         <div v-for="area in filterDistribution" :key="area.name">
             <div class="area">
                 <span>{{ area.name }}</span>
@@ -274,5 +281,38 @@ const isDark = (name) => {
 .妖精 {
     background: rgb(255, 97, 194);
     color: white;
+}
+.search-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.loading {
+    display: flex;
+    justify-content: center;
+}
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+.lds-dual-ring:after {
+    content: ' ';
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fcf;
+    border-color: #fcf transparent #fcf transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 </style>

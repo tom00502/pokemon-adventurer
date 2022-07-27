@@ -70,7 +70,7 @@ const handleChangeLevel = (level) => {
 
 <template>
     <main>
-        <div class="page-title">星級計算</div>
+        <div class="page-title">升星計算機</div>
         <div class="note">
             <ul>
                 <li>先選擇精靈品質、目前星級與目前經驗就能輕鬆算出剩餘經驗~</li>

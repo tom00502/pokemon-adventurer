@@ -42,7 +42,7 @@ const router = [
     {
         path: '/star',
         name: 'star',
-        title: '星級計算',
+        title: '升星計算',
     },
     {
         path: '/about',
