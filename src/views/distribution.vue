@@ -21,9 +21,9 @@ onMounted(() => {
 })
 const searchText = ref('')
 const filterDistribution = computed(() => {
-    if (searchText.value == '') return distributionStore.distributions
-    else
-        return distributionStore.distributions
+    let result = distributionStore.distributions
+    if (searchText.value != '') {
+        result = result
             .map((distribution) => {
                 return {
                     ...distribution,
@@ -33,7 +33,42 @@ const filterDistribution = computed(() => {
                 }
             })
             .filter((distribution) => distribution.pokes.length)
+    }
+    if (selectAttribute.value != '') {
+        result = result
+            .map((distribution) => {
+                return {
+                    ...distribution,
+                    pokes: distribution.pokes.filter((poke) =>
+                        poke.attribute.includes(selectAttribute.value)
+                    ),
+                }
+            })
+            .filter((distribution) => distribution.pokes.length)
+    }
+    return result
 })
+const attributes = [
+    '一般',
+    '格鬥',
+    '飛行',
+    '毒',
+    '地面',
+    '岩石',
+    '蟲',
+    '幽靈',
+    '鋼',
+    '火',
+    '水',
+    '草',
+    '電',
+    '超能力',
+    '冰',
+    '龍',
+    '惡',
+    '妖精',
+]
+const selectAttribute = ref('')
 const isDark = (name) => {
     return name.includes('晚上')
 }
@@ -48,6 +83,17 @@ const isDark = (name) => {
             </ul>
         </div>
         搜尋: <input type="text" v-model="searchText" />
+        屬性篩選:
+        <select v-model="selectAttribute">
+            <option :value="''">-請選擇屬性-</option>
+            <option
+                v-for="attribute in attributes"
+                :value="attribute"
+                :key="attribute"
+            >
+                {{ attribute }}
+            </option>
+        </select>
         <div v-for="area in filterDistribution" :key="area.name">
             <div class="area">
                 <span>{{ area.name }}</span>
@@ -149,7 +195,7 @@ const isDark = (name) => {
 .attribute-line {
     display: flex;
     justify-content: space-around;
-    /* gap: 8px; */
+    gap: 4px;
 }
 .attribute-line > div {
     font-size: 12px;
@@ -181,8 +227,24 @@ const isDark = (name) => {
     background: rgb(176, 0, 0);
     color: white;
 }
+.冰 {
+    background: rgb(58, 226, 231);
+    color: white;
+}
 .毒 {
     background: rgb(166, 68, 166);
+    color: white;
+}
+.鋼 {
+    background: rgb(155, 155, 155);
+    color: white;
+}
+.惡 {
+    background: rgb(104, 29, 0);
+    color: white;
+}
+.龍 {
+    background: rgb(15, 30, 114);
     color: white;
 }
 .超能力 {
@@ -191,6 +253,26 @@ const isDark = (name) => {
 }
 .飛行 {
     background: rgb(42, 105, 221);
+    color: white;
+}
+.岩石 {
+    background: rgb(165, 96, 31);
+    color: white;
+}
+.幽靈 {
+    background: rgb(160, 38, 216);
+    color: white;
+}
+.格鬥 {
+    background: rgb(204, 75, 35);
+    color: white;
+}
+.地面 {
+    background: rgb(221, 106, 52);
+    color: white;
+}
+.妖精 {
+    background: rgb(255, 97, 194);
     color: white;
 }
 </style>

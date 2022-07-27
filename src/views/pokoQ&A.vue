@@ -38,7 +38,7 @@ const table = {
         },
         { question: '下列口袋妖怪中最適合速攻的是', answer: '化石翼龍' },
         { question: '雷吉洛克有幾只眼睛', answer: '7只' },
-        { question: '皮卡丘屬於什麼系的寶可夢', answer: '電系' },
+        { question: '皮卡丘是屬於什麼系的寶可夢?', answer: '電系' },
         {
             question: '噴火龍被隆隆岩用原始力量，則原始力量的實際威力是',
             answer: '360',
@@ -79,6 +79,7 @@ const table = {
             answer: '蟲系、幽靈系、惡系',
         },
         { question: '惡系被那3種屬性克制', answer: '格鬥系、蟲系、妖精系' },
+        { question: '惡系克制下麵那2中屬性?', answer: '幽灵系、超能力系' },
         { question: '鋼系被那3種屬性克制', answer: '格鬥系、地面系、火系' },
         { question: '龍系被下麵那3種屬性克制?', answer: '冰系、龙系、妖精系' },
         { question: '幽靈系被下麵那2種屬性克制?', answer: '幽灵系、恶系' },
