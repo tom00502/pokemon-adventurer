@@ -32,7 +32,7 @@ const router = [
     {
         path: '/distribution',
         name: 'distribution',
-        title: '精靈分佈',
+        title: '尋寵地圖',
     },
     {
         path: '/reincarnation',

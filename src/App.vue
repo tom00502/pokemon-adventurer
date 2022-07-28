@@ -5,11 +5,13 @@ import Reincarnation from '@/components/Reincarnation.vue'
 import routers from '@/router/config'
 import { ref, onMounted } from 'vue'
 import { usePokedexStore } from '@/stores/pokedex'
-
+import { useDistributionStore } from '@/stores/distribution'
 const pokedexStore = usePokedexStore()
+const distributionStore = useDistributionStore()
 onMounted(() => {
     console.log('mount test')
     pokedexStore.getPokedex()
+    distributionStore.getDistributions()
     // api.getDistributed()
 })
 </script>

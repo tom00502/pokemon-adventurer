@@ -17,9 +17,10 @@ onMounted(() => {
     //         })
     //     })
     // }
-    distributionStore.getDistributions()
+    // distributionStore.getDistributions()
 })
 const searchText = ref('')
+const searchArea = ref('')
 const filterDistribution = computed(() => {
     let result = distributionStore.distributions
     if (searchText.value != '') {
@@ -33,6 +34,11 @@ const filterDistribution = computed(() => {
                 }
             })
             .filter((distribution) => distribution.pokes.length)
+    }
+    if (searchArea.value != '') {
+        result = result.filter((distribution) =>
+            distribution.name.includes(searchArea.value)
+        )
     }
     if (selectAttribute.value != '') {
         result = result
@@ -70,20 +76,26 @@ const attributes = [
 ]
 const selectAttribute = ref('')
 const isDark = (name) => {
-    return name.includes('晚上')
+    return name.includes('夜晚')
 }
 </script>
 
 <template>
     <main>
-        <div class="page-title">野生精靈分布表</div>
+        <div class="page-title">尋寵地圖</div>
         <div class="note">
             <ul>
-                <li>資料建立中</li>
+                <li>
+                    收錄各地區出沒的精靈，快速找到想抓的精靈，開圖鑑捉寵必備神器!!
+                </li>
+                <li>可搜尋精靈名稱 ex:路卡利歐</li>
+                <li>可搜尋地區名稱 ex:白銀山</li>
+                <li>可選擇精靈屬性 ex:龍</li>
             </ul>
         </div>
         <div class="search-bar">
-            <div>搜尋: <input type="text" v-model="searchText" /></div>
+            <div>精靈搜尋: <input type="text" v-model="searchText" /></div>
+            <div>地點搜尋: <input type="text" v-model="searchArea" /></div>
             <div>
                 屬性篩選:
                 <select v-model="selectAttribute">
@@ -182,7 +194,7 @@ const isDark = (name) => {
     border-radius: 8px;
 }
 .dark {
-    background: #27792786;
+    background: #164916;
 }
 .poke-list > div {
     padding: 4px;
