@@ -31,10 +31,12 @@ onMounted(() => {
   </header>
 
   <RouterView /> -->
-    <!-- <div class="bulletin">
+    <div class="bulletin">
         <details>
-            <summary>★官方周末活動★</summary>
-            <ul>
+            <summary>
+                ★新兌換碼:Happp1Summer2Time3(水晶150,扭蛋幣1,疲勞50)★
+            </summary>
+            <!-- <ul>
                 <li>劍蘭掉落 7/23~7/24 官方擺爛中...= =, 目前不會掉落</li>
                 <li>精靈占星 7/22~7/24</li>
                 <li>翻翻樂 7/22~7/24</li>
@@ -45,9 +47,9 @@ onMounted(() => {
                 </li>
                 <li>大暑超級返利 7/23</li>
                 <li>夏日特賣 7/23~7/24</li>
-            </ul>
+            </ul> -->
         </details>
-    </div> -->
+    </div>
     <header>
         <nav>
             <div v-for="route in routers" :key="route.name">
