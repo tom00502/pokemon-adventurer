@@ -410,6 +410,16 @@ const table = [
         checkAward: false,
     },
     {
+        work: '將毒和飛行系的精靈，提升10級',
+        award: ['阿羅拉九尾碎片*2', '金幣3600'],
+        level: 'great',
+    },
+    {
+        work: '將岩石和地面系的精靈，提升10級',
+        award: ['阿羅拉九尾碎片*2', '金幣3600'],
+        level: 'great',
+    },
+    {
         work: '將草和毒系的精靈，提升10級',
         award: ['阿羅拉六尾碎片*2', '金幣3600'],
         level: 'great',
@@ -447,19 +457,7 @@ const table = [
         checkAward: false,
     },
     {
-        work: '將岩石和地面系的精靈，提升10級',
-        award: [],
-        level: 'great',
-        checkAward: false,
-    },
-    {
         work: '將蟲和毒系的精靈，提升10級',
-        award: [],
-        level: 'great',
-        checkAward: false,
-    },
-    {
-        work: '將毒和飛行系的精靈，提升10級',
         award: [],
         level: 'great',
         checkAward: false,
@@ -649,9 +647,8 @@ const table = [
     },
     {
         work: '使用50次高級球捕捉精靈',
-        award: [],
+        award: ['金幣4000'],
         level: 'great',
-        checkAward: false,
     },
     {
         work: '擊敗6次道館館主',
@@ -926,7 +923,7 @@ const filterItems = computed(() => {
         <div class="page-title">田野調查</div>
         <div class="day7">
             <div>連續7天完成任務隨機獎勵:</div>
-            由克希之笛、雷公之笛、水君之笛、雷吉洛克之笛、火焰鳥之笛、博士皮卡丘之笛*2、偶像皮卡丘之笛*2、旋轉洛托姆之笛*2、加熱洛托姆之笛*2...(待補)
+            由克希之笛、雷公之笛、水君之笛、雷吉洛克之笛、火焰鳥之笛、博士皮卡丘之笛*2、偶像皮卡丘之笛*2、旋轉洛托姆之笛*2、加熱洛托姆之笛*2、阿羅拉三地鼠之笛*5...(待補)
         </div>
         任務篩選:
         <select v-model="selectAward">
