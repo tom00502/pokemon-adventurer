@@ -283,7 +283,7 @@ const table = [
     },
     {
         work: '使用2次聖灰',
-        award: ['斗笠菇之笛'],
+        award: ['斗笠菇之笛', '金幣19200'],
         level: 'rare',
         checkAward: false,
     },
