@@ -410,6 +410,11 @@ const table = [
         checkAward: false,
     },
     {
+        work: '將電和鋼系的精靈，提升10級',
+        award: ['阿羅拉九尾碎片*2', '金幣3600'],
+        level: 'great',
+    },
+    {
         work: '將毒和飛行系的精靈，提升10級',
         award: ['阿羅拉九尾碎片*2', '金幣3600'],
         level: 'great',
@@ -445,19 +450,12 @@ const table = [
         level: 'great',
     },
     {
-        work: '將電和鋼系的精靈，提升10級',
-        award: [],
+        work: '將蟲和毒系的精靈，提升10級',
+        award: ['阿羅拉六尾碎片*2', '金幣3600'],
         level: 'great',
-        checkAward: false,
     },
     {
         work: '將岩石和水系的精靈，提升10級',
-        award: [],
-        level: 'great',
-        checkAward: false,
-    },
-    {
-        work: '將蟲和毒系的精靈，提升10級',
         award: [],
         level: 'great',
         checkAward: false,
