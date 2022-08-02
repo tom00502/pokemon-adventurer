@@ -341,7 +341,7 @@ const table = [
     },
     {
         work: '使用3次努力增強劑',
-        award: ['GEN2傳說之笛'],
+        award: ['GEN2傳說之笛', '金幣9600'],
         level: 'great',
         checkAward: false,
     },
@@ -468,7 +468,13 @@ const table = [
     },
     {
         work: '捕捉5只地面系的精靈',
-        award: ['阿羅拉穿山王碎片'],
+        award: ['阿羅拉穿山王碎片*2', '金幣6000'],
+        level: 'great',
+        checkAward: false,
+    },
+    {
+        work: '捕捉5只岩石系的精靈',
+        award: ['阿羅拉穿山王碎片*2', '金幣6000'],
         level: 'great',
         checkAward: false,
     },
@@ -496,12 +502,6 @@ const table = [
     },
     {
         work: '捕捉5只妖精系的精靈',
-        award: [],
-        level: 'great',
-        checkAward: false,
-    },
-    {
-        work: '捕捉5只岩石系的精靈',
         award: [],
         level: 'great',
         checkAward: false,

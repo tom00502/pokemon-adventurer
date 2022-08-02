@@ -141,7 +141,7 @@ const table = {
             question: '挑戰精靈訓練家,可以獲得下麵哪種物品?',
             answer: '精靈經驗',
         },
-        { question: '下面那種途徑不能獲得攜帶物的', answer: '遠征之路' },
+        { question: '下麵哪種途徑不能獲得攜帶物的?', answer: '遠征之路' },
         { question: '精靈有那些途徑獲得經驗', answer: '選項全對' },
         {
             question: '首沖送的巨鉗螳螂，技能"點到為止"，最適合用來?',
