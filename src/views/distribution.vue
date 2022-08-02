@@ -3,7 +3,9 @@ import { RouterLink, RouterView } from 'vue-router'
 import { computed, reactive, ref, onMounted } from '@vue/runtime-core'
 import api from '@/libs/api'
 import { useDistributionStore } from '@/stores/distribution'
+import { usePokedexStore } from '@/stores/pokedex'
 const distributionStore = useDistributionStore()
+const pokedexStore = usePokedexStore()
 // const data = reactive({ distributions: null })
 onMounted(() => {
     // if (data.distributions == null) {
@@ -24,16 +26,38 @@ const searchArea = ref('')
 const filterDistribution = computed(() => {
     let result = distributionStore.distributions
     if (searchText.value != '') {
-        result = result
-            .map((distribution) => {
-                return {
-                    ...distribution,
-                    pokes: distribution.pokes.filter((poke) =>
-                        poke.name.includes(searchText.value)
-                    ),
-                }
-            })
-            .filter((distribution) => distribution.pokes.length)
+        if (includeFrom.value) {
+            //找出圖鑑中符合字串的來源
+            const find = Object.values(pokedexStore.pokes)
+                .filter(
+                    (poke) => poke.name.includes(searchText.value) && poke.from
+                )
+                .map((poke) => poke.from)
+            const findSet = new Set(find)
+            //對來源做set
+            //找出分布中有set的人回傳
+            result = result
+                .map((distribution) => {
+                    return {
+                        ...distribution,
+                        pokes: distribution.pokes.filter((poke) =>
+                            findSet.has(poke.from)
+                        ),
+                    }
+                })
+                .filter((distribution) => distribution.pokes.length)
+        } else {
+            result = result
+                .map((distribution) => {
+                    return {
+                        ...distribution,
+                        pokes: distribution.pokes.filter((poke) =>
+                            poke.name.includes(searchText.value)
+                        ),
+                    }
+                })
+                .filter((distribution) => distribution.pokes.length)
+        }
     }
     if (searchArea.value != '') {
         result = result.filter((distribution) =>
@@ -75,6 +99,7 @@ const attributes = [
     '妖精',
 ]
 const selectAttribute = ref('')
+const includeFrom = ref(false)
 const isDark = (name) => {
     return name.includes('夜晚')
 }
@@ -91,6 +116,10 @@ const isDark = (name) => {
                 <li>可搜尋精靈名稱 ex:路卡利歐</li>
                 <li>可搜尋地區名稱 ex:白銀山</li>
                 <li>可選擇精靈屬性 ex:龍</li>
+                <li>
+                    同源搜索: 搜尋同一進化來源的寶可夢
+                    ex:輸入噴火龍可找出小火龍(測試中僅開放第一世代寶可夢)
+                </li>
             </ul>
         </div>
         <div class="search-bar">
@@ -109,6 +138,7 @@ const isDark = (name) => {
                     </option>
                 </select>
             </div>
+            <div>同源搜索: <input type="checkbox" v-model="includeFrom" /></div>
         </div>
         <div v-if="distributionStore.distributions.length == 0" class="loading">
             <div class="lds-dual-ring">loading...</div>
