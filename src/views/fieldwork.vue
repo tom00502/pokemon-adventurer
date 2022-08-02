@@ -467,16 +467,19 @@ const table = [
         checkAward: false,
     },
     {
+        work: '捕捉5只一般系的精靈',
+        award: ['阿羅拉穿山王碎片*2', '金幣6000'],
+        level: 'great',
+    },
+    {
         work: '捕捉5只地面系的精靈',
         award: ['阿羅拉穿山王碎片*2', '金幣6000'],
         level: 'great',
-        checkAward: false,
     },
     {
         work: '捕捉5只岩石系的精靈',
         award: ['阿羅拉穿山王碎片*2', '金幣6000'],
         level: 'great',
-        checkAward: false,
     },
     { work: '捕捉5只惡系的精靈', award: [], level: 'great', checkAward: false },
     { work: '捕捉5只蟲系的精靈', award: [], level: 'great', checkAward: false },
@@ -488,12 +491,6 @@ const table = [
     { work: '捕捉5只冰系的精靈', award: [], level: 'great', checkAward: false },
     { work: '捕捉5只龍系的精靈', award: [], level: 'great', checkAward: false },
     { work: '捕捉5只鋼系的精靈', award: [], level: 'great', checkAward: false },
-    {
-        work: '捕捉5只一般系的精靈',
-        award: [],
-        level: 'great',
-        checkAward: false,
-    },
     {
         work: '捕捉5只格鬥系的精靈',
         award: [],
