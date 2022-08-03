@@ -262,7 +262,6 @@ const table = [
         work: '擊敗8次道館館主',
         award: ['GEN3史詩之笛', '金幣3600'],
         level: 'rare',
-        checkAward: false,
     },
     {
         work: '進化5次精靈',
@@ -285,7 +284,6 @@ const table = [
         work: '使用2次聖灰',
         award: ['斗笠菇之笛', '金幣19200'],
         level: 'rare',
-        checkAward: false,
     },
     {
         work: '使用2次活力碎片',
@@ -294,9 +292,8 @@ const table = [
     },
     {
         work: '使用2次活力塊',
-        award: ['差不多娃娃之笛'],
+        award: ['差不多娃娃之笛', '金幣19200'],
         level: 'rare',
-        checkAward: false,
     },
     {
         work: '使用2次全複藥',
@@ -343,7 +340,6 @@ const table = [
         work: '使用3次努力增強劑',
         award: ['GEN2傳說之笛', '金幣9600'],
         level: 'great',
-        checkAward: false,
     },
     {
         work: '使用5次厲害傷藥',
@@ -522,6 +518,11 @@ const table = [
         checkAward: false,
     },
     { work: '捕捉30只精靈', award: [], level: 'great', checkAward: false },
+    {
+        work: '進化3次超能力系的精靈',
+        award: ['阿羅拉喵喵碎片*2', '金幣9600'],
+        level: 'great',
+    },
     { work: '進化3次毒系的精靈', award: [], level: 'great', checkAward: false },
     { work: '進化3次蟲系的精靈', award: [], level: 'great', checkAward: false },
     { work: '進化3次鋼系的精靈', award: [], level: 'great', checkAward: false },
@@ -570,12 +571,6 @@ const table = [
     },
     {
         work: '進化3次地面系的精靈',
-        award: [],
-        level: 'great',
-        checkAward: false,
-    },
-    {
-        work: '進化3次超能力系的精靈',
         award: [],
         level: 'great',
         checkAward: false,
