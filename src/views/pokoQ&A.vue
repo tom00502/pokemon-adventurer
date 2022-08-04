@@ -40,11 +40,11 @@ const table = {
         { question: '雷吉洛克有幾只眼睛', answer: '7只' },
         { question: '皮卡丘是屬於什麼系的寶可夢?', answer: '電系' },
         {
-            question: '噴火龍被隆隆岩用原始力量，則原始力量的實際威力是',
+            question: '噴火龍被隆隆岩用原始力量，則原始力量的實際威力是?',
             answer: '360',
         },
         { question: '小火龍是第幾世代的寶可夢?', answer: '第一世代' },
-        { question: '木守宮是第幾世代的寶可夢', answer: '第三世代' },
+        { question: '木守宮是第幾世代的寶可夢?', answer: '第三世代' },
         { question: '卡拉卡拉頭上戴著的是誰的頭骨', answer: '母親' },
         { question: '圖鑒編號為001的是下麵哪只精靈?', answer: '妙蛙種子' },
     ],
@@ -71,7 +71,7 @@ const table = {
         { question: '毒系克制下麵那2種屬性', answer: '草系、妖精系' },
         { question: '岩石系克制下面哪種屬性', answer: '飛行系' },
         { question: '格鬥系克制下面哪種屬性', answer: '冰系' },
-        { question: '龍系克制下面哪種屬性', answer: '龍系' },
+        { question: '龍系克制下麵哪種屬性?', answer: '龙系' },
         { question: '火系克制多少種屬性', answer: '4' },
         { question: '岩石系被克制的數量和下面哪種屬性一樣多', answer: '草系' },
         {
@@ -108,7 +108,7 @@ const table = {
             answer: '正常效果',
         },
         {
-            question: '屬性為草+冰，特性厚脂肪，當受到火系傷害係數為',
+            question: '屬性為草+冰，特性厚脂肪，當受到火系傷害係數為?',
             answer: '2',
         },
     ],
@@ -142,7 +142,7 @@ const table = {
             answer: '精靈經驗',
         },
         { question: '下麵哪種途徑不能獲得攜帶物的?', answer: '遠征之路' },
-        { question: '精靈有那些途徑獲得經驗', answer: '選項全對' },
+        { question: '精靈有那些途徑獲得經驗?', answer: '選項全對' },
         {
             question: '首沖送的巨鉗螳螂，技能"點到為止"，最適合用來?',
             answer: '捕捉宠物',
