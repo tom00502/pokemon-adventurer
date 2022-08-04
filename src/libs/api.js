@@ -18,7 +18,7 @@ class Api {
     }
     getPokeMap() {
         return this.axios.get(
-            `https://script.google.com/macros/s/AKfycbyyjjykVHZCc1tuHBxAh6wHKOl4nT4wuYKd8NBL8L3pzRemP2oqI0KlJp7EQGER42FBow/exec`
+            `https://script.google.com/macros/s/AKfycby3jODTS-UFwoG_LyXHnZcAngZ2_W92FN61FGzKPGY386iBrIwZw8-uJIJi_TO4aBtiiw/exec`
         )
     }
 }

@@ -10,29 +10,32 @@ export const usePokedexStore = defineStore({
     },
     actions: {
         getPokedex() {
-            const quality = {
-                n: 'normal',
-                r: 'rare',
-                e: 'epic',
-                l: 'legend',
-                b: 'beyond',
-            }
-            if (this.pokes.length == 0) {
-                api.getPokedex().then((res) => {
-                    const entries = res.data.map((poke) => {
-                        return [
-                            poke.i,
-                            {
-                                name: poke.n,
-                                attribute: poke.a.filter((attr) => attr),
-                                quality: quality[poke.q],
-                                from: poke.f,
-                            },
-                        ]
+            return new Promise((resolve, reject) => {
+                const quality = {
+                    n: 'normal',
+                    r: 'rare',
+                    e: 'epic',
+                    l: 'legend',
+                    b: 'beyond',
+                }
+                if (this.pokes.length == 0) {
+                    api.getPokedex().then((res) => {
+                        const entries = res.data.map((poke) => {
+                            return [
+                                poke.i,
+                                {
+                                    name: poke.n,
+                                    attribute: poke.a.filter((attr) => attr),
+                                    quality: quality[poke.q],
+                                    from: poke.f,
+                                },
+                            ]
+                        })
+                        this.pokes = Object.fromEntries(entries)
+                        resolve()
                     })
-                    this.pokes = Object.fromEntries(entries)
-                })
-            }
+                }
+            })
         },
     },
 })

@@ -24,7 +24,9 @@ onMounted(() => {
 const searchText = ref('')
 const searchArea = ref('')
 const filterDistribution = computed(() => {
-    let result = distributionStore.distributions
+    let result = distributionStore.pokeMaps.filter(
+        (map) => map.type == '草叢' || map.type == '試煉之地'
+    )
     if (searchText.value != '') {
         if (includeFrom.value) {
             //找出圖鑑中符合字串的來源
@@ -140,7 +142,7 @@ const isDark = (name) => {
             </div>
             <div>同源搜索: <input type="checkbox" v-model="includeFrom" /></div>
         </div>
-        <div v-if="distributionStore.distributions.length == 0" class="loading">
+        <div v-if="distributionStore.pokeMaps.length == 0" class="loading">
             <div class="lds-dual-ring">loading...</div>
         </div>
         <div v-for="area in filterDistribution" :key="area.name">

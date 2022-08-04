@@ -10,8 +10,9 @@ const pokedexStore = usePokedexStore()
 const distributionStore = useDistributionStore()
 onMounted(() => {
     console.log('mount test')
-    pokedexStore.getPokedex()
-    distributionStore.getDistributions()
+    pokedexStore.getPokedex().then(() => {
+        distributionStore.getDistributions()
+    })
     // api.getDistributed()
 })
 </script>
