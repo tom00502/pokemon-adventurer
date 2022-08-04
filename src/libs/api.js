@@ -16,5 +16,10 @@ class Api {
             `https://script.google.com/macros/s/AKfycbyPbo2DuwuJDodmmdN1rCtHT-SJtyUvMPgn-XXXfYFl_cGyQAKlr_J9iXESlw0viPLPJw/exec`
         )
     }
+    getPokeMap() {
+        return this.axios.get(
+            `https://script.google.com/macros/s/AKfycbyyjjykVHZCc1tuHBxAh6wHKOl4nT4wuYKd8NBL8L3pzRemP2oqI0KlJp7EQGER42FBow/exec`
+        )
+    }
 }
 export default new Api()

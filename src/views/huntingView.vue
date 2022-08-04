@@ -106,7 +106,7 @@ const pokeDistribution = {
         { name: '多邊獸Z', level: 'legend' },
         { name: '始祖大鳥', level: 'legend' },
         { name: '怪力', level: 'epic' },
-        { name: '紐拉', level: 'epic' },
+        { name: '狃拉', level: 'epic' },
         { name: '盔甲鳥', level: 'epic' },
         { name: '長毛豬', level: 'epic' },
         { name: '阿勃梭魯', level: 'epic' },

@@ -20,6 +20,7 @@ export const useDistributionStore = defineStore({
                     })
                 })
             }
+            api.getPokeMap()
         },
     },
 })

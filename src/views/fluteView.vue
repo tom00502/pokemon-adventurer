@@ -71,7 +71,7 @@ const pokeDistribution = {
         { name: '布魯皇', level: 'epic' },
         { name: '千針魚', level: 'epic' },
         { name: '壺壺', level: 'epic' },
-        { name: '紐拉', level: 'epic' },
+        { name: '狃拉', level: 'epic' },
         { name: '長毛豬', level: 'epic' },
         { name: '章魚桶', level: 'epic' },
         { name: '巨翅飛魚', level: 'epic' },

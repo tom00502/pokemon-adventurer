@@ -337,21 +337,40 @@ const table = [
         level: 'rare',
     },
     {
+        work: '使用10次命中強化',
+        award: ['禦三家之笛', '金幣9600'],
+        level: 'great',
+    },
+    {
+        work: '使用15次傷藥',
+        award: ['禦三家之笛'],
+        level: 'great',
+        checkAward: false,
+    },
+    {
         work: '使用3次努力增強劑',
         award: ['GEN2傳說之笛', '金幣9600'],
         level: 'great',
     },
     {
         work: '使用5次厲害傷藥',
-        award: ['GEN2傳說之笛'],
+        award: ['GEN2傳說之笛', '金幣9600'],
         level: 'great',
-        checkAward: false,
     },
     {
-        work: '使用10次命中強化',
-        award: ['禦三家之笛'],
+        work: '使用10次好傷藥',
+        award: ['GEN2傳說之笛', '金幣9600'],
         level: 'great',
-        checkAward: false,
+    },
+    {
+        work: '使用10次要害攻擊',
+        award: ['GEN2傳說之笛', '金幣9600'],
+        level: 'great',
+    },
+    {
+        work: '使用10次能力防守',
+        award: ['GEN2傳說之笛', '金幣9600'],
+        level: 'great',
     },
     {
         work: '使用10次力量強化',
@@ -379,29 +398,8 @@ const table = [
         level: 'great',
     },
     {
-        work: '使用10次要害攻擊',
-        award: ['GEN2傳說之笛', '金幣9600'],
-        level: 'great',
-    },
-    {
-        work: '使用10次好傷藥',
-        award: ['GEN2傳說之笛', '金幣9600'],
-        level: 'great',
-    },
-    {
-        work: '使用10次能力防守',
-        award: ['GEN2傳說之笛', '金幣9600'],
-        level: 'great',
-    },
-    {
         work: '使用10次性格轉換蜜',
         award: ['GEN1史詩之笛'],
-        level: 'great',
-        checkAward: false,
-    },
-    {
-        work: '使用15次傷藥',
-        award: ['禦三家之笛'],
         level: 'great',
         checkAward: false,
     },
