@@ -178,6 +178,7 @@ const checkExperienceRange = () => {
                         :max="expsThisLevel - 1"
                         @change="checkExperienceRange()"
                         @keyup="checkExperienceRange()"
+                        class="w-25"
                     />
                     {{ ` / ${expsThisLevel}` }}
                 </div>
@@ -305,6 +306,9 @@ table {
     border: 1px solid gray;
     background: pink;
     border-radius: 8px;
+}
+.w-25 {
+    width: 100px;
 }
 .w-full {
     width: 100%;
