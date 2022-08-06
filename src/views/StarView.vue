@@ -66,6 +66,14 @@ const handleChangeLevel = (level) => {
     poko.starLevel = level
     poko.experience = 0
 }
+const checkExperienceRange = () => {
+    if (poko.experience < 0) {
+        poko.experience = 0
+    }
+    if (poko.experience > expsThisLevel.value - 1) {
+        poko.experience = expsThisLevel.value - 1
+    }
+}
 </script>
 
 <template>
@@ -156,14 +164,22 @@ const handleChangeLevel = (level) => {
             </div>
             <div>
                 <div>目前星級經驗</div>
-                <div>
+                <div class="w-full px-3">
                     <input
                         type="range"
                         v-model="poko.experience"
                         min="0"
                         :max="expsThisLevel - 1"
+                        class="w-full"
                     />
-                    {{ `${poko.experience} / ${expsThisLevel}` }}
+                    <input
+                        type="number"
+                        v-model="poko.experience"
+                        :max="expsThisLevel - 1"
+                        @change="checkExperienceRange()"
+                        @keyup="checkExperienceRange()"
+                    />
+                    {{ ` / ${expsThisLevel}` }}
                 </div>
             </div>
         </div>
@@ -289,5 +305,12 @@ table {
     border: 1px solid gray;
     background: pink;
     border-radius: 8px;
+}
+.w-full {
+    width: 100%;
+}
+.px-3 {
+    padding-left: 12px;
+    padding-right: 12px;
 }
 </style>
