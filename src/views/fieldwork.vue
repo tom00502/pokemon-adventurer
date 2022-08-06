@@ -291,6 +291,11 @@ const table = [
         level: 'rare',
     },
     {
+        work: '使用8次萬靈藥',
+        award: ['胡地之笛', '金幣19200'],
+        level: 'rare',
+    },
+    {
         work: '使用2次活力塊',
         award: ['差不多娃娃之笛', '金幣19200'],
         level: 'rare',
@@ -414,6 +419,11 @@ const table = [
         level: 'great',
     },
     {
+        work: '將岩石和水系的精靈，提升10級',
+        award: ['阿羅拉九尾碎片*2', '金幣3600'],
+        level: 'great',
+    },
+    {
         work: '將岩石和地面系的精靈，提升10級',
         award: ['阿羅拉九尾碎片*2', '金幣3600'],
         level: 'great',
@@ -449,12 +459,6 @@ const table = [
         level: 'great',
     },
     {
-        work: '將岩石和水系的精靈，提升10級',
-        award: [],
-        level: 'great',
-        checkAward: false,
-    },
-    {
         work: '將蟲和飛行系的精靈，提升10級',
         award: [],
         level: 'great',
@@ -472,6 +476,11 @@ const table = [
     },
     {
         work: '捕捉5只岩石系的精靈',
+        award: ['阿羅拉穿山王碎片*2', '金幣6000'],
+        level: 'great',
+    },
+    {
+        work: '捕捉5只飛行系的精靈',
         award: ['阿羅拉穿山王碎片*2', '金幣6000'],
         level: 'great',
     },
@@ -504,18 +513,17 @@ const table = [
         checkAward: false,
     },
     {
-        work: '捕捉5只飛行系的精靈',
-        award: [],
-        level: 'great',
-        checkAward: false,
-    },
-    {
         work: '捕捉5只超能力系的精靈',
         award: [],
         level: 'great',
         checkAward: false,
     },
     { work: '捕捉30只精靈', award: [], level: 'great', checkAward: false },
+    {
+        work: '進化3次惡系的精靈',
+        award: ['阿羅拉喵喵碎片*2', '金幣9600'],
+        level: 'great',
+    },
     {
         work: '進化3次妖精系的精靈',
         award: ['阿羅拉喵喵碎片*2', '金幣9600'],
@@ -540,7 +548,6 @@ const table = [
     { work: '進化3次電系的精靈', award: [], level: 'great', checkAward: false },
     { work: '進化3次冰系的精靈', award: [], level: 'great', checkAward: false },
     { work: '進化3次龍系的精靈', award: [], level: 'great', checkAward: false },
-    { work: '進化3次惡系的精靈', award: [], level: 'great', checkAward: false },
     {
         work: '進化3次一般系的精靈',
         award: [],
