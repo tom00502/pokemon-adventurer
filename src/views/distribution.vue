@@ -6,7 +6,7 @@ import { useDistributionStore } from '@/stores/distribution'
 import { usePokedexStore } from '@/stores/pokedex'
 const distributionStore = useDistributionStore()
 const pokedexStore = usePokedexStore()
-// const data = reactive({ distributions: null })
+const data = reactive({ includeMaps: ['草叢'] })
 onMounted(() => {
     // if (data.distributions == null) {
     //     api.getDistributed().then((res) => {
@@ -23,10 +23,18 @@ onMounted(() => {
 })
 const searchText = ref('')
 const searchArea = ref('')
+const activeMaps = computed(() => {
+    let activeMaps = []
+    data.includeMaps.forEach((mapType) => {
+        const maps = distributionStore.pokeMaps.filter(
+            (map) => map.type == mapType
+        )
+        activeMaps = [...activeMaps, ...maps]
+    })
+    return activeMaps
+})
 const filterDistribution = computed(() => {
-    let result = distributionStore.pokeMaps.filter(
-        (map) => map.type == '草叢' || map.type == '試煉之地'
-    )
+    let result = activeMaps.value
     if (searchText.value != '') {
         if (includeFrom.value) {
             //找出圖鑑中符合字串的來源
@@ -141,6 +149,19 @@ const isDark = (name) => {
                 </select>
             </div>
             <div>同源搜索: <input type="checkbox" v-model="includeFrom" /></div>
+            範圍選擇:
+            <div
+                v-for="mapType in distributionStore.getterPokeMapTypes"
+                :key="mapType"
+            >
+                <input
+                    type="checkbox"
+                    v-model="data.includeMaps"
+                    :value="mapType"
+                    :id="mapType"
+                />
+                <label :for="mapType">{{ mapType }}</label>
+            </div>
         </div>
         <div v-if="distributionStore.pokeMaps.length == 0" class="loading">
             <div class="lds-dual-ring">loading...</div>

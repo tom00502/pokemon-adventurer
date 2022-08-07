@@ -7,7 +7,11 @@ export const useDistributionStore = defineStore({
         distributions: [],
         pokeMaps: [],
     }),
-    getters: {},
+    getters: {
+        getterPokeMapTypes() {
+            return [...new Set(this.pokeMaps.map((map) => map.type))]
+        },
+    },
     actions: {
         getDistributions() {
             // if (this.distributions.length == 0) {
