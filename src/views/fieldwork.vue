@@ -348,9 +348,8 @@ const table = [
     },
     {
         work: '使用15次傷藥',
-        award: ['禦三家之笛'],
+        award: ['禦三家之笛', '金幣9600'],
         level: 'great',
-        checkAward: false,
     },
     {
         work: '使用3次努力增強劑',
