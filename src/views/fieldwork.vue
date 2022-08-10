@@ -516,9 +516,23 @@ const table = [
         level: 'great',
         checkAward: false,
     },
-    { work: '捕捉30只精靈', award: [], level: 'great', checkAward: false },
+    {
+        work: '進化3次水系的精靈',
+        award: ['阿羅拉貓老大碎片*2', '金幣9600'],
+        level: 'great',
+    },
+    {
+        work: '進化3次冰系的精靈',
+        award: ['阿羅拉貓老大碎片*2', '金幣9600'],
+        level: 'great',
+    },
     {
         work: '進化3次惡系的精靈',
+        award: ['阿羅拉喵喵碎片*2', '金幣9600'],
+        level: 'great',
+    },
+    {
+        work: '進化3次龍系的精靈',
         award: ['阿羅拉喵喵碎片*2', '金幣9600'],
         level: 'great',
     },
@@ -537,15 +551,16 @@ const table = [
         award: ['阿羅拉喵喵碎片*2', '金幣9600'],
         level: 'great',
     },
+    {
+        work: '進化3次蟲系的精靈',
+        award: ['阿羅拉喵喵碎片*2', '金幣9600'],
+        level: 'great',
+    },
     { work: '進化3次毒系的精靈', award: [], level: 'great', checkAward: false },
-    { work: '進化3次蟲系的精靈', award: [], level: 'great', checkAward: false },
     { work: '進化3次鋼系的精靈', award: [], level: 'great', checkAward: false },
-    { work: '進化3次水系的精靈', award: [], level: 'great', checkAward: false },
     { work: '進化3次火系的精靈', award: [], level: 'great', checkAward: false },
     { work: '進化3次草系的精靈', award: [], level: 'great', checkAward: false },
     { work: '進化3次電系的精靈', award: [], level: 'great', checkAward: false },
-    { work: '進化3次冰系的精靈', award: [], level: 'great', checkAward: false },
-    { work: '進化3次龍系的精靈', award: [], level: 'great', checkAward: false },
     {
         work: '進化3次一般系的精靈',
         award: [],
@@ -641,6 +656,7 @@ const table = [
         award: ['金幣4000'],
         level: 'great',
     },
+    { work: '捕捉30只精靈', award: ['金幣1750'], level: 'great' },
     {
         work: '擊敗6次道館館主',
         award: ['金幣1500'],
