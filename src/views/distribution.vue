@@ -127,9 +127,9 @@ const isDark = (name) => {
                 <li>可搜尋地區名稱 ex:白銀山</li>
                 <li>可選擇精靈屬性 ex:龍</li>
                 <li>
-                    同源搜索: 搜尋同一進化來源的寶可夢
-                    ex:輸入噴火龍可找出小火龍(測試中僅開放第一世代寶可夢)
+                    同源搜索: 搜尋同一進化來源的寶可夢 ex:輸入噴火龍可找出小火龍
                 </li>
+                <li>可針對自己的需求選擇搜尋範圍</li>
             </ul>
         </div>
         <div class="search-bar">
@@ -149,18 +149,20 @@ const isDark = (name) => {
                 </select>
             </div>
             <div>同源搜索: <input type="checkbox" v-model="includeFrom" /></div>
-            範圍選擇:
-            <div
-                v-for="mapType in distributionStore.getterPokeMapTypes"
-                :key="mapType"
-            >
-                <input
-                    type="checkbox"
-                    v-model="data.includeMaps"
-                    :value="mapType"
-                    :id="mapType"
-                />
-                <label :for="mapType">{{ mapType }}</label>
+            <div class="area-select">
+                範圍選擇:
+                <div
+                    v-for="mapType in distributionStore.getterPokeMapTypes"
+                    :key="mapType"
+                >
+                    <input
+                        type="checkbox"
+                        v-model="data.includeMaps"
+                        :value="mapType"
+                        :id="mapType"
+                    />
+                    <label :for="mapType">{{ mapType }}</label>
+                </div>
             </div>
         </div>
         <div v-if="distributionStore.pokeMaps.length == 0" class="loading">
@@ -352,32 +354,9 @@ const isDark = (name) => {
     flex-wrap: wrap;
     gap: 8px;
 }
-.loading {
+.area-select {
     display: flex;
-    justify-content: center;
-}
-.lds-dual-ring {
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-}
-.lds-dual-ring:after {
-    content: ' ';
-    display: block;
-    width: 64px;
-    height: 64px;
-    margin: 8px;
-    border-radius: 50%;
-    border: 6px solid #fcf;
-    border-color: #fcf transparent #fcf transparent;
-    animation: lds-dual-ring 1.2s linear infinite;
-}
-@keyframes lds-dual-ring {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+    gap: 8px;
+    flex-wrap: wrap;
 }
 </style>
