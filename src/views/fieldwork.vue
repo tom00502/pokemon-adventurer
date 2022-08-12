@@ -537,6 +537,11 @@ const table = [
         level: 'great',
     },
     {
+        work: '進化3次蟲系的精靈',
+        award: ['阿羅拉喵喵碎片*2', '金幣9600'],
+        level: 'great',
+    },
+    {
         work: '進化3次妖精系的精靈',
         award: ['阿羅拉喵喵碎片*2', '金幣9600'],
         level: 'great',
@@ -547,12 +552,12 @@ const table = [
         level: 'great',
     },
     {
-        work: '進化3次超能力系的精靈',
+        work: '進化3次岩石系的精靈',
         award: ['阿羅拉喵喵碎片*2', '金幣9600'],
         level: 'great',
     },
     {
-        work: '進化3次蟲系的精靈',
+        work: '進化3次超能力系的精靈',
         award: ['阿羅拉喵喵碎片*2', '金幣9600'],
         level: 'great',
     },
@@ -575,12 +580,6 @@ const table = [
     },
     {
         work: '進化3次幽靈系的精靈',
-        award: [],
-        level: 'great',
-        checkAward: false,
-    },
-    {
-        work: '進化3次岩石系的精靈',
         award: [],
         level: 'great',
         checkAward: false,
@@ -862,7 +861,7 @@ const table = [
     },
     { work: '進化2次精靈', award: [], level: 'normal', checkAward: false },
     { work: '捕捉5只精靈', award: [], level: 'normal', checkAward: false },
-    { work: '捕捉10只精靈', award: [], level: 'normal', checkAward: false },
+    { work: '捕捉10只精靈', award: ['金幣1750'], level: 'normal' },
     { work: '捕捉15只精靈', award: [], level: 'normal', checkAward: false },
     { work: '捕捉20只精靈', award: [], level: 'normal', checkAward: false },
     { work: '捕捉25只精靈', award: [], level: 'normal', checkAward: false },
