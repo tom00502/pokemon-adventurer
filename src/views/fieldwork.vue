@@ -264,19 +264,23 @@ const table = [
         level: 'rare',
     },
     {
+        work: '進化8次精靈',
+        award: ['GEN3史詩之笛', '金幣3600'],
+        level: 'rare',
+    },
+    {
         work: '進化5次精靈',
         award: ['金幣1500'],
         level: 'rare',
     },
     {
-        work: '進化8次精靈',
-        award: ['GEN2傳說之笛'],
-        level: 'rare',
-        checkAward: false,
-    },
-    {
         work: '使用2次聖灰',
         award: ['斗笠菇之笛', '金幣19200'],
+        level: 'rare',
+    },
+    {
+        work: '使用2次活力塊',
+        award: ['差不多娃娃之笛', '金幣19200'],
         level: 'rare',
     },
     {
@@ -292,11 +296,6 @@ const table = [
     {
         work: '使用8次萬靈藥',
         award: ['胡地之笛', '金幣19200'],
-        level: 'rare',
-    },
-    {
-        work: '使用2次活力塊',
-        award: ['差不多娃娃之笛', '金幣19200'],
         level: 'rare',
     },
     {
@@ -402,9 +401,8 @@ const table = [
     },
     {
         work: '使用10次性格轉換蜜',
-        award: ['GEN1史詩之笛'],
+        award: ['GEN1史詩之笛', '金幣9600'],
         level: 'great',
-        checkAward: false,
     },
     {
         work: '將電和鋼系的精靈，提升10級',
@@ -522,6 +520,11 @@ const table = [
         level: 'great',
     },
     {
+        work: '進化3次草系的精靈',
+        award: ['阿羅拉貓老大碎片*2', '金幣9600'],
+        level: 'great',
+    },
+    {
         work: '進化3次冰系的精靈',
         award: ['阿羅拉貓老大碎片*2', '金幣9600'],
         level: 'great',
@@ -556,10 +559,13 @@ const table = [
         award: ['阿羅拉喵喵碎片*2', '金幣9600'],
         level: 'great',
     },
+    {
+        work: '進化3次鋼系的精靈',
+        award: ['阿羅拉喵喵碎片*2', '金幣9600'],
+        level: 'great',
+    },
     { work: '進化3次毒系的精靈', award: [], level: 'great', checkAward: false },
-    { work: '進化3次鋼系的精靈', award: [], level: 'great', checkAward: false },
     { work: '進化3次火系的精靈', award: [], level: 'great', checkAward: false },
-    { work: '進化3次草系的精靈', award: [], level: 'great', checkAward: false },
     { work: '進化3次電系的精靈', award: [], level: 'great', checkAward: false },
     {
         work: '進化3次一般系的精靈',

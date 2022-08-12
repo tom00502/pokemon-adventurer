@@ -62,7 +62,7 @@ const table = {
         { question: '以下哪種屬性不被格鬥系克制?', answer: '飞行系' },
         { question: '妖精系克制下面哪種屬性?', answer: '格斗系、龙系、恶系' },
         { question: '飛行系克制下麵那3種屬性', answer: '格鬥系、蟲系、草系' },
-        { question: '草系克制下麵那3種屬性', answer: '地面系、岩石系、水系' },
+        { question: '草系克制下麵那3種屬性?', answer: '地面系、岩石系、水系' },
         { question: '水系克制下麵那3種屬性', answer: '地面系、岩石系、火系' },
         { question: '蟲系克制下麵那3種屬性', answer: '超能系、草系、惡系' },
         { question: '惡系克制下麵那2中屬性?', answer: '幽灵系、超能力系' },
