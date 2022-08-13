@@ -8,7 +8,7 @@ const table = {
         { question: '以下物防不同於其他三只的是?', answer: '沙河马' },
         { question: '以下特攻不同於其他三只的是?', answer: '獵斑鰻' },
         { question: '以下特防不同於其他三只的是?', answer: '摇篮百合' },
-        { question: '以下速度不同於其他三只的是', answer: '愛心魚' },
+        { question: '以下速度不同於其他三只的是?', answer: '爱心鱼' },
         { question: '以下絕招中威力不同於其他三只的是?', answer: '瓦割' },
         { question: '以下絕招中初始PP不同於其他三只的是?', answer: '起风' },
         { question: '以下絕招命中不同於其他三只的是', answer: '岩石封殺' },
@@ -101,7 +101,7 @@ const table = {
         { question: '以下哪2種屬性克制毒系', answer: '地面系、超能力系' },
         { question: '下面哪種屬性不克制冰系', answer: '超能力系' },
         { question: '下面哪種屬性不克制草系', answer: '普通系' },
-        { question: '下面哪種屬性克制電系', answer: '地面系' },
+        { question: '下麵哪種屬性克制電系?', answer: '地面系' },
         { question: '冰系不克制下麵那種屬性?', answer: '水系' },
         {
             question: '對超能抗性兩倍，並火屬性對其有兩倍效果，該PM屬性為?',
