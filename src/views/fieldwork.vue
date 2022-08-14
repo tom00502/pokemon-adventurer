@@ -330,9 +330,8 @@ const table = [
     },
     {
         work: '使用5次解毒藥',
-        award: ['禦三家之笛'],
+        award: ['禦三家之笛', '金幣9600'],
         level: 'rare',
-        checkAward: false,
     },
     {
         work: '捕捉50只精靈',
@@ -882,12 +881,7 @@ const table = [
     { work: '使用3次體力飲料', award: [], level: 'normal', checkAward: false },
     { work: '使用5次相遇碰碰', award: [], level: 'normal', checkAward: false },
     { work: '使用10次誘捕噴霧', award: [], level: 'normal', checkAward: false },
-    {
-        work: '使用10次神奇糖果(大)',
-        award: [],
-        level: 'normal',
-        checkAward: false,
-    },
+    { work: '使用10次神奇糖果(大)', award: ['金幣4000'], level: 'normal' },
     {
         work: '使用30次神奇糖果(中)',
         award: [],
@@ -935,7 +929,7 @@ const filterItems = computed(() => {
         <div class="page-title">田野調查</div>
         <div class="day7">
             <div>連續7天完成任務隨機獎勵:</div>
-            由克希之笛、雷公之笛、水君之笛、雷吉洛克之笛、火焰鳥之笛、博士皮卡丘之笛*2、偶像皮卡丘之笛*2、旋轉洛托姆之笛*2、加熱洛托姆之笛*2、阿羅拉三地鼠之笛*5、阿羅拉貓老大之笛*5...(待補)
+            由克希之笛、雷公之笛、水君之笛、雷吉洛克之笛、火焰鳥之笛、霏歐納之笛、博士皮卡丘之笛*2、偶像皮卡丘之笛*2、暴鯉龍之笛*2、旋轉洛托姆之笛*2、加熱洛托姆之笛*2、阿羅拉三地鼠之笛*5、阿羅拉貓老大之笛*5、阿羅拉六尾之笛*5...(待補)
         </div>
         任務篩選:
         <select v-model="selectAward">
