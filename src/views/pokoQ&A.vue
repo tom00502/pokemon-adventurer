@@ -126,7 +126,7 @@ const table = {
         { question: '精靈之星主要產出什麼?', answer: '精靈碎片' },
         { question: '四大天王在那個城市召開?', answer: '石英聯盟' },
         { question: '瀕死的精靈可以去哪裡治療?', answer: '精靈中心' },
-        { question: '真新鎮在長青市那個方位?', answer: '南方' },
+        { question: '真新鎮在常青市那個方位?', answer: '南方' },
         { question: '那個培養方式是本作特有的?', answer: '轉生' },
         {
             question: '洗練個體值的神奇膠囊可以從那裏獲得?',
