@@ -64,7 +64,7 @@ const table = {
         { question: '飛行系克制下麵那3種屬性', answer: '格鬥系、蟲系、草系' },
         { question: '草系克制下麵那3種屬性?', answer: '地面系、岩石系、水系' },
         { question: '水系克制下麵那3種屬性', answer: '地面系、岩石系、火系' },
-        { question: '蟲系克制下麵那3種屬性', answer: '超能系、草系、惡系' },
+        { question: '蟲系克制下麵那3種屬性?', answer: '超能力系、草系、恶系' },
         { question: '惡系克制下麵那2中屬性?', answer: '幽灵系、超能力系' },
         { question: '幽靈系克制下麵那2種屬性?', answer: '幽灵系、超能力系' },
         { question: '超能力系克制下麵那2種屬性', answer: '格鬥系、毒系' },

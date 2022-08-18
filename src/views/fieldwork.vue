@@ -470,6 +470,11 @@ const table = [
         level: 'great',
     },
     {
+        work: '捕捉5只龍系的精靈',
+        award: ['阿羅拉穿山王碎片*2', '金幣6000'],
+        level: 'great',
+    },
+    {
         work: '捕捉5只一般系的精靈',
         award: ['阿羅拉穿山王碎片*2', '金幣6000'],
         level: 'great',
@@ -500,7 +505,6 @@ const table = [
     { work: '捕捉5只水系的精靈', award: [], level: 'great', checkAward: false },
     { work: '捕捉5只火系的精靈', award: [], level: 'great', checkAward: false },
     { work: '捕捉5只電系的精靈', award: [], level: 'great', checkAward: false },
-    { work: '捕捉5只龍系的精靈', award: [], level: 'great', checkAward: false },
     { work: '捕捉5只鋼系的精靈', award: [], level: 'great', checkAward: false },
     {
         work: '捕捉5只格鬥系的精靈',
@@ -566,6 +570,11 @@ const table = [
         level: 'great',
     },
     {
+        work: '進化3次幽靈系的精靈',
+        award: ['阿羅拉喵喵碎片*2', '金幣9600'],
+        level: 'great',
+    },
+    {
         work: '進化3次妖精系的精靈',
         award: ['阿羅拉喵喵碎片*2', '金幣9600'],
         level: 'great',
@@ -586,12 +595,6 @@ const table = [
     },
     {
         work: '進化3次格鬥系的精靈',
-        award: [],
-        level: 'great',
-        checkAward: false,
-    },
-    {
-        work: '進化3次幽靈系的精靈',
         award: [],
         level: 'great',
         checkAward: false,
@@ -673,6 +676,16 @@ const table = [
         level: 'great',
     },
     {
+        work: '擊敗5次格鬥系的精靈',
+        award: ['進階石碎片', '金幣2500'],
+        level: 'normal',
+    },
+    {
+        work: '擊敗5次超能力系的精靈',
+        award: ['金幣2500'],
+        level: 'normal',
+    },
+    {
         work: '擊敗5次毒系的精靈',
         award: [],
         level: 'normal',
@@ -751,12 +764,6 @@ const table = [
         checkAward: false,
     },
     {
-        work: '擊敗5次格鬥系的精靈',
-        award: [],
-        level: 'normal',
-        checkAward: false,
-    },
-    {
         work: '擊敗5次妖精系的精靈',
         award: [],
         level: 'normal',
@@ -775,6 +782,12 @@ const table = [
         checkAward: false,
     },
     {
+        work: '將冰系的精靈，提升10級',
+        award: ['進階石碎片', '金幣1500'],
+        level: 'normal',
+    },
+    { work: '將蟲系的精靈,提升10級', award: ['金幣1500'], level: 'normal' },
+    {
         work: '將火系的精靈,提升10級',
         award: [],
         level: 'normal',
@@ -792,13 +805,6 @@ const table = [
         level: 'normal',
         checkAward: false,
     },
-    {
-        work: '將冰系的精靈,提升10級',
-        award: [],
-        level: 'normal',
-        checkAward: false,
-    },
-    { work: '將蟲系的精靈,提升10級', award: ['金幣1500'], level: 'normal' },
     {
         work: '將草系的精靈,提升10級',
         award: [],
@@ -884,12 +890,7 @@ const table = [
     { work: '使用10次誘捕噴霧', award: [], level: 'normal', checkAward: false },
     { work: '使用10次神奇糖果(大)', award: ['金幣4000'], level: 'normal' },
     { work: '使用30次神奇糖果(中)', award: ['金幣4000'], level: 'normal' },
-    {
-        work: '使用50次神奇糖果(小)',
-        award: [],
-        level: 'normal',
-        checkAward: false,
-    },
+    { work: '使用50次神奇糖果(小)', award: ['金幣4000'], level: 'normal' },
     {
         work: '使用80次超級球捕捉精靈',
         award: [],
