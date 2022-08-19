@@ -78,7 +78,10 @@ const table = {
             answer: '蟲系、幽靈系、惡系',
         },
         { question: '惡系被哪3種屬性克制?', answer: '格斗系、虫系、妖精系' },
-        { question: '鋼系被那3種屬性克制', answer: '格鬥系、地面系、火系' },
+        {
+            question: '鋼系被以下那3種屬性克制?',
+            answer: '格斗系、地面系、火系',
+        },
         { question: '龍系被下麵那3種屬性克制?', answer: '冰系、龙系、妖精系' },
         {
             question: '火系被下麵那3種屬性克制?',
