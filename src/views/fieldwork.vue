@@ -3,6 +3,11 @@ import { computed, ref } from '@vue/runtime-core'
 import { RouterLink, RouterView } from 'vue-router'
 const table = [
     {
+        work: '使用1次大師球捕捉精靈',
+        award: ['水晶50', '金幣48000'],
+        level: 'legend',
+    },
+    {
         work: '提升1次草和毒系精靈的品階',
         award: ['胡地之笛', '金幣28800'],
         level: 'legend',
@@ -53,9 +58,59 @@ const table = [
         level: 'legend',
     },
     {
-        work: '使用1次大師球捕捉精靈',
-        award: ['水晶50', '金幣48000'],
-        level: 'legend',
+        work: '使用5次PP提升劑',
+        award: ['差不多娃娃之笛', '金幣19200'],
+        level: 'epic',
+    },
+    {
+        work: '進化1次蟲和毒系的精靈',
+        award: ['GEN1史詩之笛', '金幣19200'],
+        level: 'epic',
+    },
+    {
+        work: '進化1次草和毒系的精靈',
+        award: ['GEN1史詩之笛', '金幣19200'],
+        level: 'epic',
+    },
+    {
+        work: '進化1次草和超能力系的精靈',
+        award: ['GEN1史詩之笛', '金幣19200'],
+        level: 'epic',
+    },
+    {
+        work: '進化1次一般和妖精系的精靈',
+        award: ['GEN1史詩之笛', '金幣19200'],
+        level: 'epic',
+    },
+    {
+        work: '進化1次岩石和地面系的精靈',
+        award: ['GEN1史詩之笛', '金幣19200'],
+        level: 'epic',
+    },
+    {
+        work: '進化1次電和鋼系的精靈',
+        award: ['神奇膠囊*2', '金幣19200'],
+        level: 'epic',
+    },
+    {
+        work: '進化1次毒和飛行系的精靈',
+        award: ['神奇膠囊*2', '金幣19200'],
+        level: 'epic',
+    },
+    {
+        work: '進化1次蟲和飛行系的精靈',
+        award: ['神奇膠囊*2', '金幣19200'],
+        level: 'epic',
+    },
+    {
+        work: '進化1次岩石和水系的精靈',
+        award: ['神奇膠囊*2', '金幣19200'],
+        level: 'epic',
+    },
+    {
+        work: '進化1次一般和飛行系的精靈',
+        award: ['神奇膠囊*2', '金幣19200'],
+        level: 'epic',
     },
     {
         work: '捕捉4只岩石和水系的精靈',
@@ -109,64 +164,69 @@ const table = [
         level: 'epic',
     },
     {
-        work: '進化1次岩石和地面系的精靈',
-        award: ['GEN1史詩之笛', '金幣19200'],
-        level: 'epic',
-    },
-    {
-        work: '進化1次草和毒系的精靈',
-        award: ['GEN1史詩之笛', '金幣19200'],
-        level: 'epic',
-    },
-    {
-        work: '進化1次草和超能力系的精靈',
-        award: ['GEN1史詩之笛', '金幣19200'],
-        level: 'epic',
-    },
-    {
-        work: '進化1次蟲和毒系的精靈',
-        award: ['GEN1史詩之笛', '金幣19200'],
-        level: 'epic',
-    },
-    {
-        work: '進化1次一般和妖精系的精靈',
-        award: ['GEN1史詩之笛', '金幣19200'],
-        level: 'epic',
-    },
-    {
-        work: '進化1次電和鋼系的精靈',
-        award: ['神奇膠囊*2', '金幣19200'],
-        level: 'epic',
-    },
-    {
-        work: '進化1次毒和飛行系的精靈',
-        award: ['神奇膠囊*2', '金幣19200'],
-        level: 'epic',
-    },
-    {
-        work: '進化1次蟲和飛行系的精靈',
-        award: ['神奇膠囊*2', '金幣19200'],
-        level: 'epic',
-    },
-    {
-        work: '進化1次岩石和水系的精靈',
-        award: ['神奇膠囊*2', '金幣19200'],
-        level: 'epic',
-    },
-    {
-        work: '進化1次一般和飛行系的精靈',
-        award: ['神奇膠囊*2', '金幣19200'],
-        level: 'epic',
-    },
-    {
         work: '進化12次精靈',
         award: ['GEN3史詩之笛', '金幣3600'],
         level: 'epic',
     },
     {
-        work: '使用5次PP提升劑',
+        work: '使用1次全滿藥',
+        award: ['胡地之笛', '金幣19200'],
+        level: 'rare',
+    },
+    {
+        work: '使用2次活力碎片',
+        award: ['胡地之笛', '金幣19200'],
+        level: 'rare',
+    },
+    {
+        work: '使用8次萬靈藥',
+        award: ['胡地之笛', '金幣19200'],
+        level: 'rare',
+    },
+    {
+        work: '使用2次聖灰',
+        award: ['斗笠菇之笛', '金幣19200'],
+        level: 'rare',
+    },
+    {
+        work: '使用2次活力塊',
         award: ['差不多娃娃之笛', '金幣19200'],
-        level: 'epic',
+        level: 'rare',
+    },
+    {
+        work: '提升1次蟲系精靈的品階',
+        award: ['禦三家之笛', '金幣14400'],
+        level: 'rare',
+    },
+    {
+        work: '提升1次草系精靈的品階',
+        award: ['禦三家之笛', '金幣14400'],
+        level: 'rare',
+    },
+    {
+        work: '提升1次電系精靈的品階',
+        award: ['禦三家之笛', '金幣14400'],
+        level: 'rare',
+    },
+    {
+        work: '提升1次地面系精靈的品階',
+        award: ['禦三家之笛', '金幣14400'],
+        level: 'rare',
+    },
+    {
+        work: '提升1次岩石系精靈的品階',
+        award: ['禦三家之笛', '金幣14400'],
+        level: 'rare',
+    },
+    {
+        work: '提升1次幽靈系精靈的品階',
+        award: ['禦三家之笛', '金幣14400'],
+        level: 'rare',
+    },
+    {
+        work: '提升1次妖精系精靈的品階',
+        award: ['禦三家之笛', '金幣14400'],
+        level: 'rare',
     },
     {
         work: '提升1次毒系精靈的品階',
@@ -214,41 +274,6 @@ const table = [
         level: 'rare',
     },
     {
-        work: '提升1次蟲系精靈的品階',
-        award: ['禦三家之笛', '金幣14400'],
-        level: 'rare',
-    },
-    {
-        work: '提升1次草系精靈的品階',
-        award: ['禦三家之笛', '金幣14400'],
-        level: 'rare',
-    },
-    {
-        work: '提升1次電系精靈的品階',
-        award: ['禦三家之笛', '金幣14400'],
-        level: 'rare',
-    },
-    {
-        work: '提升1次地面系精靈的品階',
-        award: ['禦三家之笛', '金幣14400'],
-        level: 'rare',
-    },
-    {
-        work: '提升1次岩石系精靈的品階',
-        award: ['禦三家之笛', '金幣14400'],
-        level: 'rare',
-    },
-    {
-        work: '提升1次幽靈系精靈的品階',
-        award: ['禦三家之笛', '金幣14400'],
-        level: 'rare',
-    },
-    {
-        work: '提升1次妖精系精靈的品階',
-        award: ['禦三家之笛', '金幣14400'],
-        level: 'rare',
-    },
-    {
         work: '提升1次惡系精靈的品階',
         award: ['GEN1稀有之笛', '金幣14400'],
         level: 'rare',
@@ -259,43 +284,13 @@ const table = [
         level: 'rare',
     },
     {
-        work: '擊敗8次道館館主',
-        award: ['GEN3史詩之笛', '金幣3600'],
+        work: '使用5次解毒藥',
+        award: ['禦三家之笛', '金幣9600'],
         level: 'rare',
     },
     {
-        work: '進化8次精靈',
-        award: ['GEN3史詩之笛', '金幣3600'],
-        level: 'rare',
-    },
-    {
-        work: '進化5次精靈',
-        award: ['金幣1500'],
-        level: 'rare',
-    },
-    {
-        work: '使用2次聖灰',
-        award: ['斗笠菇之笛', '金幣19200'],
-        level: 'rare',
-    },
-    {
-        work: '使用2次活力塊',
-        award: ['差不多娃娃之笛', '金幣19200'],
-        level: 'rare',
-    },
-    {
-        work: '使用1次全滿藥',
-        award: ['胡地之笛', '金幣19200'],
-        level: 'rare',
-    },
-    {
-        work: '使用2次活力碎片',
-        award: ['胡地之笛', '金幣19200'],
-        level: 'rare',
-    },
-    {
-        work: '使用8次萬靈藥',
-        award: ['胡地之笛', '金幣19200'],
+        work: '使用5次努力之羽',
+        award: ['GEN2傳說之笛', '金幣9600'],
         level: 'rare',
     },
     {
@@ -324,18 +319,23 @@ const table = [
         level: 'rare',
     },
     {
-        work: '使用5次努力之羽',
-        award: ['GEN2傳說之笛', '金幣9600'],
-        level: 'rare',
-    },
-    {
-        work: '使用5次解毒藥',
-        award: ['禦三家之笛', '金幣9600'],
-        level: 'rare',
-    },
-    {
         work: '捕捉50只精靈',
         award: ['GEN1稀有之笛', '金幣4200'],
+        level: 'rare',
+    },
+    {
+        work: '擊敗8次道館館主',
+        award: ['GEN3史詩之笛', '金幣3600'],
+        level: 'rare',
+    },
+    {
+        work: '進化8次精靈',
+        award: ['GEN3史詩之笛', '金幣3600'],
+        level: 'rare',
+    },
+    {
+        work: '進化5次精靈',
+        award: ['金幣1500'],
         level: 'rare',
     },
     {
@@ -374,16 +374,6 @@ const table = [
         level: 'great',
     },
     {
-        work: '使用10次力量強化',
-        award: ['GEN1稀有之笛', '金幣9600'],
-        level: 'great',
-    },
-    {
-        work: '使用10次防禦強化',
-        award: ['GEN1稀有之笛', '金幣9600'],
-        level: 'great',
-    },
-    {
         work: '使用10次特攻強化',
         award: ['GEN3史詩之笛', '金幣9600'],
         level: 'great',
@@ -404,57 +394,95 @@ const table = [
         level: 'great',
     },
     {
-        work: '將電和鋼系的精靈，提升10級',
-        award: ['阿羅拉九尾碎片*2', '金幣3600'],
+        work: '使用10次力量強化',
+        award: ['GEN1稀有之笛', '金幣9600'],
         level: 'great',
     },
     {
-        work: '將毒和飛行系的精靈，提升10級',
-        award: ['阿羅拉九尾碎片*2', '金幣3600'],
+        work: '使用10次防禦強化',
+        award: ['GEN1稀有之笛', '金幣9600'],
         level: 'great',
     },
     {
-        work: '將岩石和水系的精靈，提升10級',
-        award: ['阿羅拉九尾碎片*2', '金幣3600'],
+        work: '進化3次水系的精靈',
+        award: ['阿羅拉貓老大碎片*2', '金幣9600'],
         level: 'great',
     },
     {
-        work: '將岩石和地面系的精靈，提升10級',
-        award: ['阿羅拉九尾碎片*2', '金幣3600'],
+        work: '進化3次草系的精靈',
+        award: ['阿羅拉貓老大碎片*2', '金幣9600'],
         level: 'great',
     },
     {
-        work: '將蟲和毒系的精靈，提升10級',
-        award: ['阿羅拉六尾碎片*2', '金幣3600'],
+        work: '進化3次電系的精靈',
+        award: ['阿羅拉貓老大碎片*2', '金幣9600'],
         level: 'great',
     },
     {
-        work: '將草和毒系的精靈，提升10級',
-        award: ['阿羅拉六尾碎片*2', '金幣3600'],
+        work: '進化3次冰系的精靈',
+        award: ['阿羅拉貓老大碎片*2', '金幣9600'],
         level: 'great',
     },
     {
-        work: '將蟲和飛行系的精靈，提升10級',
-        award: ['阿羅拉六尾碎片*2', '金幣3600'],
+        work: '進化3次格鬥系的精靈',
+        award: ['阿羅拉貓老大碎片*2', '金幣9600'],
         level: 'great',
     },
     {
-        work: '將草和超能力系的精靈，提升10級',
-        award: ['阿羅拉六尾碎片*2', '金幣3600'],
+        work: '進化3次蟲系的精靈',
+        award: ['阿羅拉喵喵碎片*2', '金幣9600'],
         level: 'great',
     },
     {
-        work: '將一般和飛行系的精靈，提升10級',
-        award: ['阿羅拉六尾碎片*2', '金幣3600'],
+        work: '進化3次鋼系的精靈',
+        award: ['阿羅拉喵喵碎片*2', '金幣9600'],
         level: 'great',
     },
     {
-        work: '將一般和妖精系的精靈，提升10級',
-        award: ['阿羅拉六尾碎片*2', '金幣3600'],
+        work: '進化3次龍系的精靈',
+        award: ['阿羅拉喵喵碎片*2', '金幣9600'],
         level: 'great',
     },
     {
-        work: '將蟲和飛行系的精靈，提升10級',
+        work: '進化3次惡系的精靈',
+        award: ['阿羅拉喵喵碎片*2', '金幣9600'],
+        level: 'great',
+    },
+    {
+        work: '進化3次飛行系的精靈',
+        award: ['阿羅拉喵喵碎片*2', '金幣9600'],
+        level: 'great',
+    },
+    {
+        work: '進化3次岩石系的精靈',
+        award: ['阿羅拉喵喵碎片*2', '金幣9600'],
+        level: 'great',
+    },
+    {
+        work: '進化3次幽靈系的精靈',
+        award: ['阿羅拉喵喵碎片*2', '金幣9600'],
+        level: 'great',
+    },
+    {
+        work: '進化3次妖精系的精靈',
+        award: ['阿羅拉喵喵碎片*2', '金幣9600'],
+        level: 'great',
+    },
+    {
+        work: '進化3次超能力系的精靈',
+        award: ['阿羅拉喵喵碎片*2', '金幣9600'],
+        level: 'great',
+    },
+    { work: '進化3次毒系的精靈', award: [], level: 'great', checkAward: false },
+    { work: '進化3次火系的精靈', award: [], level: 'great', checkAward: false },
+    {
+        work: '進化3次一般系的精靈',
+        award: [],
+        level: 'great',
+        checkAward: false,
+    },
+    {
+        work: '進化3次地面系的精靈',
         award: [],
         level: 'great',
         checkAward: false,
@@ -536,92 +564,17 @@ const table = [
         checkAward: false,
     },
     {
-        work: '進化3次水系的精靈',
-        award: ['阿羅拉貓老大碎片*2', '金幣9600'],
-        level: 'great',
-    },
-    {
-        work: '進化3次草系的精靈',
-        award: ['阿羅拉貓老大碎片*2', '金幣9600'],
-        level: 'great',
-    },
-    {
-        work: '進化3次冰系的精靈',
-        award: ['阿羅拉貓老大碎片*2', '金幣9600'],
-        level: 'great',
-    },
-    {
-        work: '進化3次格鬥系的精靈',
-        award: ['阿羅拉貓老大碎片*2', '金幣9600'],
-        level: 'great',
-    },
-    {
-        work: '進化3次蟲系的精靈',
-        award: ['阿羅拉喵喵碎片*2', '金幣9600'],
-        level: 'great',
-    },
-    {
-        work: '進化3次鋼系的精靈',
-        award: ['阿羅拉喵喵碎片*2', '金幣9600'],
-        level: 'great',
-    },
-    {
-        work: '進化3次龍系的精靈',
-        award: ['阿羅拉喵喵碎片*2', '金幣9600'],
-        level: 'great',
-    },
-    {
-        work: '進化3次惡系的精靈',
-        award: ['阿羅拉喵喵碎片*2', '金幣9600'],
-        level: 'great',
-    },
-    {
-        work: '進化3次飛行系的精靈',
-        award: ['阿羅拉喵喵碎片*2', '金幣9600'],
-        level: 'great',
-    },
-    {
-        work: '進化3次岩石系的精靈',
-        award: ['阿羅拉喵喵碎片*2', '金幣9600'],
-        level: 'great',
-    },
-    {
-        work: '進化3次幽靈系的精靈',
-        award: ['阿羅拉喵喵碎片*2', '金幣9600'],
-        level: 'great',
-    },
-    {
-        work: '進化3次妖精系的精靈',
-        award: ['阿羅拉喵喵碎片*2', '金幣9600'],
-        level: 'great',
-    },
-    {
-        work: '進化3次超能力系的精靈',
-        award: ['阿羅拉喵喵碎片*2', '金幣9600'],
-        level: 'great',
-    },
-    { work: '進化3次毒系的精靈', award: [], level: 'great', checkAward: false },
-    { work: '進化3次火系的精靈', award: [], level: 'great', checkAward: false },
-    { work: '進化3次電系的精靈', award: [], level: 'great', checkAward: false },
-    {
-        work: '進化3次一般系的精靈',
-        award: [],
-        level: 'great',
-        checkAward: false,
-    },
-    {
-        work: '進化3次地面系的精靈',
-        award: [],
-        level: 'great',
-        checkAward: false,
-    },
-    {
         work: '擊敗4次蟲和毒系的精靈',
         award: ['阿羅拉穿山鼠碎片*2', '金幣6000'],
         level: 'great',
     },
     {
         work: '擊敗4次一般和妖精系的精靈',
+        award: ['阿羅拉穿山鼠碎片*2', '金幣6000'],
+        level: 'great',
+    },
+    {
+        work: '擊敗4次岩石和水系的精靈',
         award: ['阿羅拉穿山鼠碎片*2', '金幣6000'],
         level: 'great',
     },
@@ -633,12 +586,6 @@ const table = [
     },
     {
         work: '擊敗4次岩石和地面系的精靈',
-        award: [],
-        level: 'great',
-        checkAward: false,
-    },
-    {
-        work: '擊敗4次岩石和水系的精靈',
         award: [],
         level: 'great',
         checkAward: false,
@@ -669,6 +616,62 @@ const table = [
     },
     {
         work: '擊敗4次電和鋼系的精靈',
+        award: [],
+        level: 'great',
+        checkAward: false,
+    },
+    {
+        work: '將電和鋼系的精靈，提升10級',
+        award: ['阿羅拉九尾碎片*2', '金幣3600'],
+        level: 'great',
+    },
+    {
+        work: '將毒和飛行系的精靈，提升10級',
+        award: ['阿羅拉九尾碎片*2', '金幣3600'],
+        level: 'great',
+    },
+    {
+        work: '將岩石和水系的精靈，提升10級',
+        award: ['阿羅拉九尾碎片*2', '金幣3600'],
+        level: 'great',
+    },
+    {
+        work: '將岩石和地面系的精靈，提升10級',
+        award: ['阿羅拉九尾碎片*2', '金幣3600'],
+        level: 'great',
+    },
+    {
+        work: '將蟲和毒系的精靈，提升10級',
+        award: ['阿羅拉六尾碎片*2', '金幣3600'],
+        level: 'great',
+    },
+    {
+        work: '將草和毒系的精靈，提升10級',
+        award: ['阿羅拉六尾碎片*2', '金幣3600'],
+        level: 'great',
+    },
+    {
+        work: '將蟲和飛行系的精靈，提升10級',
+        award: ['阿羅拉六尾碎片*2', '金幣3600'],
+        level: 'great',
+    },
+    {
+        work: '將草和超能力系的精靈，提升10級',
+        award: ['阿羅拉六尾碎片*2', '金幣3600'],
+        level: 'great',
+    },
+    {
+        work: '將一般和飛行系的精靈，提升10級',
+        award: ['阿羅拉六尾碎片*2', '金幣3600'],
+        level: 'great',
+    },
+    {
+        work: '將一般和妖精系的精靈，提升10級',
+        award: ['阿羅拉六尾碎片*2', '金幣3600'],
+        level: 'great',
+    },
+    {
+        work: '將蟲和飛行系的精靈，提升10級',
         award: [],
         level: 'great',
         checkAward: false,
