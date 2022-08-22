@@ -671,12 +671,6 @@ const table = [
         level: 'great',
     },
     {
-        work: '將蟲和飛行系的精靈，提升10級',
-        award: [],
-        level: 'great',
-        checkAward: false,
-    },
-    {
         work: '使用50次高級球捕捉精靈',
         award: ['金幣4000'],
         level: 'great',
