@@ -704,6 +704,21 @@ const table = [
         level: 'normal',
     },
     {
+        work: '擊敗5次龍系的精靈',
+        award: ['金幣2500'],
+        level: 'normal',
+    },
+    {
+        work: '擊敗5次飛行系的精靈',
+        award: ['金幣2500'],
+        level: 'normal',
+    },
+    {
+        work: '擊敗5次妖精系的精靈',
+        award: ['金幣2500'],
+        level: 'normal',
+    },
+    {
         work: '擊敗5次超能力系的精靈',
         award: ['金幣2500'],
         level: 'normal',
@@ -739,12 +754,6 @@ const table = [
         checkAward: false,
     },
     {
-        work: '擊敗5次龍系的精靈',
-        award: [],
-        level: 'normal',
-        checkAward: false,
-    },
-    {
         work: '擊敗5次惡系的精靈',
         award: [],
         level: 'normal',
@@ -758,18 +767,6 @@ const table = [
     },
     {
         work: '擊敗5次地面系的精靈',
-        award: [],
-        level: 'normal',
-        checkAward: false,
-    },
-    {
-        work: '擊敗5次飛行系的精靈',
-        award: [],
-        level: 'normal',
-        checkAward: false,
-    },
-    {
-        work: '擊敗5次妖精系的精靈',
         award: [],
         level: 'normal',
         checkAward: false,
@@ -906,6 +903,20 @@ const table = [
         checkAward: false,
     },
 ]
+const day7awards = {
+    超越: ['火焰鳥之笛', '雷公之笛', '水君之笛', '雷吉洛克之笛', '由克希之笛'],
+    傳說: [
+        '暴鯉龍之笛*2',
+        '加熱洛托姆之笛*2',
+        '旋轉洛托姆之笛*2',
+        '霏歐納之笛',
+        '偶像皮卡丘之笛*2',
+        '博士皮卡丘之笛*2',
+    ],
+    史詩: ['阿羅拉隆隆岩之笛*5'],
+    稀有: ['阿羅拉三地鼠之笛*5', '阿羅拉貓老大之笛*5'],
+    普通: ['阿羅拉六尾之笛*5', '阿羅拉六尾之笛*3'],
+}
 const selectAward = ref('')
 const awards = computed(() => {
     const awardSet = new Set()
@@ -926,9 +937,28 @@ const filterItems = computed(() => {
 <template>
     <main>
         <div class="page-title">田野調查</div>
+        <div class="note">
+            <ul>
+                <li>每天可至各大城鎮精靈中心右上角的小姐姐領取任務</li>
+                <li>一個精靈中心只能領取一個任務，一天最多做兩個任務</li>
+                <li>每個任務完成後都有對應的獎賞，可依照想要的獎賞選擇任務</li>
+                <li>
+                    一週內每天都做滿兩個任務，共14個任務，可再領取最終獎勵笛子
+                </li>
+                <li>
+                    最終獎勵笛子的品質其實會依照做過的14個任務總分來發放，如果都做黃色任務，大機率會領到超越笛子，如果都做白色任務，就只會拿到普通笛子
+                </li>
+                <li>任務分數高至低: 黃 > 紫 > 藍 > 綠 > 白</li>
+            </ul>
+        </div>
         <div class="day7">
-            <div>連續7天完成任務隨機獎勵:</div>
-            由克希之笛、雷公之笛、水君之笛、雷吉洛克之笛、火焰鳥之笛、霏歐納之笛、博士皮卡丘之笛*2、偶像皮卡丘之笛*2、暴鯉龍之笛*2、旋轉洛托姆之笛*2、加熱洛托姆之笛*2、阿羅拉三地鼠之笛*5、阿羅拉貓老大之笛*5、阿羅拉六尾之笛*5...(待補)
+            <div>連續7天完成任務已知獎勵:</div>
+            <table>
+                <tr v-for="(awards, key) in day7awards" :key="key">
+                    <td>{{ key }}</td>
+                    <td>{{ awards.join('、') }}</td>
+                </tr>
+            </table>
         </div>
         任務篩選:
         <select v-model="selectAward">
@@ -1014,9 +1044,9 @@ tr:last-child td:last-child {
 }
 .day7 {
     padding: 8px;
-    border: 1px solid gray;
-    background: pink;
-    border-radius: 8px;
+    /* border: 1px solid gray;*/
+    /* background: pink; */
+    /* border-radius: 8px; */
 }
 .page-title {
     border-left: 8px solid rgb(255, 60, 93);
@@ -1024,5 +1054,11 @@ tr:last-child td:last-child {
     font-weight: 700;
     font-size: 16px;
     margin: 8px 0px;
+}
+.note {
+    padding: 8px;
+    border: 1px solid gray;
+    background: pink;
+    border-radius: 8px;
 }
 </style>
