@@ -404,6 +404,11 @@ const table = [
         level: 'great',
     },
     {
+        work: '進化3次毒系的精靈',
+        award: ['阿羅拉貓老大碎片*2', '金幣9600'],
+        level: 'great',
+    },
+    {
         work: '進化3次水系的精靈',
         award: ['阿羅拉貓老大碎片*2', '金幣9600'],
         level: 'great',
@@ -420,6 +425,11 @@ const table = [
     },
     {
         work: '進化3次冰系的精靈',
+        award: ['阿羅拉貓老大碎片*2', '金幣9600'],
+        level: 'great',
+    },
+    {
+        work: '進化3次一般系的精靈',
         award: ['阿羅拉貓老大碎片*2', '金幣9600'],
         level: 'great',
     },
@@ -473,14 +483,7 @@ const table = [
         award: ['阿羅拉喵喵碎片*2', '金幣9600'],
         level: 'great',
     },
-    { work: '進化3次毒系的精靈', award: [], level: 'great', checkAward: false },
     { work: '進化3次火系的精靈', award: [], level: 'great', checkAward: false },
-    {
-        work: '進化3次一般系的精靈',
-        award: [],
-        level: 'great',
-        checkAward: false,
-    },
     {
         work: '進化3次地面系的精靈',
         award: [],
@@ -778,6 +781,16 @@ const table = [
         checkAward: false,
     },
     {
+        work: '將水系的精靈,提升10級',
+        award: ['進階石碎片', '金幣1500'],
+        level: 'normal',
+    },
+    {
+        work: '將草系的精靈,提升10級',
+        award: ['進階石碎片', '金幣1500'],
+        level: 'normal',
+    },
+    {
         work: '將電系的精靈,提升10級',
         award: ['進階石碎片', '金幣1500'],
         level: 'normal',
@@ -800,18 +813,6 @@ const table = [
     },
     {
         work: '將火系的精靈,提升10級',
-        award: [],
-        level: 'normal',
-        checkAward: false,
-    },
-    {
-        work: '將水系的精靈,提升10級',
-        award: [],
-        level: 'normal',
-        checkAward: false,
-    },
-    {
-        work: '將草系的精靈,提升10級',
         award: [],
         level: 'normal',
         checkAward: false,
