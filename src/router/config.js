@@ -45,6 +45,11 @@ const router = [
         title: '升星計算',
     },
     {
+        path: '/character',
+        name: 'character',
+        title: '性格列表',
+    },
+    {
         path: '/about',
         name: 'about',
         title: '關於本站',

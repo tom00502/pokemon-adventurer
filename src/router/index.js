@@ -53,6 +53,11 @@ const router = createRouter({
             name: 'star',
             component: () => import('@/views/StarView.vue'),
         },
+        {
+            path: '/character',
+            name: 'character',
+            component: () => import('@/views/Character.vue'),
+        },
     ],
 })
 
