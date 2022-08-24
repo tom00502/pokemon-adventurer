@@ -572,6 +572,11 @@ const table = [
         level: 'great',
     },
     {
+        work: '擊敗4次蟲和飛行系的精靈',
+        award: ['阿羅拉穿山鼠碎片*2', '金幣6000'],
+        level: 'great',
+    },
+    {
         work: '擊敗4次一般和妖精系的精靈',
         award: ['阿羅拉穿山鼠碎片*2', '金幣6000'],
         level: 'great',
@@ -595,12 +600,6 @@ const table = [
     },
     {
         work: '擊敗4次毒和飛行系的精靈',
-        award: [],
-        level: 'great',
-        checkAward: false,
-    },
-    {
-        work: '擊敗4次蟲和飛行系的精靈',
         award: [],
         level: 'great',
         checkAward: false,
@@ -681,7 +680,42 @@ const table = [
     { work: '捕捉30只精靈', award: ['金幣1750'], level: 'great' },
     { work: '擊敗6次道館館主', award: ['金幣1500'], level: 'great' },
     {
+        work: '使用100次精靈球捕捉精靈',
+        award: ['GEN1稀有之笛', '金幣4000'],
+        level: 'normal',
+    },
+    {
+        work: '使用80次超級球捕捉精靈',
+        award: [],
+        level: 'normal',
+        checkAward: false,
+    },
+    { work: '使用10次神奇糖果(大)', award: ['金幣4000'], level: 'normal' },
+    { work: '使用30次神奇糖果(中)', award: ['金幣4000'], level: 'normal' },
+    { work: '使用50次神奇糖果(小)', award: ['金幣4000'], level: 'normal' },
+    { work: '擊敗2次道館館主', award: [], level: 'normal', checkAward: false },
+    { work: '擊敗4次道館館主', award: [], level: 'normal', checkAward: false },
+    {
+        work: '使用1次可達鴨噴壺',
+        award: [],
+        level: 'normal',
+        checkAward: false,
+    },
+    { work: '使用3次體力飲料', award: [], level: 'normal', checkAward: false },
+    { work: '使用5次相遇碰碰', award: [], level: 'normal', checkAward: false },
+    { work: '使用10次誘捕噴霧', award: [], level: 'normal', checkAward: false },
+    {
+        work: '擊敗5次火系的精靈',
+        award: ['進階石碎片', '金幣2500'],
+        level: 'normal',
+    },
+    {
         work: '擊敗5次草系的精靈',
+        award: ['進階石碎片', '金幣2500'],
+        level: 'normal',
+    },
+    {
+        work: '擊敗5次電系的精靈',
         award: ['進階石碎片', '金幣2500'],
         level: 'normal',
     },
@@ -728,18 +762,6 @@ const table = [
     },
     {
         work: '擊敗5次水系的精靈',
-        award: [],
-        level: 'normal',
-        checkAward: false,
-    },
-    {
-        work: '擊敗5次火系的精靈',
-        award: [],
-        level: 'normal',
-        checkAward: false,
-    },
-    {
-        work: '擊敗5次電系的精靈',
         award: [],
         level: 'normal',
         checkAward: false,
@@ -871,32 +893,6 @@ const table = [
     { work: '捕捉15只精靈', award: [], level: 'normal', checkAward: false },
     { work: '捕捉20只精靈', award: [], level: 'normal', checkAward: false },
     { work: '捕捉25只精靈', award: [], level: 'normal', checkAward: false },
-    { work: '擊敗2次道館館主', award: [], level: 'normal', checkAward: false },
-    { work: '擊敗4次道館館主', award: [], level: 'normal', checkAward: false },
-    {
-        work: '使用1次可達鴨噴壺',
-        award: [],
-        level: 'normal',
-        checkAward: false,
-    },
-    { work: '使用3次體力飲料', award: [], level: 'normal', checkAward: false },
-    { work: '使用5次相遇碰碰', award: [], level: 'normal', checkAward: false },
-    { work: '使用10次誘捕噴霧', award: [], level: 'normal', checkAward: false },
-    { work: '使用10次神奇糖果(大)', award: ['金幣4000'], level: 'normal' },
-    { work: '使用30次神奇糖果(中)', award: ['金幣4000'], level: 'normal' },
-    { work: '使用50次神奇糖果(小)', award: ['金幣4000'], level: 'normal' },
-    {
-        work: '使用80次超級球捕捉精靈',
-        award: [],
-        level: 'normal',
-        checkAward: false,
-    },
-    {
-        work: '使用100次精靈球捕捉精靈',
-        award: [],
-        level: 'normal',
-        checkAward: false,
-    },
 ]
 const day7awards = {
     超越: ['火焰鳥之笛', '雷公之笛', '水君之笛', '雷吉洛克之笛', '由克希之笛'],
@@ -909,7 +905,7 @@ const day7awards = {
         '博士皮卡丘之笛*2',
     ],
     史詩: ['阿羅拉隆隆岩之笛*5'],
-    稀有: ['阿羅拉三地鼠之笛*5', '阿羅拉貓老大之笛*5'],
+    稀有: ['阿羅拉三地鼠之笛*5', '阿羅拉貓老大之笛*5', '阿羅拉臭泥之笛*5'],
     普通: ['阿羅拉六尾之笛*5', '阿羅拉六尾之笛*3'],
 }
 const selectAward = ref('')

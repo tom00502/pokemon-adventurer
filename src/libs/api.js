@@ -8,7 +8,7 @@ class Api {
     }
     getPokedex() {
         return this.axios.get(
-            `https://script.google.com/macros/s/AKfycbxdmJ7--LQ-ofswDGVC61empqF0sRh7jDlJ1pdrdFIc7D8Uy8cV_FH8SZlC7m7Hf6ad4Q/exec`
+            `https://script.google.com/macros/s/AKfycbxBZQlkYxP0dsQq4-ENX4OWDB72Bq2TBfUJ1xR-S68WHAQRIIyFzawz7wwRF44n-3Cidw/exec`
         )
     }
     getDistributed() {

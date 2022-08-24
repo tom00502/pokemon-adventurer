@@ -26,12 +26,28 @@ export const usePokedexStore = defineStore({
                                 {
                                     name: poke.n,
                                     attribute: poke.a.filter((attr) => attr),
-                                    quality: quality[poke.q],
+                                    quality:
+                                        quality[poke.q] || quality[poke.q2],
                                     from: poke.f,
                                 },
                             ]
                         })
-                        this.pokes = Object.fromEntries(entries)
+                        const flashEntries = res.data.map((poke) => {
+                            return [
+                                poke.i + 10000,
+                                {
+                                    name: `閃光${poke.n}`,
+                                    attribute: poke.a.filter((attr) => attr),
+                                    quality:
+                                        quality[poke.q2] || quality[poke.q],
+                                    from: poke.f,
+                                },
+                            ]
+                        })
+                        this.pokes = Object.fromEntries([
+                            ...entries,
+                            ...flashEntries,
+                        ])
                         resolve()
                     })
                 }
