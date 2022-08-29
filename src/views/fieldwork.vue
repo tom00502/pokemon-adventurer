@@ -501,6 +501,11 @@ const table = [
         level: 'great',
     },
     {
+        work: '捕捉5只火系的精靈',
+        award: ['阿羅拉穿山王碎片*2', '金幣6000'],
+        level: 'great',
+    },
+    {
         work: '捕捉5只水系的精靈',
         award: ['阿羅拉穿山王碎片*2', '金幣6000'],
         level: 'great',
@@ -571,7 +576,6 @@ const table = [
         level: 'great',
     },
     { work: '捕捉5只蟲系的精靈', award: [], level: 'great', checkAward: false },
-    { work: '捕捉5只火系的精靈', award: [], level: 'great', checkAward: false },
     {
         work: '擊敗4次毒和飛行系的精靈',
         award: ['阿羅拉穿山鼠碎片*2', '金幣6000'],
@@ -598,6 +602,11 @@ const table = [
         level: 'great',
     },
     {
+        work: '擊敗4次一般和飛行系的精靈',
+        award: ['阿羅拉穿山鼠碎片*2', '金幣6000'],
+        level: 'great',
+    },
+    {
         work: '擊敗4次一般和妖精系的精靈',
         award: ['阿羅拉穿山鼠碎片*2', '金幣6000'],
         level: 'great',
@@ -611,12 +620,6 @@ const table = [
         work: '擊敗4次岩石和地面系的精靈',
         award: ['阿羅拉穿山鼠碎片*2', '金幣6000'],
         level: 'great',
-    },
-    {
-        work: '擊敗4次一般和飛行系的精靈',
-        award: [],
-        level: 'great',
-        checkAward: false,
     },
     {
         work: '擊敗4次草和毒系的精靈',
@@ -751,47 +754,14 @@ const table = [
         award: ['進階石碎片', '金幣2500'],
         level: 'normal',
     },
-    {
-        work: '擊敗5次鋼系的精靈',
-        award: ['金幣2500'],
-        level: 'normal',
-    },
-    {
-        work: '擊敗5次龍系的精靈',
-        award: ['金幣2500'],
-        level: 'normal',
-    },
-    {
-        work: '擊敗5次惡系的精靈',
-        award: ['金幣2500'],
-        level: 'normal',
-    },
-    {
-        work: '擊敗5次飛行系的精靈',
-        award: ['金幣2500'],
-        level: 'normal',
-    },
-    {
-        work: '擊敗5次幽靈系的精靈',
-        award: ['金幣2500'],
-        level: 'normal',
-    },
-    {
-        work: '擊敗5次妖精系的精靈',
-        award: ['金幣2500'],
-        level: 'normal',
-    },
-    {
-        work: '擊敗5次超能力系的精靈',
-        award: ['金幣2500'],
-        level: 'normal',
-    },
-    {
-        work: '擊敗5次蟲系的精靈',
-        award: [],
-        level: 'normal',
-        checkAward: false,
-    },
+    { work: '擊敗5次蟲系的精靈', award: ['金幣2500'], level: 'normal' },
+    { work: '擊敗5次鋼系的精靈', award: ['金幣2500'], level: 'normal' },
+    { work: '擊敗5次龍系的精靈', award: ['金幣2500'], level: 'normal' },
+    { work: '擊敗5次惡系的精靈', award: ['金幣2500'], level: 'normal' },
+    { work: '擊敗5次飛行系的精靈', award: ['金幣2500'], level: 'normal' },
+    { work: '擊敗5次幽靈系的精靈', award: ['金幣2500'], level: 'normal' },
+    { work: '擊敗5次妖精系的精靈', award: ['金幣2500'], level: 'normal' },
+    { work: '擊敗5次超能力系的精靈', award: ['金幣2500'], level: 'normal' },
     {
         work: '擊敗5次岩石系的精靈',
         award: [],
@@ -824,6 +794,11 @@ const table = [
         level: 'normal',
     },
     {
+        work: '將格鬥系的精靈，提升10級',
+        award: ['進階石碎片', '金幣1500'],
+        level: 'normal',
+    },
+    {
         work: '將地面系的精靈，提升10級',
         award: ['進階石碎片', '金幣1500'],
         level: 'normal',
@@ -847,12 +822,6 @@ const table = [
     },
     {
         work: '將岩石系的精靈,提升10級',
-        award: [],
-        level: 'normal',
-        checkAward: false,
-    },
-    {
-        work: '將格鬥系的精靈,提升10級',
         award: [],
         level: 'normal',
         checkAward: false,
@@ -910,7 +879,7 @@ const day7awards = {
         '偶像皮卡丘之笛*2',
         '博士皮卡丘之笛*2',
     ],
-    史詩: ['阿羅拉隆隆岩之笛*5'],
+    史詩: ['阿羅拉隆隆岩之笛*5', '阿羅拉隆隆岩之笛*4'],
     稀有: ['阿羅拉三地鼠之笛*5', '阿羅拉貓老大之笛*5', '阿羅拉臭泥之笛*5'],
     普通: ['阿羅拉六尾之笛*5', '阿羅拉六尾之笛*3'],
 }
