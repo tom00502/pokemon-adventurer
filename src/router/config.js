@@ -50,6 +50,11 @@ const router = [
         title: '性格列表',
     },
     {
+        path: '/redeem-code',
+        name: 'redeem-code',
+        title: '兌換碼',
+    },
+    {
         path: '/about',
         name: 'about',
         title: '關於本站',

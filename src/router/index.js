@@ -58,6 +58,11 @@ const router = createRouter({
             name: 'character',
             component: () => import('@/views/Character.vue'),
         },
+        {
+            path: '/redeem-code',
+            name: 'redeem-code',
+            component: () => import('@/views/RedeemCode.vue'),
+        },
     ],
 })
 
