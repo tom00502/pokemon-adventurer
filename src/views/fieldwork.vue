@@ -759,15 +759,10 @@ const table = [
     { work: '擊敗5次龍系的精靈', award: ['金幣2500'], level: 'normal' },
     { work: '擊敗5次惡系的精靈', award: ['金幣2500'], level: 'normal' },
     { work: '擊敗5次飛行系的精靈', award: ['金幣2500'], level: 'normal' },
+    { work: '擊敗5次岩石系的精靈', award: ['金幣2500'], level: 'normal' },
     { work: '擊敗5次幽靈系的精靈', award: ['金幣2500'], level: 'normal' },
     { work: '擊敗5次妖精系的精靈', award: ['金幣2500'], level: 'normal' },
     { work: '擊敗5次超能力系的精靈', award: ['金幣2500'], level: 'normal' },
-    {
-        work: '擊敗5次岩石系的精靈',
-        award: [],
-        level: 'normal',
-        checkAward: false,
-    },
     {
         work: '將毒系的精靈，提升10級',
         award: ['進階石碎片', '金幣1500'],
@@ -790,6 +785,11 @@ const table = [
     },
     {
         work: '將冰系的精靈，提升10級',
+        award: ['進階石碎片', '金幣1500'],
+        level: 'normal',
+    },
+    {
+        work: '將一般系的精靈，提升10級',
         award: ['進階石碎片', '金幣1500'],
         level: 'normal',
     },
@@ -840,12 +840,6 @@ const table = [
     },
     {
         work: '將超能力系的精靈,提升10級',
-        award: [],
-        level: 'normal',
-        checkAward: false,
-    },
-    {
-        work: '將一般系的精靈,提升10級',
         award: [],
         level: 'normal',
         checkAward: false,

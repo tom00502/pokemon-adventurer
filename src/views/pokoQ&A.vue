@@ -103,7 +103,7 @@ const table = {
         },
         { question: '以下那三種屬性克制地面系?', answer: '水系、草系、冰系' },
         { question: '以下哪2種屬性克制毒系', answer: '地面系、超能力系' },
-        { question: '下面哪種屬性不克制冰系', answer: '超能力系' },
+        { question: '下麵哪種屬性不克制冰系?', answer: '超能力系' },
         { question: '下面哪種屬性不克制草系', answer: '普通系' },
         { question: '下麵哪種屬性克制電系?', answer: '地面系' },
         { question: '冰系不克制下麵那種屬性?', answer: '水系' },
