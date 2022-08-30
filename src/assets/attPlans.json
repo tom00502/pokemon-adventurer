@@ -223,5 +223,119 @@
             "speed": 3,
             "attack": 3
         }
+    },
+    "疾速套餐": {
+        "discript": "只要速度，不需要雙攻",
+        "steps": [
+            {
+                "count": 20,
+                "type": "speed",
+                "quality": "low",
+                "overflow": 0,
+                "overflowMinus": 20
+            },
+            {
+                "count": 6,
+                "type": "contact",
+                "quality": "low",
+                "overflow": 0,
+                "overflowMinus": 6
+            },
+            {
+                "count": 3,
+                "type": "attack",
+                "quality": "low",
+                "overflow": 0,
+                "overflowMinus": 0
+            },
+            {
+                "count": 3,
+                "type": "speed",
+                "quality": "low",
+                "overflow": 0,
+                "overflowMinus": 0
+            }
+        ],
+        "board": {
+            "contact": 3,
+            "speed": 20,
+            "attack": 3
+        }
+    },
+    "減速物攻套餐": {
+        "discript": "只要物攻，不需要特攻與速度",
+        "steps": [
+            {
+                "count": 20,
+                "type": "attack",
+                "quality": "low",
+                "overflow": 0,
+                "overflowMinus": 20
+            },
+            {
+                "count": 6,
+                "type": "speed",
+                "quality": "low",
+                "overflow": 0,
+                "overflowMinus": 5
+            },
+            {
+                "count": 3,
+                "type": "contact",
+                "quality": "low",
+                "overflow": 0,
+                "overflowMinus": 0
+            },
+            {
+                "count": 3,
+                "type": "attack",
+                "quality": "low",
+                "overflow": 0,
+                "overflowMinus": 0
+            }
+        ],
+        "board": {
+            "contact": 3,
+            "speed": 3,
+            "attack": 20
+        }
+    },
+    "減速特攻套餐": {
+        "discript": "只要特攻，不需要物攻與速度",
+        "steps": [
+            {
+                "count": 20,
+                "type": "contact",
+                "quality": "low",
+                "overflow": 0,
+                "overflowMinus": 20
+            },
+            {
+                "count": 6,
+                "type": "attack",
+                "quality": "low",
+                "overflow": 0,
+                "overflowMinus": 6
+            },
+            {
+                "count": 3,
+                "type": "speed",
+                "quality": "low",
+                "overflow": 0,
+                "overflowMinus": 0
+            },
+            {
+                "count": 3,
+                "type": "contact",
+                "quality": "low",
+                "overflow": 0,
+                "overflowMinus": 0
+            }
+        ],
+        "board": {
+            "contact": 20,
+            "speed": 3,
+            "attack": 3
+        }
     }
 }
