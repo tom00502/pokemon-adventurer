@@ -45,7 +45,7 @@ const table = {
         },
         { question: '小火龍是第幾世代的寶可夢?', answer: '第一世代' },
         { question: '木守宮是第幾世代的寶可夢?', answer: '第三世代' },
-        { question: '卡拉卡拉頭上戴著的是誰的頭骨', answer: '母親' },
+        { question: '卡拉卡拉頭上戴著的是誰的頭骨?', answer: '它的母亲' },
         { question: '圖鑒編號為001的是下麵哪只精靈?', answer: '妙蛙種子' },
     ],
     屬性克制: [
@@ -104,7 +104,7 @@ const table = {
         { question: '以下那三種屬性克制地面系?', answer: '水系、草系、冰系' },
         { question: '以下那2種屬性克制毒系?', answer: '地面系、超能力系' },
         { question: '下麵哪種屬性不克制冰系?', answer: '超能力系' },
-        { question: '下面哪種屬性不克制草系', answer: '普通系' },
+        { question: '以下那種屬性是不克制草系的?', answer: '普通系' },
         { question: '下麵哪種屬性克制電系?', answer: '地面系' },
         { question: '冰系不克制下麵那種屬性?', answer: '水系' },
         {

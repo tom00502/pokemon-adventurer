@@ -496,6 +496,11 @@ const table = [
         level: 'great',
     },
     {
+        work: '捕捉5只蟲系的精靈',
+        award: ['阿羅拉穿山王碎片*2', '金幣6000'],
+        level: 'great',
+    },
+    {
         work: '捕捉5只鋼系的精靈',
         award: ['阿羅拉穿山王碎片*2', '金幣6000'],
         level: 'great',
@@ -575,7 +580,6 @@ const table = [
         award: ['阿羅拉穿山王碎片*2', '金幣6000'],
         level: 'great',
     },
-    { work: '捕捉5只蟲系的精靈', award: [], level: 'great', checkAward: false },
     {
         work: '擊敗4次毒和飛行系的精靈',
         award: ['阿羅拉穿山鼠碎片*2', '金幣6000'],
@@ -588,6 +592,11 @@ const table = [
     },
     {
         work: '擊敗4次蟲和飛行系的精靈',
+        award: ['阿羅拉穿山鼠碎片*2', '金幣6000'],
+        level: 'great',
+    },
+    {
+        work: '擊敗4次草和毒系的精靈',
         award: ['阿羅拉穿山鼠碎片*2', '金幣6000'],
         level: 'great',
     },
@@ -620,12 +629,6 @@ const table = [
         work: '擊敗4次岩石和地面系的精靈',
         award: ['阿羅拉穿山鼠碎片*2', '金幣6000'],
         level: 'great',
-    },
-    {
-        work: '擊敗4次草和毒系的精靈',
-        award: [],
-        level: 'great',
-        checkAward: false,
     },
     {
         work: '將電和鋼系的精靈，提升10級',
@@ -698,8 +701,6 @@ const table = [
     { work: '使用10次神奇糖果(大)', award: ['金幣4000'], level: 'normal' },
     { work: '使用30次神奇糖果(中)', award: ['金幣4000'], level: 'normal' },
     { work: '使用50次神奇糖果(小)', award: ['金幣4000'], level: 'normal' },
-    { work: '擊敗2次道館館主', award: [], level: 'normal', checkAward: false },
-    { work: '擊敗4次道館館主', award: [], level: 'normal', checkAward: false },
     {
         work: '使用1次可達鴨噴壺',
         award: [],
@@ -804,6 +805,7 @@ const table = [
         level: 'normal',
     },
     { work: '將蟲系的精靈，提升10級', award: ['金幣1500'], level: 'normal' },
+    { work: '將鋼系的精靈，提升10級', award: ['金幣1500'], level: 'normal' },
     {
         work: '將龍系的精靈，提升10級',
         award: ['金幣1500'],
@@ -815,19 +817,17 @@ const table = [
         level: 'normal',
     },
     {
-        work: '將火系的精靈,提升10級',
-        award: [],
+        work: '將岩石系的精靈，提升10級',
+        award: ['金幣1500'],
         level: 'normal',
-        checkAward: false,
-    },
-    {
-        work: '將岩石系的精靈,提升10級',
-        award: [],
-        level: 'normal',
-        checkAward: false,
     },
     {
         work: '將妖精系的精靈,提升10級',
+        award: ['金幣1500'],
+        level: 'normal',
+    },
+    {
+        work: '將火系的精靈,提升10級',
         award: [],
         level: 'normal',
         checkAward: false,
@@ -845,12 +845,6 @@ const table = [
         checkAward: false,
     },
     {
-        work: '將鋼系的精靈,提升10級',
-        award: [],
-        level: 'normal',
-        checkAward: false,
-    },
-    {
         work: '將飛行系的精靈,提升10級',
         award: [],
         level: 'normal',
@@ -859,9 +853,11 @@ const table = [
     { work: '進化2次精靈', award: [], level: 'normal', checkAward: false },
     { work: '捕捉5只精靈', award: [], level: 'normal', checkAward: false },
     { work: '捕捉10只精靈', award: ['金幣1750'], level: 'normal' },
-    { work: '捕捉15只精靈', award: [], level: 'normal', checkAward: false },
+    { work: '捕捉15只精靈', award: ['金幣1750'], level: 'normal' },
     { work: '捕捉20只精靈', award: [], level: 'normal', checkAward: false },
     { work: '捕捉25只精靈', award: [], level: 'normal', checkAward: false },
+    { work: '擊敗2次道館館主', award: ['金幣1500'], level: 'normal' },
+    { work: '擊敗4次道館館主', award: [], level: 'normal', checkAward: false },
 ]
 const day7awards = {
     超越: ['火焰鳥之笛', '雷公之笛', '水君之笛', '雷吉洛克之笛', '由克希之笛'],
