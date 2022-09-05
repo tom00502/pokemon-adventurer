@@ -817,12 +817,22 @@ const table = [
         level: 'normal',
     },
     {
+        work: '將飛行系的精靈,提升10級',
+        award: ['金幣1500'],
+        level: 'normal',
+    },
+    {
         work: '將岩石系的精靈，提升10級',
         award: ['金幣1500'],
         level: 'normal',
     },
     {
         work: '將妖精系的精靈,提升10級',
+        award: ['金幣1500'],
+        level: 'normal',
+    },
+    {
+        work: '將超能力系的精靈,提升10級',
         award: ['金幣1500'],
         level: 'normal',
     },
@@ -834,18 +844,6 @@ const table = [
     },
     {
         work: '將幽靈系的精靈,提升10級',
-        award: [],
-        level: 'normal',
-        checkAward: false,
-    },
-    {
-        work: '將超能力系的精靈,提升10級',
-        award: [],
-        level: 'normal',
-        checkAward: false,
-    },
-    {
-        work: '將飛行系的精靈,提升10級',
         award: [],
         level: 'normal',
         checkAward: false,
@@ -870,7 +868,12 @@ const day7awards = {
         '博士皮卡丘之笛*2',
     ],
     史詩: ['阿羅拉隆隆岩之笛*5', '阿羅拉隆隆岩之笛*4'],
-    稀有: ['阿羅拉三地鼠之笛*5', '阿羅拉貓老大之笛*5', '阿羅拉臭泥之笛*5'],
+    稀有: [
+        '阿羅拉三地鼠之笛*5',
+        '阿羅拉貓老大之笛*5',
+        '阿羅拉臭泥之笛*5',
+        '阿羅拉嘎啦嘎啦之笛*5',
+    ],
     普通: ['阿羅拉六尾之笛*5', '阿羅拉六尾之笛*3'],
 }
 const selectAward = ref('')
