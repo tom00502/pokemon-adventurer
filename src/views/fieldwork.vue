@@ -439,6 +439,11 @@ const table = [
         level: 'great',
     },
     {
+        work: '進化3次地面系的精靈',
+        award: ['阿羅拉貓老大碎片*2', '金幣9600'],
+        level: 'great',
+    },
+    {
         work: '進化3次蟲系的精靈',
         award: ['阿羅拉喵喵碎片*2', '金幣9600'],
         level: 'great',
@@ -484,12 +489,6 @@ const table = [
         level: 'great',
     },
     { work: '進化3次火系的精靈', award: [], level: 'great', checkAward: false },
-    {
-        work: '進化3次地面系的精靈',
-        award: [],
-        level: 'great',
-        checkAward: false,
-    },
     {
         work: '捕捉5只毒系的精靈',
         award: ['阿羅拉穿山王碎片*2', '金幣6000'],
