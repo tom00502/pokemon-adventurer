@@ -26,5 +26,10 @@ class Api {
             `https://script.google.com/macros/s/AKfycbxyQO-P42H1bBXLOMPSP1wGg8KKLZQBdjgDISpZdJvWGkQEi6DajrXINrmHARhogt2t/exec`
         )
     }
+    getFetters() {
+        return this.axios.get(
+            `https://script.google.com/macros/s/AKfycbxr5ezZSSQQe3NrdxtsmeySCGfUwrQhvUvqLnOnyflq7CV3DxlT3FS_jml-9vWYyLKA/exec`
+        )
+    }
 }
 export default new Api()

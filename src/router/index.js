@@ -63,6 +63,11 @@ const router = createRouter({
             name: 'redeem-code',
             component: () => import('@/views/RedeemCode.vue'),
         },
+        {
+            path: '/fetter',
+            name: 'fetter',
+            component: () => import('@/views/Fetter.vue'),
+        },
     ],
 })
 

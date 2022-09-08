@@ -55,6 +55,11 @@ const router = [
         title: '兌換碼',
     },
     {
+        path: '/fetter',
+        name: 'fetter',
+        title: '羈絆之心',
+    },
+    {
         path: '/about',
         name: 'about',
         title: '關於本站',
