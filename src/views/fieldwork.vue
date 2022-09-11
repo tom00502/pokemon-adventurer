@@ -704,13 +704,13 @@ const table = [
     { work: '使用10次神奇糖果(大)', award: ['金幣4000'], level: 'normal' },
     { work: '使用30次神奇糖果(中)', award: ['金幣4000'], level: 'normal' },
     { work: '使用50次神奇糖果(小)', award: ['金幣4000'], level: 'normal' },
+    { work: '使用3次體力飲料', award: ['金幣4000'], level: 'normal' },
     {
         work: '使用1次可達鴨噴壺',
         award: [],
         level: 'normal',
         checkAward: false,
     },
-    { work: '使用3次體力飲料', award: [], level: 'normal', checkAward: false },
     { work: '使用5次相遇碰碰', award: [], level: 'normal', checkAward: false },
     { work: '使用10次誘捕噴霧', award: [], level: 'normal', checkAward: false },
     {
@@ -852,7 +852,7 @@ const table = [
         checkAward: false,
     },
     { work: '捕捉25只精靈', award: [], level: 'normal', checkAward: false },
-    { work: '捕捉20只精靈', award: [], level: 'normal', checkAward: false },
+    { work: '捕捉20只精靈', award: ['金幣1750'], level: 'normal' },
     { work: '捕捉15只精靈', award: ['金幣1750'], level: 'normal' },
     { work: '捕捉10只精靈', award: ['金幣1750'], level: 'normal' },
     { work: '捕捉5只精靈', award: ['金幣1750'], level: 'normal' },
