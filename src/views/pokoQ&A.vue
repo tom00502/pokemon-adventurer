@@ -75,8 +75,8 @@ const table = {
         { question: '龍系克制下麵哪種屬性?', answer: '龙系' },
         { question: '岩石系被克制的數量和下面哪種屬性一樣多', answer: '草系' },
         {
-            question: '超能力系被下麵那3種屬性克制',
-            answer: '蟲系、幽靈系、惡系',
+            question: '超能力系被下麵那3種屬性克制?',
+            answer: '虫系、幽灵系、恶系',
         },
         { question: '惡系被哪3種屬性克制?', answer: '格斗系、虫系、妖精系' },
         {
