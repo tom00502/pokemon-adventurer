@@ -83,6 +83,7 @@ const table = {
             question: '鋼系被以下那3種屬性克制?',
             answer: '格斗系、地面系、火系',
         },
+        { question: '水系被下麵那2種屬性克制?', answer: '电系、草系' },
         { question: '龍系被下麵那3種屬性克制?', answer: '冰系、龙系、妖精系' },
         {
             question: '火系被下麵那3種屬性克制?',
