@@ -773,6 +773,11 @@ const table = [
         level: 'normal',
     },
     {
+        work: '將火系的精靈,提升10級',
+        award: ['進階石碎片', '金幣1500'],
+        level: 'normal',
+    },
+    {
         work: '將水系的精靈，提升10級',
         award: ['進階石碎片', '金幣1500'],
         level: 'normal',
@@ -838,12 +843,6 @@ const table = [
         work: '將超能力系的精靈,提升10級',
         award: ['金幣1500'],
         level: 'normal',
-    },
-    {
-        work: '將火系的精靈,提升10級',
-        award: [],
-        level: 'normal',
-        checkAward: false,
     },
     {
         work: '將幽靈系的精靈,提升10級',
