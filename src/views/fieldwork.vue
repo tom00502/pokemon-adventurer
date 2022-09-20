@@ -695,12 +695,7 @@ const table = [
         award: ['GEN1稀有之笛', '金幣4000'],
         level: 'normal',
     },
-    {
-        work: '使用80次超級球捕捉精靈',
-        award: [],
-        level: 'normal',
-        checkAward: false,
-    },
+    { work: '使用80次超級球捕捉精靈', award: ['金幣4000'], level: 'normal' },
     { work: '使用10次神奇糖果(大)', award: ['金幣4000'], level: 'normal' },
     { work: '使用30次神奇糖果(中)', award: ['金幣4000'], level: 'normal' },
     { work: '使用50次神奇糖果(小)', award: ['金幣4000'], level: 'normal' },
@@ -712,7 +707,7 @@ const table = [
         checkAward: false,
     },
     { work: '使用5次相遇碰碰', award: [], level: 'normal', checkAward: false },
-    { work: '使用10次誘捕噴霧', award: [], level: 'normal', checkAward: false },
+    { work: '使用10次誘捕噴霧', award: ['金幣4000'], level: 'normal' },
     {
         work: '擊敗5次毒系的精靈',
         award: ['進階石碎片', '金幣2500'],
