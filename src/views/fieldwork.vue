@@ -706,7 +706,7 @@ const table = [
         level: 'normal',
         checkAward: false,
     },
-    { work: '使用5次相遇碰碰', award: [], level: 'normal', checkAward: false },
+    { work: '使用5次相遇碰碰', award: ['金幣4000'], level: 'normal' },
     { work: '使用10次誘捕噴霧', award: ['金幣4000'], level: 'normal' },
     {
         work: '擊敗5次毒系的精靈',
@@ -820,14 +820,14 @@ const table = [
         award: ['金幣1500'],
         level: 'normal',
     },
-    { work: '捕捉25只精靈', award: [], level: 'normal', checkAward: false },
+    { work: '捕捉25只精靈', award: ['金幣1750'], level: 'normal' },
     { work: '捕捉20只精靈', award: ['金幣1750'], level: 'normal' },
     { work: '捕捉15只精靈', award: ['金幣1750'], level: 'normal' },
     { work: '捕捉10只精靈', award: ['金幣1750'], level: 'normal' },
     { work: '捕捉5只精靈', award: ['金幣1750'], level: 'normal' },
     { work: '進化2次精靈', award: ['金幣1500'], level: 'normal' },
     { work: '擊敗2次道館館主', award: ['金幣1500'], level: 'normal' },
-    { work: '擊敗4次道館館主', award: [], level: 'normal', checkAward: false },
+    { work: '擊敗4次道館館主', award: ['金幣1500'], level: 'normal' },
 ]
 const day7awards = {
     超越: ['火焰鳥之笛', '雷公之笛', '水君之笛', '雷吉洛克之笛', '由克希之笛'],
