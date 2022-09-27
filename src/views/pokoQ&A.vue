@@ -36,7 +36,7 @@ const table = {
                 '光合作用，在沙暴、冰雹、下雨、大雨或霧天氣下，回復自己最大HP的',
             answer: '1/4',
         },
-        { question: '下列口袋妖怪中最適合速攻的是', answer: '化石翼龍' },
+        { question: '以下最適合速攻的是?', answer: '化石翼龙' },
         { question: '雷吉洛克有幾只眼睛?', answer: '7只' },
         { question: '皮卡丘是屬於什麼系的寶可夢?', answer: '電系' },
         {
