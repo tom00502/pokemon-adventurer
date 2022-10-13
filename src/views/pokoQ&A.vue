@@ -93,7 +93,7 @@ const table = {
         { question: '妖精系被下麵那2種屬性克制?', answer: '毒系、钢系' },
         { question: '普通系被下麵哪種屬性克制?', answer: '格斗系' },
         { question: '以下屬性中被克制最多的屬性是?', answer: '岩石' },
-        { question: '以下哪三種屬性克制蟲系', answer: '飛行系,岩石系,火系' },
+        { question: '以下那3種屬性克制蟲系?', answer: '飞行系、岩石系、火系' },
         {
             question: '以下那3種屬性克制格鬥系?',
             answer: '飞行系、超能力系、妖精系',

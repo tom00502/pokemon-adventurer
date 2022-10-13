@@ -700,12 +700,7 @@ const table = [
     { work: '使用30次神奇糖果(中)', award: ['金幣4000'], level: 'normal' },
     { work: '使用50次神奇糖果(小)', award: ['金幣4000'], level: 'normal' },
     { work: '使用3次體力飲料', award: ['金幣4000'], level: 'normal' },
-    {
-        work: '使用1次可達鴨噴壺',
-        award: [],
-        level: 'normal',
-        checkAward: false,
-    },
+    { work: '使用1次可達鴨噴壺', award: ['金幣4000'], level: 'normal' },
     { work: '使用5次相遇碰碰', award: ['金幣4000'], level: 'normal' },
     { work: '使用10次誘捕噴霧', award: ['金幣4000'], level: 'normal' },
     {
@@ -847,7 +842,7 @@ const day7awards = {
         '霏歐納之笛',
         '波克基斯之笛',
     ],
-    史詩: ['阿羅拉隆隆岩之笛*5', '阿羅拉隆隆岩之笛*4'],
+    史詩: ['阿羅拉雷丘之笛*5', '阿羅拉隆隆岩之笛*5', '阿羅拉隆隆岩之笛*4'],
     稀有: [
         '阿羅拉三地鼠之笛*5',
         '阿羅拉貓老大之笛*5',

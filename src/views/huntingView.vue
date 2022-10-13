@@ -33,6 +33,7 @@ const filterDistribution = computed(() => {
                 <li>狩獵場可使用30個狩獵球捕捉精靈，用完就結束了</li>
                 <li>丟誘餌防止逃跑、但也會降低捕獲率</li>
                 <li>丟泥巴則容易捉到，但也會提高逃跑機率</li>
+                <li>狩獵場開放時間: 10:00 ~ 12:00, 18:00 ~ 22:00</li>
             </ul>
         </div>
         搜尋: <input type="text" v-model="searchText" />
